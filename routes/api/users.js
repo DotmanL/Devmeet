@@ -5,7 +5,9 @@ const gravatar = require('gravatar')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config')
-const User = require('../../modules/User')
+const User = require('../../models/User')
+
+
 //@orute     POST api/users
 // @desc     Register users
 // @access   Public
@@ -75,13 +77,6 @@ check('password', 'Please enter a password with 6 or more characters').isLength(
     console.error(err.message);
     res.status(500).send('Server error');
   }
-
-
-
-
-
-
-	
 	}
 )
 
