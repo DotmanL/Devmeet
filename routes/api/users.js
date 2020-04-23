@@ -1,11 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const { check, validationResult } = require('express-validator')
-
-
 const gravatar = require('gravatar')
 const bcrypt = require('bcryptjs');
-
+const jwt = require('jsonwebtoken');
+const config = require('config')
 const User = require('../../modules/User')
 //@orute     POST api/users
 // @desc     Register users
@@ -59,8 +58,19 @@ check('password', 'Please enter a password with 6 or more characters').isLength(
   await user.save();
 
   // return jsonwebtoken
-
-    res.send('User Registered')
+      const payload = {
+        user: {
+          id: user.id
+        }
+      }
+        jwt.sign(
+          payload, 
+          config.get('jwtSecret'), 
+          { expiresIn: 360000 }, //change the value to like 3600 which is 1hr, curreent value just for testing
+          (err, token) => {
+            if(err) throw err;
+            res.json({ token })
+          });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server error');
