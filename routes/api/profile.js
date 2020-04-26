@@ -4,6 +4,9 @@ const auth = require('../../middleware/auth')
 const Profile = require('../../models/Profile')
 const User = require('../../models/User')
 const { check, validationResult } = require('express-validator')
+const request = require("request")
+const config = require("config")
+
 
 //@orute     GET api/Profile/me
 // @desc      Get Current users profile
@@ -304,6 +307,37 @@ try {
     }
 
 });
+
+
+//@route     GET api/profile/github/:username
+// @desc    Get user repos from profile
+// @access   Public
+
+router.get('/github/:username', (req, res) => {
+try {
+  const options = {
+    url: `https://api.github.com/users/${req.params.username}/repos?per_page=5&sort=created:asc`,
+    method: 'GET',
+    headers: {
+      'user-agent': 'node.js',
+      Authorization: `token ${config.get('OAUTH-TOKEN')}`
+    }
+  };
+
+  request(options, (error, response, body) =>{
+    if(error) console.error(error);
+
+    if(response.statusCode !== 200) {
+    return  res.status(400).json({ msg: 'No Github Profile Found' });
+    }
+      res.json(JSON.parse(body));
+  });
+} catch (err) {
+  console.error(err.message);
+      res.status(500).json.send('Server Error');
+}
+
+})
 
 
 module.exports = router

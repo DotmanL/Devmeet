@@ -1,4 +1,7 @@
 {
   "mongoURI": "mongodb+srv://Dotman:8ynydedy@devmeet-zohwt.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
+  "jwtSecret": "mysecrettoken",
+  "githubClientId" : "37b7169376dcb6e8c9f4",
+  "githubSecret": "cfc322acd30776ebfd2a2bcbda45d7e7e615026d",
+  "OAUTH-TOKEN" : "ae189b9b273fa71d9d5200e5b50954d7c2c575f3"
 }
