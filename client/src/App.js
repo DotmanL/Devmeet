@@ -15,12 +15,12 @@ const App = () => (
       <Switch>    
     <Route exact path ='/' component={LandingPage}/>
       
+   
    <Route exact path ='/signup' component={SignUpPage}/>
-   <section className = 'container'>
-    
-    <Route exact path ='/signin' component={SignInPage}/>
-    </section>
- 
+   
+   <Route exact path ='/signin' component={SignInPage}/>
+   
+     
   </Switch>
   
     </Fragment>

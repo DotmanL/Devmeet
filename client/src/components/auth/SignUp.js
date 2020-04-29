@@ -37,8 +37,8 @@ const SignUp = () => {
             label='Email'
             required
           />
-         <h9>This site uses Gravatar so if you want a profile image, use a
-            Gravatar email</h9> 
+         <h6>This site uses Gravatar so if you want a profile image, use a
+            Gravatar email</h6> 
           <FormInput
             type='password'
             name='password'
