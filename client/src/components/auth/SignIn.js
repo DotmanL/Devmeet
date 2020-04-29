@@ -12,18 +12,31 @@ const SignIn = () => {
     
     })
   
-  
     const { email, password,} = userCredentials;
+
+    const handleSubmit = async event => {
+      event.preventDefault();
+      setUserCredentials({ email:"", password:"" });
+      console.log('Success')
+      
+    }
+
+    const handleChange = event =>{
+      const {name, value} = event.target
+      setUserCredentials({ ...userCredentials, [name]: value });
+
+    }
    
    
     return (  
       <SignInContainer>
          <SignInTitle>SIGN IN</SignInTitle>
-          <form >
+          <form onSubmit={handleSubmit} >
           <FormInput
             type='email'
             name='email'
             value={email}
+            onChange={handleChange}
             label='Email'
             required
           /> 
@@ -31,6 +44,7 @@ const SignIn = () => {
             type='password'
             name='password'
             value={password}
+            onChange={handleChange}
             label='Password'
             minLength="6"
             required

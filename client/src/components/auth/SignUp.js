@@ -2,38 +2,62 @@ import React, { useState } from 'react';
 import FormInput from '../form-input/form-input';
 import CustomButton from '../custom-button/custom-button';
 import Logo from '../images/ecs2.jpg';
+//import axios from 'axios'
+import { connect } from 'react-redux';
+import { setAlert } from '../../Redux/Alert/alert.actions' ;
+
 
 
 import { SignUpContainer, SignUpTitle, SignUpFooter, LogoContainer } from './SignUp.styles';
 
-const SignUp = () => {
+const SignUp = ({ setAlert }) => {
 
   const [ userCredentials, setUserCredentials] = useState({
-      displayName: '',
+      name: '',
       email: '',
       password: '',
       confirmPassword: ''
     })
   
   
-    const { displayName, email, password, confirmPassword } = userCredentials;
-    return (
+    const { name, email, password, confirmPassword } = userCredentials;
     
-     
+    const handleSubmit = async event => {
+      event.preventDefault();
+      setUserCredentials({ name: '', email: '', password: '', confirmPassword: ''})
+  
+      if (password !== confirmPassword) {
+        setAlert("passwords don't match", "danger");
+      } else {
+        alert('password match')
+      }
+    };
+
+      const handleChange = event => {
+        const { name, value } = event.target;
+    
+        setUserCredentials({ ...userCredentials, [name]: value });
+      };
+
+
+
+      return (
       <SignUpContainer>
          <SignUpTitle>SIGN UP</SignUpTitle>
-          <form >
+          <form onSubmit={handleSubmit}>
           <FormInput
             type='text'
-            name='displayName'
-            value={displayName} 
-            label='Display Name'
+            name='name'
+            value={name} 
+            onChange ={handleChange}
+            label='Name'
             required
           />
           <FormInput
             type='email'
             name='email'
             value={email}
+            onChange ={handleChange}
             label='Email'
             required
           />
@@ -43,6 +67,7 @@ const SignUp = () => {
             type='password'
             name='password'
             value={password}
+            onChange ={handleChange}
             label='Password'
             minLength="6"
             required
@@ -51,6 +76,7 @@ const SignUp = () => {
             type='password'
             name='confirmPassword'
             value={confirmPassword}
+            onChange ={handleChange}
             label='Confirm Password'
             minLength="6"
             required
@@ -64,6 +90,8 @@ const SignUp = () => {
     );
   }
 
+const mapDispatchToProps = dispatch => ({
+  setAlert: (msg, alertType) => dispatch(setAlert({msg, alertType}))
+})
 
-
-export default SignUp;
+export default connect(null, mapDispatchToProps)(SignUp);
