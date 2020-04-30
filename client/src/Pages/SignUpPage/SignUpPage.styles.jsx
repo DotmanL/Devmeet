@@ -10,7 +10,11 @@ export const SignUpPageContainer = styled.div`
   margin: 120px auto;
  
   @media screen and (max-width: 800px) {
-   width: 425px;
-  align-items: center;
+   width: 345px;
+  
+  
+  
+  
+  
   }
 `;

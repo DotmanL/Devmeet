@@ -150,10 +150,20 @@ img {
 
 .alert {
   padding: 0.8rem;
-  margin: 1rem 0;
+  margin: 5rem 20rem;
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
+  text-align: center;
+  width: 50vw;
+}
+
+ 
+@media screen and (max-width: 800px) {
+     .alert{
+       margin: 7rem 3rem;
+       width: 70vw;
+     }     
 }
 
 .btn-primary,
@@ -333,7 +343,7 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  background: url('./img/developm.jpg') no-repeat center center/cover;
+  background: url('./assets/developm.jpg') no-repeat center center/cover;
   height: 100vh;
 }
 

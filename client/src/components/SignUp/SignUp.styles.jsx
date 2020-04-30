@@ -8,6 +8,10 @@ export const SignUpContainer = styled.div`
   margin-left: 40px;
   margin-bottom: 70px;
   margin-top: -10px;
+  @media screen and (max-width: 800px) {
+  width: 300px;
+  margin-left: 20px;
+  }
 `;
 
 export const LogoContainer = styled.img`
@@ -20,7 +24,8 @@ export const LogoContainer = styled.img`
   @media screen and (max-width: 800px) {
   flex-direction: column;
   margin-left: -10px;
-  margin-top: 30px
+  margin-top: 30px;
+  width: 300px;
   }
 `;
 

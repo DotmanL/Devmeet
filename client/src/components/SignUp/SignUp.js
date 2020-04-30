@@ -6,6 +6,7 @@ import Logo from '../images/ecs2.jpg';
 import { connect } from 'react-redux';
 import { setAlert } from '../../Redux/Alert/alert.actions' ;
 
+import PropTypes from 'prop-types';
 
 
 import { SignUpContainer, SignUpTitle, SignUpFooter, LogoContainer } from './SignUp.styles';
@@ -29,7 +30,7 @@ const SignUp = ({ setAlert }) => {
       if (password !== confirmPassword) {
         setAlert("passwords don't match", "danger");
       } else {
-        alert('password match')
+        setAlert('password match', "success")
       }
     };
 
@@ -89,6 +90,10 @@ const SignUp = ({ setAlert }) => {
 
     );
   }
+
+SignUp.protoTypes = {
+  setAlert: PropTypes.func.isRequired
+}
 
 const mapDispatchToProps = dispatch => ({
   setAlert: (msg, alertType) => dispatch(setAlert({msg, alertType}))
