@@ -5,13 +5,14 @@ import Logo from '../images/ecs2.jpg';
 //import axios from 'axios'
 import { connect } from 'react-redux';
 import { setAlert } from '../../Redux/Alert/alert.actions' ;
-
+import { signup } from '../../Redux/User/user.actions'
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 
 
 import { SignUpContainer, SignUpTitle, SignUpFooter, LogoContainer } from './SignUp.styles';
 
-const SignUp = ({ setAlert }) => {
+const SignUp = ({ setAlert, signup, isAuthenticated }) => {
 
   const [ userCredentials, setUserCredentials] = useState({
       name: '',
@@ -28,9 +29,10 @@ const SignUp = ({ setAlert }) => {
       setUserCredentials({ name: '', email: '', password: '', confirmPassword: ''})
   
       if (password !== confirmPassword) {
-        setAlert("passwords don't match", "danger");
+        setAlert("passwords don't match", 'danger');
       } else {
-        setAlert('password match', "success")
+       signup({ name, email, password });
+       setAlert('Registeration Successful', 'success')
       }
     };
 
@@ -40,6 +42,10 @@ const SignUp = ({ setAlert }) => {
         setUserCredentials({ ...userCredentials, [name]: value });
       };
 
+      if(isAuthenticated) {
+        return <Redirect to = "/dashboard" />
+      
+      }
 
 
       return (
@@ -52,7 +58,7 @@ const SignUp = ({ setAlert }) => {
             value={name} 
             onChange ={handleChange}
             label='Name'
-            required
+             required
           />
           <FormInput
             type='email'
@@ -91,12 +97,16 @@ const SignUp = ({ setAlert }) => {
     );
   }
 
-SignUp.protoTypes = {
-  setAlert: PropTypes.func.isRequired
+SignUp.propTypes = {
+  setAlert: PropTypes.func.isRequired,
+  signup: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool,
 }
 
-const mapDispatchToProps = dispatch => ({
-  setAlert: (msg, alertType) => dispatch(setAlert({msg, alertType}))
-})
+const mapStateToProps = state => ({
+  isAuthenticated: state.user.isAuthenticated
+  })
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps,
+   {setAlert, signup} )
+   (SignUp);

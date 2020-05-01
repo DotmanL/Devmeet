@@ -3,8 +3,13 @@ import FormInput from '../form-input/form-input';
 import CustomButton from '../custom-button/custom-button';
 import Logo from '../images/ecs1.jpg';
 import { SignInContainer, SignInTitle, SignInFooter, LogoContainer } from './SignIn.styles';
+import { connect } from 'react-redux';
+import { signin } from '../../Redux/User/user.actions';
 
-const SignIn = () => {
+import PropTypes from 'prop-types'
+import { Redirect } from 'react-router-dom';
+
+const SignIn = ({ signin, isAuthenticated}) => {
 
     const [ userCredentials, setUserCredentials] = useState({
       email: '',
@@ -17,7 +22,8 @@ const SignIn = () => {
     const handleSubmit = async event => {
       event.preventDefault();
       setUserCredentials({ email:"", password:"" });
-      console.log('Success')
+      signin(email, password);
+      
       
     }
 
@@ -25,7 +31,14 @@ const SignIn = () => {
       const {name, value} = event.target
       setUserCredentials({ ...userCredentials, [name]: value });
 
-    }
+    };
+
+    //redirect when signed in
+
+if(isAuthenticated) {
+  return <Redirect to = "/dashboard" />
+
+}
    
    
     return (  
@@ -58,4 +71,13 @@ const SignIn = () => {
   )
 }
 
-export default SignIn;
+SignIn.propType = {
+  signin: PropTypes.func.isRequired,
+  isAuthenticated:PropTypes.bool,
+}
+
+const mapStateToProps = state => ({
+isAuthenticated: state.user.isAuthenticated
+})
+
+export default connect( mapStateToProps, { signin, }) (SignIn);

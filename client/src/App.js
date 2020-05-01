@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect} from 'react';
 
 import './App.css';
 import { Switch, Route,} from 'react-router-dom';
@@ -7,9 +7,25 @@ import Navbar from './components/Navbar/Navbar';
 import SignInPage from './Pages/SignInPage/SignInPage';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import Alert from "./components/Alert/Alert"
+import {loadUser} from './Redux/User/user.actions'
+import setAuthToken from './utils/setAuthToken';
+import store from './Redux/store';
 
 
-const App = () => (
+
+if (localStorage.token){
+  setAuthToken(localStorage.token);
+}
+
+const App = () => {
+  
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, [])
+  
+  
+  
+  return (
     <Fragment>
      <Navbar />
       <Alert />
@@ -25,7 +41,7 @@ const App = () => (
   </Switch>
   
     </Fragment>
-  );
+  )};
 
 
 export default App;

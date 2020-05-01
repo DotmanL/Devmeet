@@ -149,8 +149,8 @@ img {
 }
 
 .alert {
-  padding: 0.8rem;
-  margin: 5rem 20rem;
+  padding: 0.2rem;
+  margin: 4rem 20rem;
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
@@ -161,7 +161,9 @@ img {
  
 @media screen and (max-width: 800px) {
      .alert{
-       margin: 7rem 3rem;
+       padding: 5px;
+       margin-top: 120px;
+       margin-left: 70px;
        width: 70vw;
      }     
 }
