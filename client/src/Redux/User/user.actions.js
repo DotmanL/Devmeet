@@ -16,7 +16,9 @@ import {
 //Load users
 
 export const loadUser = () => async dispatch => {
-if (localStorage.token){
+
+
+  if (localStorage.token){
   setAuthToken(localStorage.token);
 }
 
@@ -90,8 +92,9 @@ export const signin = ( email, password) => async dispatch => {
       type: SIGN_IN_SUCCESS,
       payload: res.data
     });
-    dispatch(setAlert("Sign In Successful", "success"))
     dispatch(loadUser());
+    dispatch(setAlert("Sign In Successful", "success"))
+    
   } catch (err) {
     const errors = err.response.data.errors;
     

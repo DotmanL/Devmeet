@@ -10,7 +10,7 @@ export const SignInPageContainer = styled.div`
   margin: 120px auto;
  
   @media screen and (max-width: 800px) {
-   width: 425px;
+   width: 345px;
   align-items: center;
   }
 `;

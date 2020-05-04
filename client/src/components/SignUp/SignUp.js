@@ -36,16 +36,18 @@ const SignUp = ({ setAlert, signup, isAuthenticated }) => {
       }
     };
 
+    if(isAuthenticated) {
+      return <Redirect to = "/dashboard" />
+    
+    }
+
       const handleChange = event => {
         const { name, value } = event.target;
     
         setUserCredentials({ ...userCredentials, [name]: value });
       };
 
-      if(isAuthenticated) {
-        return <Redirect to = "/dashboard" />
-      
-      }
+    
 
 
       return (

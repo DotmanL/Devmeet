@@ -1,47 +1,68 @@
 import React, {Fragment} from 'react'
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signout } from '../../Redux/User/user.actions';
 import PropTypes from 'prop-types';
-
+import {
+  Nav,
+  NavHeader,
+  //NavCenter,
+  //Input,
+  NavRight,
+  MenuLink,
+  NavLeft,
+  TitleLink
+  //Compass,
+  } from './Navbar.styles'
 
 
 const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
 
+
+
+
   const userLinks = (
-    <ul>
-         <li>
-        <a onClick={signout} href='#!'>
-          <i className='fas fa-sign-out-alt' />{' '}
-          <span className='hide-sm'>Signout</span>
-        </a>
-      </li>
-  
-  </ul>
+    <NavRight> 
+    <MenuLink to = "/" onClick={signout}>
+        SIGN OUT 
+    </MenuLink>
+    </NavRight>
 
   )
 
   const guestLinks =(
     
-    <ul>
-    <li><Link to="#!">Developers</Link></li>
-    <li><Link to="/signup">Sign Up</Link></li>
-    <li><Link to="/signin">Sign In</Link></li>
-  </ul>
+    <NavRight>
+    <MenuLink to ='/developers'>
+    Developers
+    </MenuLink>
+
+    <MenuLink to ='/signup'>
+      SignUp
+    </MenuLink>
+
+    <MenuLink to ='/signin'>
+    SignIn
+    </MenuLink>
+  </NavRight>
   );
 
+
+
   return (
-    <nav className="navbar bg-dark">
-    <h1>
-      <Link to="/">
-        <i className="fas fa-code"></i> DevMeet
-        </Link>
-    </h1>
+  <Nav>
+  <NavHeader>
+    <NavLeft>
+    <TitleLink to= "/">
+        Devmeet
+        </TitleLink>
+      </NavLeft>
     {!loading && (
-        <Fragment>{isAuthenticated ? userLinks : guestLinks}</Fragment>
-      )}
-  </nav>
-  )
+      <Fragment>{isAuthenticated ? userLinks : guestLinks}</Fragment>
+    )}
+    
+  </NavHeader>
+</Nav>
+)
 }
 
 Navbar.propTypes = {

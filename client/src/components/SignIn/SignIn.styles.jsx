@@ -4,8 +4,8 @@ import {Link } from 'react-router-dom';
 export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 350px;
-  margin-left: 40px;
+  width: 300px;
+  margin-left: 20px;
   margin-bottom: 0px;
   margin-top: 20px;
 `;
@@ -21,8 +21,10 @@ export const LogoContainer = styled.img`
 
   @media screen and (max-width: 800px) {
   flex-direction: column;
-  margin-left: -10px;
-  margin-top: 30px
+  margin-left: -5px;
+  margin-top: 30px;
+  width: 300px;
+  height: 200px;
   }
 `;
 
