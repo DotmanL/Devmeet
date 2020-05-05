@@ -1,2 +1,12 @@
 node_modules/
 config/
+
+
+/config
+
+
+.env
+
+/client/npm-debug.log*
+/client/yarn-debug.log*
+/client/yarn-error.log

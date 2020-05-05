@@ -6,8 +6,11 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config')
 const User = require('../../models/User')
+
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey('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');
+
+const nodemailer = require('nodemailer')
 
 
 
@@ -61,27 +64,87 @@ check('password', 'Please enter a password with 6 or more characters').isLength(
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(password, salt);
 
-  await user.save();
-
+  //await user.save();
   // return jsonwebtoken
-      const payload = {
+      
+  
+  const payload = {
         user: {
           id: user.id
         }
       }
-        jwt.sign(
-          payload, 
+    const token = jwt.sign(
+          payload,
           config.get('jwtSecret'), 
           { expiresIn: 360000 }, //change the value to like 3600 which is 1hr, curreent value just for testing
           (err, token) => {
             if(err) throw err;
             res.json({ token })
-          });
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Server error');
-  }
-	}
-)
+            console.log(token)
+          
 
-module.exports = router
+
+    // const token = jwt.sign({ name, email, password },  config.get('jwtSecret'), {
+    //   expiresIn: '10m',
+    // })
+    // console.log(token)
+
+          const transport = {
+            host: 'smtp.gmail.com',
+            port: 587,
+            secure: false,
+            auth: {
+              user: process.env.THE_EMAIL,
+              pass: process.env.thePassword,
+            }
+          };
+          
+            const transporter = nodemailer.createTransport(transport);
+            transporter.verify((error, success) => {
+              if(error) {
+                console.error(error)
+              } else {
+                console.log('users ready to mail myself')
+              }
+            }); 
+  
+              const mail = {
+                from: process.env.THE_EMAIL,
+                to: email,
+                subject: `Account activation link`,
+                html: `
+                <h1> Hello ${name} Please use the following link to activate your account</h1>
+                <p>${process.env.CLIENT_URL}/verifyaccount/${token}</p>
+                <hr />
+                <p>This email may contain sensetive information</p>
+                <p>${process.env.CLIENT_URL}</p>
+            `, 
+              }
+          
+          transporter.sendMail(mail, (err,data) => {
+              if(err) {
+                res.json({
+                  status: 'failure to send mail'
+                })
+              } else {
+                res.json({
+                  status: 'success'
+                })
+              }
+            }) 
+          });
+        } catch (err) {
+          console.error(err.message);
+          res.status(500).send('Server error');
+        }
+        }
+      )
+
+      module.exports = router
+
+
+
+
+
+ 
+

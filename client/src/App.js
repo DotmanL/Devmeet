@@ -13,14 +13,14 @@ import setAuthToken from './utils/setAuthToken';
 import store from './Redux/store';
 
 
+// if (localStorage.token) {
+//   setAuthToken(localStorage.token);
+// }
 
-if (localStorage.token){
-  setAuthToken(localStorage.token);
-}
 
 const App = () => {
-  
   useEffect(() => {
+    setAuthToken(localStorage.token);
     store.dispatch(loadUser());
   }, [])
   

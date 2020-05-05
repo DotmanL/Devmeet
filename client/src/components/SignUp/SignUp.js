@@ -32,14 +32,14 @@ const SignUp = ({ setAlert, signup, isAuthenticated }) => {
         setAlert("passwords don't match", 'danger');
       } else {
        signup({ name, email, password });
-       setAlert('Registeration Successful', 'success')
+       setAlert('Registeration Successful, Check your mail box to activate your account', 'success', 60000)
+
       }
     };
 
     if(isAuthenticated) {
-      return <Redirect to = "/dashboard" />
-    
-    }
+     return <Redirect to = "/dashboard" />
+     } 
 
       const handleChange = event => {
         const { name, value } = event.target;

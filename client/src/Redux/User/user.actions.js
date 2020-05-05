@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import { setAlert } from "../Alert/alert.actions";
-import setAuthToken from '../../utils/setAuthToken'
+//import setAuthToken from '../../utils/setAuthToken'
 
 import { 
   SIGN_UP_SUCCESS, 
@@ -17,18 +17,19 @@ import {
 
 export const loadUser = () => async dispatch => {
 
-
-  if (localStorage.token){
-  setAuthToken(localStorage.token);
-}
+  // if (localStorage.token) {
+  //   setAuthToken(localStorage.token);
+  // }
 
 try {
   const res = await axios.get ('/api/auth');
+
   dispatch ({ 
     type: USER_LOADED,
     payload: res.data
    })
 } catch (err) {
+  console.log(err)
   dispatch({
     type: AUTH_ERROR
   })
@@ -56,7 +57,6 @@ export const signup = ({name, email, password}) => async dispatch => {
       type: SIGN_UP_SUCCESS,
       payload: res.data
     });
-    dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
     

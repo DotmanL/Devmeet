@@ -23,8 +23,15 @@ const userReducer = (state = initialState, action) => {
 
 switch (type) {
 case SIGN_UP_SUCCESS: 
+return {
+  ...state,
+  ...payload,
+  isAuthenticated: false,
+  loading: false
+}
+
 case SIGN_IN_SUCCESS:
-  localStorage.setItem('token', payload.token)
+  //localStorage.setItem('token', payload.token)
   return {
     ...state,
     ...payload,
@@ -35,12 +42,13 @@ case SIGN_IN_SUCCESS:
   case AUTH_ERROR:
   case SIGN_IN_FAIL:
   case SIGN_OUT:
-    localStorage.removeItem('token')
+     //localStorage.removeItem('token')
     return {
       ...state,
       token: null,
       isAuthenticated: false,
-      loading: false
+      loading: false,
+      user: null,
     }
   case USER_LOADED:
     return {
