@@ -21,7 +21,10 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
 
 
   const userLinks = (
-    <NavRight> 
+    <NavRight>
+      <MenuLink to ='/developers'>
+    Developers
+    </MenuLink> 
     <MenuLink to = "/" onClick={signout}>
         SIGN OUT 
     </MenuLink>
@@ -32,9 +35,9 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
   const guestLinks =(
     
     <NavRight>
-    <MenuLink to ='/developers'>
+      <MenuLink to ='/developers'>
     Developers
-    </MenuLink>
+    </MenuLink> 
 
     <MenuLink to ='/signup'>
       SignUp

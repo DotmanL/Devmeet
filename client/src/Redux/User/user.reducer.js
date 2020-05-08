@@ -5,7 +5,9 @@ import {
     AUTH_ERROR,
     SIGN_IN_SUCCESS,
     SIGN_IN_FAIL,
-    SIGN_OUT
+    SIGN_OUT,
+    ACTIVATION_SUCCESS,
+    ACTIVATION_FAILURE
   } from './user.types'
 
 const initialState = {
@@ -27,10 +29,12 @@ return {
   ...state,
   ...payload,
   isAuthenticated: false,
-  loading: false
+  loading: false,
+  user: null
 }
 
 case SIGN_IN_SUCCESS:
+case ACTIVATION_SUCCESS: 
   //localStorage.setItem('token', payload.token)
   return {
     ...state,
@@ -38,10 +42,13 @@ case SIGN_IN_SUCCESS:
     isAuthenticated: true,
     loading: false
   }
+  
+
   case SIGN_UP_FAIL:
   case AUTH_ERROR:
   case SIGN_IN_FAIL:
   case SIGN_OUT:
+  case ACTIVATION_FAILURE:  
      //localStorage.removeItem('token')
     return {
       ...state,

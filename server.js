@@ -1,7 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const app = express();
-
+const bodyParser = require('body-parser');
 
 require('dotenv').config()
 
@@ -12,6 +12,7 @@ if (process.env.NODE_ENV !== 'production') require ('dotenv').config();
 connectDB();
 app.use(express.json({ extended: false }));
 app.get('/', (req, res) => res.send('API Running'));
+app.use(bodyParser.json());
 
 //Define Routes
 

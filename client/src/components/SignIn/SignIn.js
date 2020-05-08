@@ -7,7 +7,12 @@ import { connect } from 'react-redux';
 import { signin } from '../../Redux/User/user.actions';
 
 import PropTypes from 'prop-types'
-import { Redirect } from 'react-router-dom';
+//import { Redirect } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const SignIn = ({ signin, isAuthenticated}) => {
 
@@ -20,10 +25,10 @@ const SignIn = ({ signin, isAuthenticated}) => {
     const { email, password,} = userCredentials;
 
     const handleSubmit = async event => {
-      event.preventDefault();
-      setUserCredentials({ email:"", password:"" });
-      signin(email, password);
-      
+      // event.preventDefault();
+      // setUserCredentials({ email:"", password:"" });
+      // signin(email, password);
+      toast.success("Sign in Successful", { autoClose: 8000,});
       
     }
 
@@ -33,16 +38,19 @@ const SignIn = ({ signin, isAuthenticated}) => {
 
     };
 
+    
+
     //redirect when signed in
 
-if(isAuthenticated) {
-  return <Redirect to = "/dashboard" />
+// if(isAuthenticated) {
+//   return <Redirect to = "/dashboard" />
 
-}
+// }
    
    
     return (  
       <SignInContainer>
+       
          <SignInTitle>SIGN IN</SignInTitle>
           <form onSubmit={handleSubmit} >
           <FormInput
@@ -62,8 +70,9 @@ if(isAuthenticated) {
             minLength="6"
             required
           />
-      
-          <CustomButton type='submit'>SIGN IN</CustomButton>
+         
+          <CustomButton type='submit' onClick={handleSubmit}>SIGN IN</CustomButton>
+        
         </form>
         <LogoContainer src={Logo} alt="sign IN" />
             <SignInFooter to ="/signup">I don't have a account </SignInFooter>  

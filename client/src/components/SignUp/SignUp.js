@@ -20,6 +20,7 @@ const SignUp = ({ setAlert, signup, isAuthenticated }) => {
       password: '',
       confirmPassword: ''
     })
+    
   
   
     const { name, email, password, confirmPassword } = userCredentials;

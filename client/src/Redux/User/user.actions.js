@@ -9,7 +9,9 @@ import {
   USER_LOADED, AUTH_ERROR, 
   SIGN_IN_SUCCESS, 
   SIGN_IN_FAIL,
-  SIGN_OUT
+  SIGN_OUT,
+  ACTIVATION_FAILURE,
+  ACTIVATION_SUCCESS
 } 
   from './user.types';
 
@@ -17,9 +19,6 @@ import {
 
 export const loadUser = () => async dispatch => {
 
-  // if (localStorage.token) {
-  //   setAuthToken(localStorage.token);
-  // }
 
 try {
   const res = await axios.get ('/api/auth');
@@ -93,7 +92,7 @@ export const signin = ( email, password) => async dispatch => {
       payload: res.data
     });
     dispatch(loadUser());
-    dispatch(setAlert("Sign In Successful", "success"))
+    // dispatch(setAlert("Sign In Successful", "success", 3000))
     
   } catch (err) {
     const errors = err.response.data.errors;
@@ -112,3 +111,40 @@ export const signin = ( email, password) => async dispatch => {
 export const signout = () => dispatch => {
   dispatch({ type: SIGN_OUT})
 } 
+
+
+//Activate account
+
+
+
+export const activate = token => async dispatch => {
+  
+  const config ={
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+  
+  const body =JSON.stringify({token});
+
+  try {
+    const res = await axios.post(`/api/users/verifyaccount/${token}`, body,  config);
+    
+    dispatch({
+      type: ACTIVATION_SUCCESS,
+      payload: res.data
+    });
+    dispatch(setAlert("Activation Successful", "success"))
+    dispatch (signin());
+  } catch (err) {
+    const errors = err.response.data.errors;
+    
+    if (errors) {
+      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+    }
+    dispatch({
+      type: ACTIVATION_FAILURE
+    })
+    dispatch(setAlert("Activation Failed", "failed"))
+  };
+};

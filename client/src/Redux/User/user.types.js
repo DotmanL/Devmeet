@@ -7,3 +7,7 @@ export const AUTH_ERROR = 'AUTH_ERROR';
 export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS';
 export const SIGN_IN_FAIL = 'SIGN_IN_FAIL';
 export const SIGN_OUT = 'SIGN_OUT';
+
+
+export const ACTIVATION_SUCCESS = 'ACTIVATION_SUCCESS';
+export const ACTIVATION_FAILURE = 'ACTIVATION_FAILURE';

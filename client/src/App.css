@@ -149,8 +149,8 @@ img {
 }
 
 .alert {
-  padding: 0.2rem;
-  margin: 4rem 20rem;
+  padding: 0.7rem;
+  margin: 7rem 20rem;
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
