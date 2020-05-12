@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
  
 export const Nav = styled.div`
   background-color: rgb(5, 91, 94);
-  height: 15vh;
+  height: 8vh;
   width: 100%;
   border-bottom: 2px solid white;
   position: fixed;
@@ -35,12 +35,14 @@ export const NavLeft = styled.div`
   width: 33.333%;
   text-align: left;
   color: white;
-  font-size: 30px;
-  margin-top: -20px;
+  font-size: 10px;
+  margin-top: -30px;
+  margin-left: -50px;
 
   @media screen and ( max-width: 800px) {
       margin-left: 100px;
-      font-size: 40px;
+      font-size: 20px;
+      margin-top: -8px;
   }
 
 `;
@@ -59,8 +61,11 @@ export const NavRight = styled.div`
     justify-content: flex-end;
     font-size: 15px;
     margin-right: -90px;
+    margin-top: -20px;
+    
 
     @media screen and ( max-width: 800px) {
+      margin-top: 0px;
       margin-right: 0px;
   }
 
@@ -96,15 +101,17 @@ export const MenuLink = styled(Link)`
 
 export const TitleLink = styled(Link)`
  color: white;
-  font-size: 50px;
+  font-size: 30px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: none;
-  margin-left: -100px;
+  margin-left: -40px;
   cursor: pointer;
+  margin-top: 20px;
 
 
   @media screen and ( max-width: 800px) {
-      font-size: 25px;
+      font-size: 15px;
       padding: 5px 6px;
+      margin-left: -100px;
   }
 `;

@@ -31,7 +31,7 @@ export const HomeContent = styled.div`
   @media screen and (max-width: 800px) {
     background-size: cover;
     background-position: center;
-    width: 370px;
+    width: 320px;
 }
 `
 
@@ -39,6 +39,11 @@ export const Title = styled.h1`
 color: white;
 font-size: 50px;
 margin-top: 90px;
+
+@media screen and (max-width: 800px) {
+    font-size: 40px;
+}
+
 `
 export const SubTitle = styled.h3`
 color: white;

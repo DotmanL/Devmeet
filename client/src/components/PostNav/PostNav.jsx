@@ -1,10 +1,12 @@
 import React from 'react'
-import { Nav, Header } from './PostNav.styles';
+import { Nav, Header, Circle } from './PostNav.styles';
 
 const PostNav = () => {
   return (
-    <Nav>
-<Header>Home</Header>
+<Nav>
+<Circle> </Circle>
+<Header> Home </Header>
+
     </Nav>
   )
 }

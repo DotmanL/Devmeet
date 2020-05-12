@@ -2,10 +2,9 @@ import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { activate } from '../../Redux/User/user.actions';
-import {setAlert} from '../../Redux/Alert/alert.actions';
 import NavBar  from '../../components/Navbar/Navbar';
 
-//import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import {
   Container,
   Details,
@@ -13,16 +12,19 @@ import {
 from './ConfirmationPage.styles'
 
 
-const ConfirmationPage = ({activate, match, setAlert}) => {
+const ConfirmationPage = ({activate, match, isAuthenticated}) => {
   
   useEffect(() => {
     activate(match.params.token);
   }, [activate, match.params.token]);
   
+  console.log(match.params.token, 'activate details')
 
+    if(!isAuthenticated) {
+      return <Redirect to = "/signin" />
+      }
 
-
-
+    
   return (
   
    <Container>
@@ -37,6 +39,11 @@ Chill, your account is being verified
 
 ConfirmationPage.propTypes = {
   activate: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool,
 }
 
-export default connect(null, {activate, setAlert,}) (ConfirmationPage)
+const mapStateToProps = state => ({
+  isAuthenticated: state.user.isAuthenticated
+  })
+
+export default connect(mapStateToProps, {activate}) (ConfirmationPage)

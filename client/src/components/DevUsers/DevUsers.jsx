@@ -5,7 +5,7 @@ import {Container, Header} from './DevUsers.styles';
 const DevUsers = () => {
   return (
     <Container>
-     <Header>Dev</Header>
+     <Header to= '/' >Dev</Header>
       
       </Container>
   )

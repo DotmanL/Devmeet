@@ -7,12 +7,12 @@ import { connect } from 'react-redux';
 import { setAlert } from '../../Redux/Alert/alert.actions' ;
 import { signup } from '../../Redux/User/user.actions'
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
+
 
 
 import { SignUpContainer, SignUpTitle, SignUpFooter, LogoContainer } from './SignUp.styles';
 
-const SignUp = ({ setAlert, signup, isAuthenticated }) => {
+const SignUp = ({ setAlert, signup }) => {
 
   const [ userCredentials, setUserCredentials] = useState({
       name: '',
@@ -33,14 +33,9 @@ const SignUp = ({ setAlert, signup, isAuthenticated }) => {
         setAlert("passwords don't match", 'danger');
       } else {
        signup({ name, email, password });
-       setAlert('Registeration Successful, Check your mail box to activate your account', 'success', 60000)
 
       }
     };
-
-    if(isAuthenticated) {
-     return <Redirect to = "/dashboard" />
-     } 
 
       const handleChange = event => {
         const { name, value } = event.target;
@@ -103,13 +98,10 @@ const SignUp = ({ setAlert, signup, isAuthenticated }) => {
 SignUp.propTypes = {
   setAlert: PropTypes.func.isRequired,
   signup: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool,
+  
 }
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.user.isAuthenticated
-  })
 
-export default connect(mapStateToProps,
+export default connect(null,
    {setAlert, signup} )
    (SignUp);

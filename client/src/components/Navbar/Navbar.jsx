@@ -25,6 +25,11 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
       <MenuLink to ='/developers'>
     Developers
     </MenuLink> 
+
+    <MenuLink to ='/posts'>
+    Posts
+    </MenuLink>
+    
     <MenuLink to = "/" onClick={signout}>
         SIGN OUT 
     </MenuLink>
@@ -39,6 +44,9 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
     Developers
     </MenuLink> 
 
+    <MenuLink to ='/posts'>
+    Posts
+    </MenuLink>
     <MenuLink to ='/signup'>
       SignUp
     </MenuLink>
@@ -46,7 +54,11 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
     <MenuLink to ='/signin'>
     SignIn
     </MenuLink>
+
+  
+
   </NavRight>
+  
   );
 
 

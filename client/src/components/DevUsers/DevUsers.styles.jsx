@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
+
 
 export const Container = styled.div`
   background: rgb(5, 91, 94);
@@ -24,8 +26,9 @@ export const Container = styled.div`
 
 
 
-export const Header = styled.h2`
+export const Header = styled(Link)`
   color: white;
+  font-size: 30px;
   margin-top: 15px;
   margin-left: 25px;
   `;

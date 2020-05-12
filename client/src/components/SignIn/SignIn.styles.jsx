@@ -51,3 +51,8 @@ export const SignInFooter = styled(Link)`
   }
 `;
 
+
+export const Password = styled(Link)`
+  font-size: 15px;
+  margin-left: 10px;
+`

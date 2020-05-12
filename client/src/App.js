@@ -9,15 +9,28 @@ import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import ConfirmationPage from './Pages/Confirmation Page/Confirmation Page'
 import DashboardPage from './Pages/DashboardPage/DashboardPage';
 import PostsPage from './Pages/Posts/Posts';
+import Forgot from './Pages/Forgot/Forgot';
+import Reset from './Pages/ResetPassword/Reset';
 import Alert from "./components/Alert/Alert"
 import { loadUser } from './Redux/User/user.actions'
 import setAuthToken from './utils/setAuthToken';
 import store from './Redux/store';
 
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { Zoom  } from 'react-toastify';
+
+
 // if (localStorage.token) {
 //   setAuthToken(localStorage.token);
 // }
+
+
+
+const styles = {
+  marginTop: "80px"
+};
 
 
 const App = () => {
@@ -28,7 +41,7 @@ const App = () => {
   
   return (
     <Fragment>
-     <ToastContainer/>
+     <ToastContainer style= {styles} closeOnClick transition={Zoom}/>
       <Alert />
       <Switch>    
     <Route exact path ='/' component={HomePage}/>
@@ -39,6 +52,8 @@ const App = () => {
    
    <Route exact path ='/dashboard' component={DashboardPage}/>
    <Route exact path ='/posts' component={PostsPage}/>
+   <Route exact path ='/forgotpassword' component={Forgot}/>
+   <Route exact path ='/resetpassword/:token' component={Reset}/>
      
   </Switch>
   

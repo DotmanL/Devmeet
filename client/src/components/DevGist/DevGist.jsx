@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Subheader } from './DevGist.styles';
+import { Container } from './DevGist.styles';
 import PostNav from '../PostNav/PostNav';
 
 

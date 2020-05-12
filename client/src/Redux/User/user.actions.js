@@ -1,7 +1,10 @@
 import axios from 'axios';
 
 import { setAlert } from "../Alert/alert.actions";
-//import setAuthToken from '../../utils/setAuthToken'
+import { toast } from 'react-toastify';
+//import {browserHistory} from '../../history'
+
+
 
 import { 
   SIGN_UP_SUCCESS, 
@@ -11,7 +14,11 @@ import {
   SIGN_IN_FAIL,
   SIGN_OUT,
   ACTIVATION_FAILURE,
-  ACTIVATION_SUCCESS
+  ACTIVATION_SUCCESS, 
+  FORGOT_PASSWORD,
+  FORGOT_PASSWORD_FAILURE,
+  RESET_PASSWORD,
+  RESET_PASSWORD_FAILURE
 } 
   from './user.types';
 
@@ -32,6 +39,7 @@ try {
   dispatch({
     type: AUTH_ERROR
   })
+ 
 }
 }
 
@@ -56,6 +64,7 @@ export const signup = ({name, email, password}) => async dispatch => {
       type: SIGN_UP_SUCCESS,
       payload: res.data
     });
+    toast.success("Registration Successful, Check your mail for activation details", { autoClose: 8000,});
   } catch (err) {
     const errors = err.response.data.errors;
     
@@ -91,8 +100,9 @@ export const signin = ( email, password) => async dispatch => {
       type: SIGN_IN_SUCCESS,
       payload: res.data
     });
+    toast.success("Sign in Successful", { autoClose: 5000,});
     dispatch(loadUser());
-    // dispatch(setAlert("Sign In Successful", "success", 3000))
+    
     
   } catch (err) {
     const errors = err.response.data.errors;
@@ -104,6 +114,7 @@ export const signin = ( email, password) => async dispatch => {
     dispatch({
       type: SIGN_IN_FAIL
     })
+    toast.error("Sign in Failure", { autoClose: 8000,});
   };
 };
 
@@ -115,9 +126,7 @@ export const signout = () => dispatch => {
 
 //Activate account
 
-
-
-export const activate = token => async dispatch => {
+export const activate = (token) => async dispatch => {
   
   const config ={
     headers: {
@@ -133,9 +142,10 @@ export const activate = token => async dispatch => {
     dispatch({
       type: ACTIVATION_SUCCESS,
       payload: res.data
-    });
-    dispatch(setAlert("Activation Successful", "success"))
-    dispatch (signin());
+    })
+    //browserHistory.push('/signin')
+    //dispatch(loadUser());
+    toast.success('Activation Successful, Kindly Sign In with your details',{ autoClose: 8000,})
   } catch (err) {
     const errors = err.response.data.errors;
     
@@ -145,6 +155,82 @@ export const activate = token => async dispatch => {
     dispatch({
       type: ACTIVATION_FAILURE
     })
-    dispatch(setAlert("Activation Failed", "failed"))
+    toast.error('Invalid Token or Expired Token, Kindly Sign Up Again',{ autoClose: 10000,})
+   
+  };
+};
+
+
+
+
+
+//Forgot Password
+
+export const forgot = (email) => async dispatch => {
+  
+  const config ={
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+  
+  const body =JSON.stringify({email});
+
+  try {
+    const res = await axios.put(`/api/users/forgotpassword`, body,  config);
+    
+    dispatch({
+      type: FORGOT_PASSWORD,
+      payload: res.data
+    })
+    toast.success('Check your mail for reset link',{ autoClose: 8000,})
+  } catch (err) {
+    const errors = err.response.data.errors;
+    
+    if (errors) {
+      errors.forEach((error) => console.log(errors));
+    }
+    dispatch({
+      type: FORGOT_PASSWORD_FAILURE
+    })
+    toast.error('User does not exist ',{ autoClose: 10000,})
+   
+  };
+};
+
+
+
+//Reset Password
+
+
+export const reset = (resetPasswordLink, newPassword) => async dispatch => {
+  
+  const config ={
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+  
+  const body =JSON.stringify({resetPasswordLink, newPassword});
+
+  try {
+    const res = await axios.put(`/api/users/resetpassword/:token`, body,  config);
+    
+    dispatch({
+      type:RESET_PASSWORD,
+      payload: res.data
+    })
+    toast.success('Password succesfully changed, Sign in with new password',{ autoClose: 8000,})
+  } catch (err) {
+    const errors = err.response.data.errors;
+    
+    if (errors) {
+      errors.forEach((error) => console.log(errors));
+    }
+    dispatch({
+      type: RESET_PASSWORD_FAILURE
+    })
+    toast.error('Password reset link expired ',{ autoClose: 10000,})
+   
   };
 };

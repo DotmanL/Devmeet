@@ -18,6 +18,11 @@ const UserSchema = new mongoose.Schema({
   avatar: {
     type: String,
   },
+
+  resetPasswordLink: {
+    data: String,
+    default: ''
+},
   date: {
     type: Date,
     default: Date.now,

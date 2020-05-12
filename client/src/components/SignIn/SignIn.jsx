@@ -2,15 +2,14 @@ import React, { useState } from 'react'
 import FormInput from '../form-input/form-input';
 import CustomButton from '../custom-button/custom-button';
 import Logo from '../images/ecs1.jpg';
-import { SignInContainer, SignInTitle, SignInFooter, LogoContainer } from './SignIn.styles';
+import { SignInContainer, SignInTitle, SignInFooter, LogoContainer, Password } from './SignIn.styles';
 import { connect } from 'react-redux';
 import { signin } from '../../Redux/User/user.actions';
 
 import PropTypes from 'prop-types'
-//import { Redirect } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { Redirect } from 'react-router-dom';
 
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -25,10 +24,10 @@ const SignIn = ({ signin, isAuthenticated}) => {
     const { email, password,} = userCredentials;
 
     const handleSubmit = async event => {
-      // event.preventDefault();
-      // setUserCredentials({ email:"", password:"" });
-      // signin(email, password);
-      toast.success("Sign in Successful", { autoClose: 8000,});
+      event.preventDefault();
+      setUserCredentials({ email:"", password:"" });
+      signin(email, password);
+      //toast.success("Sign in Successful", { autoClose: 8000,});
       
     }
 
@@ -42,15 +41,13 @@ const SignIn = ({ signin, isAuthenticated}) => {
 
     //redirect when signed in
 
-// if(isAuthenticated) {
-//   return <Redirect to = "/dashboard" />
-
-// }
+ if(isAuthenticated) {
+   return <Redirect to = "/posts" />
+   }
    
    
     return (  
       <SignInContainer>
-       
          <SignInTitle>SIGN IN</SignInTitle>
           <form onSubmit={handleSubmit} >
           <FormInput
@@ -71,7 +68,8 @@ const SignIn = ({ signin, isAuthenticated}) => {
             required
           />
          
-          <CustomButton type='submit' onClick={handleSubmit}>SIGN IN</CustomButton>
+          <CustomButton type='submit'>SIGN IN</CustomButton>
+          <Password to ='/forgotpassword'>Forgot your Password? </Password>
         
         </form>
         <LogoContainer src={Logo} alt="sign IN" />

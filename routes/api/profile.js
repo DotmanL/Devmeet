@@ -27,7 +27,7 @@ router.get('/me', auth, async (req, res) => {
 		res.status(500).send('Server Error')
 	}
 })
-//@orute     POST api/Profile/me
+//@orute     POST api/Profile/
 // @desc      Create or update user profile
 // @access   Private
 
