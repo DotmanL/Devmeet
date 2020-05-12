@@ -103,9 +103,7 @@ const payload = {
             transporter.verify((error, success) => {
               if(error) {
                 console.error(error)
-              } else {
-                console.log('users ready to mail myself')
-              }
+              } 
             }); 
   
               const mail = {
@@ -192,7 +190,7 @@ const payload = {
           }
         })
           
-      module.exports = router;
+      
 
         
 // @orute     Put api/forgotpassword
@@ -234,22 +232,6 @@ const payload = {
             if(err) throw err;
             res.json({ token })
       
-          
-          //  if(user) {
-          //   user =  User.updateOne({
-          //     resetPasswordLink: token
-          //   })
-          // }
-
-
-          
-          // if(user) {
-          //   user =  User.findOneAndUpdate({
-          //     resetPasswordLink: token
-          //   })
-          // }
-
-
            const transport = {
             host: 'smtp.gmail.com',
             port: 587,
@@ -264,9 +246,7 @@ const payload = {
             transporter.verify((error, success) => {
               if(error) {
                 console.error(error)
-              } else {
-                console.log('users ready to mail myself')
-              }
+              } 
             }); 
   
               const mail = {
@@ -372,3 +352,4 @@ const payload = {
       res.status(500).send('Server error');
     }
     })
+    module.exports = router;

@@ -6,16 +6,23 @@ import {
   Welcome,
   Prof, 
   Proft,
-  Buttons
+  Buttons, 
+  PageContainer
 }
 from './DashboardPage.styles'
+
+import Particles from '../../components/Particles/Particles';
 
 
 const DashboardPage = () => {
   return (
    
-    <Container>
+    <PageContainer>  
+        <Particles />   
        <NavBar />
+     
+       <Container>
+ 
  <Details>
     Dashboard
  </Details>
@@ -27,15 +34,16 @@ const DashboardPage = () => {
  </Prof>
 
  <Prof> 
-   <Proft>Add Experience</Proft>
+   <Proft to='/'>Add Experience</Proft>
  </Prof>
-
-
  <Prof> 
    <Proft>Add Education</Proft>
  </Prof>
  </Buttons>
-    </Container>
+    
+  </Container>
+    </PageContainer>
+ 
    )
  }
 
