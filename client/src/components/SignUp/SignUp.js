@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 
 
 
+
 import { SignUpContainer, SignUpTitle, SignUpFooter, LogoContainer } from './SignUp.styles';
 
 const SignUp = ({ setAlert, signup }) => {
@@ -90,6 +91,7 @@ const SignUp = ({ setAlert, signup }) => {
         </form>
         <LogoContainer src={Logo} alt="sign up" />
             <SignUpFooter to ="/signin">I am already a member</SignUpFooter>  
+      
         </SignUpContainer>
 
     );

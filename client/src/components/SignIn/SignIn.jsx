@@ -42,7 +42,7 @@ const SignIn = ({ signin, isAuthenticated}) => {
     //redirect when signed in
 
  if(isAuthenticated) {
-   return <Redirect to = "/posts" />
+   return <Redirect to = "/dashboard" />
    }
    
    

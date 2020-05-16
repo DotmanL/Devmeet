@@ -14,6 +14,8 @@ import {
     RESET_PASSWORD_FAILURE
   } from './user.types'
 
+  
+
 const initialState = {
   token: localStorage.getItem('token'),
   isAuthenticated: null,

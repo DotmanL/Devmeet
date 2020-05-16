@@ -1,10 +1,23 @@
 
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-//import { ReactComponent as Explore } from '../explore.svg';
-//import { ReactComponent as Avatar } from '../avatar.svg';
-//import { ReactComponent as Compass } from '../compass.svg';
+import {SignOut} from '@styled-icons/octicons/SignOut'
  
+
+
+export const So =styled(SignOut)`
+color: white;
+width: 30px;
+height: 30px;
+margin-left: 10px;
+
+@media screen and ( max-width: 800px) {
+      width: 20px;
+      height: 20px;
+  }
+
+`
+
 export const Nav = styled.div`
   background-color: rgb(5, 91, 94);
   height: 8vh;
@@ -37,7 +50,7 @@ export const NavLeft = styled.div`
   color: white;
   font-size: 10px;
   margin-top: -30px;
-  margin-left: -50px;
+  margin-left: 40px;
 
   @media screen and ( max-width: 800px) {
       margin-left: 100px;
@@ -60,12 +73,12 @@ export const NavRight = styled.div`
     align-items: center;
     justify-content: flex-end;
     font-size: 15px;
-    margin-right: -90px;
+    margin-right: -10px;
     margin-top: -20px;
     
 
     @media screen and ( max-width: 800px) {
-      margin-top: 0px;
+      margin-top: -12px;
       margin-right: 0px;
   }
 

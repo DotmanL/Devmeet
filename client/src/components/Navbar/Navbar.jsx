@@ -5,13 +5,12 @@ import PropTypes from 'prop-types';
 import {
   Nav,
   NavHeader,
-  //NavCenter,
-  //Input,
   NavRight,
   MenuLink,
   NavLeft,
-  TitleLink
-  //Compass,
+  TitleLink,
+  So
+  
   } from './Navbar.styles'
 
 
@@ -22,6 +21,11 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
 
   const userLinks = (
     <NavRight>
+
+<MenuLink to ='/dashboard'>
+    Dashboard
+    </MenuLink>
+
       <MenuLink to ='/developers'>
     Developers
     </MenuLink> 
@@ -31,7 +35,7 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
     </MenuLink>
     
     <MenuLink to = "/" onClick={signout}>
-        SIGN OUT 
+       <So /> SIGN OUT 
     </MenuLink>
     </NavRight>
 

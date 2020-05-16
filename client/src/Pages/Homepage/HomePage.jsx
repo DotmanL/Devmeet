@@ -1,10 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import NavBar  from '../../components/Navbar/Navbar';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+
+
 import { 
  
   Buttons,
-  
   HomePageContainer,
   HomeContent,
   SignUpButton,
@@ -15,7 +18,12 @@ import {
 } from './HomePage.styles'
 
 
-const HomePage = () => {
+const HomePage = ({isAuthenticated}) => {
+
+  if (isAuthenticated){
+    return <Redirect to='/dashboard'/>
+  }
+
   return (
     <HomePageContainer>
       <NavBar />
@@ -35,4 +43,11 @@ const HomePage = () => {
   )
 }
 
-export default HomePage;
+HomePage.propTypes ={
+  isAuthenticated: PropTypes.bool.isRequired,
+}
+
+const mapStateToProps = state => ({
+isAuthenticated: state.user.isAuthenticated
+})
+export default connect(mapStateToProps) (HomePage);

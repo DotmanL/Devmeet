@@ -22,6 +22,7 @@ import {
 } 
   from './user.types';
 
+  import { CLEAR_PROFILE } from '../Profile/profile.types'
 //Load users
 
 export const loadUser = () => async dispatch => {
@@ -118,10 +119,7 @@ export const signin = ( email, password) => async dispatch => {
   };
 };
 
-//SIGN OUT
-export const signout = () => dispatch => {
-  dispatch({ type: SIGN_OUT})
-} 
+
 
 
 //Activate account
@@ -234,3 +232,10 @@ export const reset = (resetPasswordLink, newPassword) => async dispatch => {
    
   };
 };
+
+//SIGN OUT
+export const signout = () => dispatch => {
+  dispatch({ type: CLEAR_PROFILE})
+  dispatch({ type: SIGN_OUT})
+  
+} 
