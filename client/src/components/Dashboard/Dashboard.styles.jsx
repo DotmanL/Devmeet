@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Link } from 'react-router-dom';
+
 
 export const Container = styled.div `
 display: flex;
@@ -10,9 +10,17 @@ background: black;
 border: 2px solid white;
 border-radius: 3px;
 width: 95vw;
-margin-left: 20px;
 height: 700px;
 margin-top: 60px;
+
+@media screen and ( max-width: 800px) {
+      width: 95vw;
+     
+      display: flex;
+align-items: center;
+text-align: center;
+flex-direction: column;
+  }
 `
 export const Details = styled.h2 `
 color: white;
@@ -42,15 +50,56 @@ display: flex;
 margin-top: 0px;
 
 `
-export const Ibutton = styled.button `
-background: greenyellow;
-width: 120px;
-height: 40px;
-border-radius: 5px;
-font-size: 18px;
-text-align: center;
-padding-top: 5px;
-color: black;
+export const Button = styled.button `
+border: 3px solid black;
+  border-radius: 4px;
+  width: 162px;
+  height: 51px;
+  border: 2px solid #fff;
+  margin: auto;
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: green;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat-SemiBold";
 
-`
+  &:hover {
+    opacity: 0.5;
+  }
+  @media screen and ( max-width: 800px) {
+      width: 80px;
+      font-size: 10px;
+  }
+
+ `
+
+ export const Add = styled.div`
+ display: flex;
+ align-items: center;
+ flex-direction: row;
+ justify-content: center;
+ margin-top: 80px;
+
+ @media screen and ( max-width: 800px) {
+  display: flex;
+ align-items: center;
+ flex-direction: row;
+ justify-content: center;
+  }
+ `
+
+ export const EditButton= styled(Button)`
+  margin-left: 30px;
+  @media screen and ( max-width: 800px) {
+  margin-left: 10px;
+  }
+  
+ ` 
+
+
 

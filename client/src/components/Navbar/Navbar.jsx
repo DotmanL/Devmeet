@@ -35,8 +35,10 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
     </MenuLink>
     
     <MenuLink to = "/" onClick={signout}>
-       <So /> SIGN OUT 
+     SIGN OUT 
     </MenuLink>
+    <So to = "/" onClick={signout} > 
+    Sign Out </So>
     </NavRight>
 
   )

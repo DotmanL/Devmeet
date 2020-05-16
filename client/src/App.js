@@ -56,7 +56,7 @@ const App = () => {
    <Route exact path ='/signin' component={SignInPage}/>
    <Route exact path ='/verifyaccount/:token' component={ConfirmationPage}/>
    
-   <PrivateRoute exact path ='/dashboard' component={DashboardPage}/>
+   <Route exact path ='/dashboard' component={DashboardPage}/>
    <Route exact path ='/posts' component={PostsPage}/>
    <Route exact path ='/forgotpassword' component={Forgot}/>
    <Route exact path ='/resetpassword/:token' component={Reset}/>

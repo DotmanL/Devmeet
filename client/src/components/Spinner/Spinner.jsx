@@ -10,7 +10,7 @@ const override = css`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 200px auto;
+  margin: 400px auto;
   border-color: red;
 `;
 const Spinner = () => {
@@ -20,7 +20,7 @@ const Spinner = () => {
         <BeatLoader
           css={override}
           size={50}
-          color={"#123abc"}
+          color={"#FFFFFF"}
           
         />
       </div> 

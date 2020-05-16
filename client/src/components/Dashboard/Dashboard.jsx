@@ -9,9 +9,11 @@ import {Container,
 Details,
 Welcome,
 Create,
-
 Intro,
-Ibutton,
+Button,
+Add,
+EditButton
+
 } from './Dashboard.styles';
 
 const Dashboard = ({ 
@@ -37,12 +39,25 @@ const Dashboard = ({
 
  {profile !== null ? <Fragment>has</Fragment> : <Create>
    <Intro> You have not setup a profile, please add some info</Intro>
-    <Ibutton as="a" href="/create-profile">Create Profile</Ibutton>
+    <Button as="a" href="/create-profile">Create Profile</Button>
  
   </Create>}
 
+ <Add>
+  <EditButton as="a" href="/edit-profile">
+    Edit Profile
+  </EditButton>
 
-  
+  <EditButton as="a" href="/add-experience">
+    Add Experience
+  </EditButton>
+
+  <EditButton as="a" href="/add-education">
+    Add Education
+  </EditButton>
+
+ </Add>
+
 
   </Container>
  

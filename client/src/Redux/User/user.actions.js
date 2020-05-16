@@ -22,7 +22,7 @@ import {
 } 
   from './user.types';
 
-  import { CLEAR_PROFILE } from '../Profile/profile.types'
+  import { CLEAR_PROFILE } from '../Profile/profile.types';
 //Load users
 
 export const loadUser = () => async dispatch => {
@@ -103,6 +103,7 @@ export const signin = ( email, password) => async dispatch => {
     });
     toast.success("Sign in Successful", { autoClose: 5000,});
     dispatch(loadUser());
+    //dispatch(getCurrentProfile());
     
     
   } catch (err) {

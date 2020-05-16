@@ -10,6 +10,7 @@ color: white;
 width: 30px;
 height: 30px;
 margin-left: 10px;
+cursor: pointer;
 
 @media screen and ( max-width: 800px) {
       width: 20px;
