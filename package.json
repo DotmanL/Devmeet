@@ -35,7 +35,8 @@
     "passport-jwt": "^4.0.0",
     "pug": "^2.0.4",
     "react-icons": "^3.10.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "styled-table-component": "^4.0.0"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",

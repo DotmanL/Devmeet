@@ -9,7 +9,12 @@ import {
   MenuLink,
   NavLeft,
   TitleLink,
-  So
+  So,
+  Sos, 
+  MenuLinkD, 
+  MenuLinkS,
+  Dash,
+  DashB
   
   } from './Navbar.styles'
 
@@ -22,23 +27,30 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
   const userLinks = (
     <NavRight>
 
-<MenuLink to ='/dashboard'>
-    Dashboard
-    </MenuLink>
-
       <MenuLink to ='/developers'>
     Developers
     </MenuLink> 
 
     <MenuLink to ='/posts'>
-    Posts
+    Posts  |
     </MenuLink>
-    
-    <MenuLink to = "/" onClick={signout}>
+
+
+    <MenuLinkD to ='/dashboard'>
+    <DashB title="Dashboard" to='/dashboard'/>
+    Dashboard
+    </MenuLinkD>
+
+  <Dash title="Dashboard" to='/dashboard'/>
+
+
+    <MenuLinkS to = "/" onClick={signout}>
      SIGN OUT 
-    </MenuLink>
-    <So to = "/" onClick={signout} > 
-    Sign Out </So>
+    <So to = "/" title="Sign Out" onClick={signout} /> 
+    </MenuLinkS>
+
+    <Sos to = "/" title="Sign Out" onClick={signout} />
+
     </NavRight>
 
   )
@@ -50,9 +62,6 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
     Developers
     </MenuLink> 
 
-    <MenuLink to ='/posts'>
-    Posts
-    </MenuLink>
     <MenuLink to ='/signup'>
       SignUp
     </MenuLink>

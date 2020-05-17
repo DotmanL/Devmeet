@@ -7,9 +7,10 @@ require('dotenv').config()
 
 if (process.env.NODE_ENV !== 'production') require ('dotenv').config();
 
-
 //Connect Database
 connectDB();
+
+
 app.use(express.json({ extended: false }));
 app.get('/', (req, res) => res.send('API Running'));
 app.use(bodyParser.json());

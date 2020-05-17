@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import {SignOut} from '@styled-icons/octicons/SignOut'
+import {Dashboard} from '@styled-icons/boxicons-solid/Dashboard'
  
 
 
@@ -15,9 +16,61 @@ cursor: pointer;
 @media screen and ( max-width: 800px) {
       width: 20px;
       height: 20px;
+      display: none
+  }
+`
+
+export const Sos =styled(SignOut)`
+color: white;
+width: 30px;
+height: 30px;
+margin-left: 10px;
+cursor: pointer;
+display:none;
+
+@media screen and ( max-width: 800px) {
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      margin-left: -13px;
+      margin-top: 3px;
+
+  }
+`
+
+export const Dash =styled(Dashboard)`
+color: white;
+width: 30px;
+height: 30px;
+margin-left: 30px;
+cursor: pointer;
+display: none;
+
+@media screen and ( max-width: 800px) {
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      margin-left: -5px;
   }
 
 `
+
+export const DashB =styled(Dashboard)`
+color: white;
+width: 30px;
+height: 30px;
+margin-left: -5px;
+cursor: pointer;
+
+@media screen and ( max-width: 800px) {
+      width: 20px;
+      height: 20px;
+      display: none;
+  }
+
+
+`
+
 
 export const Nav = styled.div`
   background-color: rgb(5, 91, 94);
@@ -54,9 +107,9 @@ export const NavLeft = styled.div`
   margin-left: 40px;
 
   @media screen and ( max-width: 800px) {
-      margin-left: 100px;
+      margin-left: 60vw;
       font-size: 20px;
-      margin-top: -8px;
+      margin-top: -35px;
   }
 
 `;
@@ -76,11 +129,11 @@ export const NavRight = styled.div`
     font-size: 15px;
     margin-right: -10px;
     margin-top: -20px;
-    
+  
 
     @media screen and ( max-width: 800px) {
-      margin-top: -12px;
-      margin-right: 0px;
+      margin-top: 3px;
+      margin-left: -320px;
   }
 
     
@@ -112,6 +165,19 @@ export const MenuLink = styled(Link)`
 `;
 
 
+export const MenuLinkS =styled(MenuLink)`
+
+@media screen and ( max-width: 800px) {
+      display: none;
+  }
+`
+
+export const MenuLinkD =styled(MenuLink)`
+
+@media screen and ( max-width: 800px) {
+      display: none;
+  }
+`
 
 export const TitleLink = styled(Link)`
  color: white;

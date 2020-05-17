@@ -5,12 +5,13 @@ display: flex;
 align-items: center;
 justify-content: center;
 text-align: center;
-background: grey;
+background: black;
 flex-direction: column;
 margin: 90px auto;
-width: 60vw;
+width: 80vw;
 height: 50vh;
 border-radius: 10px;
+border: 2px dashed white;
 `
 
 export const Title = styled.h2 `

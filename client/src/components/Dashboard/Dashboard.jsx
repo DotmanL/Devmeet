@@ -37,13 +37,10 @@ const Dashboard = ({
  </Details>
    <Welcome>Welcome {user && user.name}</Welcome>
 
- {profile !== null ? <Fragment>has</Fragment> : <Create>
-   <Intro> You have not setup a profile, please add some info</Intro>
-    <Button as="a" href="/create-profile">Create Profile</Button>
- 
-  </Create>}
+ {profile !== null ? <Fragment>
 
- <Add>
+
+  <Add>
   <EditButton as="a" href="/edit-profile">
     Edit Profile
   </EditButton>
@@ -57,6 +54,13 @@ const Dashboard = ({
   </EditButton>
 
  </Add>
+ 
+ </Fragment> : <Create>
+   <Intro> You have not setup a profile, please add some info</Intro>
+    <Button as="a" href="/create-profile">Create Profile</Button>
+ 
+  </Create>}
+
 
 
   </Container>

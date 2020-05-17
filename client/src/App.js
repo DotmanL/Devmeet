@@ -14,6 +14,7 @@ import Forgot from './Pages/Forgot/Forgot';
 import Reset from './Pages/ResetPassword/Reset';
 import CreateProfile from './components/Profile-form/CreateProfile';
 
+
 import Alert from "./components/Alert/Alert"
 import PrivateRoute from './components/Routes/PrivateRoute';
 
@@ -56,11 +57,12 @@ const App = () => {
    <Route exact path ='/signin' component={SignInPage}/>
    <Route exact path ='/verifyaccount/:token' component={ConfirmationPage}/>
    
-   <Route exact path ='/dashboard' component={DashboardPage}/>
+   <PrivateRoute exact path ='/dashboard' component={DashboardPage}/>
    <Route exact path ='/posts' component={PostsPage}/>
    <Route exact path ='/forgotpassword' component={Forgot}/>
    <Route exact path ='/resetpassword/:token' component={Reset}/>
    <PrivateRoute exact path ='/create-profile' component={CreateProfile}/>
+   <PrivateRoute exact path ='/edit-profile' component={CreateProfile}/>
      
   </Switch>
   
