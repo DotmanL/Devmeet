@@ -11,18 +11,17 @@ margin-top: 80px;
 border-radius: 10px;
 border: 3px solid white;
 background: black;
-height: 900px;
-width: 80%;
-margin-left: 120px;
+height: 1000px;
+width: 1000px;
+margin-right: auto;
+margin-left: auto;
 margin-top: 90px;
 
 @media screen and (max-width: 800px) {
-   width: 445px;
-   height: 1320px;
-   margin-left: 40px;
-   display: flex;
-   justify-content: center;
-   flex-direction: row;
+   width: 135vw;
+   height: 1530px;
+   margin-bottom: 10px;
+   margin-left: 7px;
 ;
 }
 `
@@ -30,6 +29,7 @@ export const Title = styled.h1`
 font-size: 30px;
 color: white;
 margin-left: 40px;
+margin-top: -120px;
 
 `
 
@@ -42,16 +42,18 @@ margin-left: 40px;
 
 
 export const FormContainer = styled.div`
-margin-top: 20px;
+margin-top: 150px;
 background: black;
-height: 750px;
-width: 95%;
+height: 800px;
+width: 94%;
 margin-left: 20px;
+justify-content: space-between;
+
 
 @media screen and (max-width: 800px) {
-   width: 345px;
-   margin-left: 0px;
-   height: 1280px;
+   width: 110vw;
+   margin-left: 40px;
+   height: 1480px;
   
 }
 ;
@@ -75,12 +77,17 @@ export const Select = styled.select`
     min-height: 20px;
     padding: 0px 2px 1px;
   }
+
+  @media screen and (max-width: 800px) {
+   width: 80%;
+}
   `
 
   export const SmallText =styled.h6`
   font-size: 10px;
   margin-left: 34px;
   color: white;
+  margin-top: -2px;
   `
 
   export const FormInput =styled.input`
@@ -91,6 +98,10 @@ export const Select = styled.select`
   border-radius: 5px;
   margin-top: 15px;
   border: 1px solid black;
+
+  @media screen and (max-width: 800px) {
+   width: 80%;
+}
   `
 
 export const FormInputText =styled.textarea`
@@ -101,6 +112,10 @@ margin-left: 30px;
 border-radius: 5px;
 margin-top: 15px;
 border: 1px solid black;
+@media screen and (max-width: 800px) {
+   width: 80%;
+   height: 45px;
+}
 `
 
 export const FormInputS =styled.input`
@@ -128,6 +143,7 @@ height: 30px;
 width: 22%;
 text-align: center;
 background: white;
+font-size: 12px;
 
 
 @media screen and (max-width: 800px) {
@@ -299,3 +315,16 @@ font-size: 20px
 
 
 `
+
+// export const Image = styled.div `
+// width: 220px;
+// height: 220px;
+// margin-left: 60vw;
+// display: flex;
+// flex-direction: column;
+// justify-content: flex-end;
+// margin-top: -1000px;
+// border: 2px solid white;
+// background: blue;
+
+// `

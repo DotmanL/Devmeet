@@ -14,7 +14,7 @@ import {
     RESET_PASSWORD_FAILURE
   } from './user.types'
 
-  
+  import { DELETE_ACCOUNT } from '../Profile/profile.types'
 
 const initialState = {
   token: localStorage.getItem('token'),
@@ -65,6 +65,7 @@ case SIGN_IN_SUCCESS:
   case ACTIVATION_FAILURE:  
   case FORGOT_PASSWORD_FAILURE:
   case RESET_PASSWORD_FAILURE: 
+  case DELETE_ACCOUNT:
      //localStorage.removeItem('token')
     return {
       ...state,

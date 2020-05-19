@@ -4,19 +4,23 @@ import {Link } from 'react-router-dom';
 export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 350px;
   margin-left: 20px;
   margin-bottom: 0px;
   margin-top: 20px;
+  
+  @media screen and (max-width: 800px) {
+  width: 300px;
+  }
 `;
 
 export const LogoContainer = styled.img`
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 390px;
   height: 350px;
-  margin-top: -320px;
-  margin-left: 400px;
+  margin-top: -370px;
+  margin-left: 420px;
   
 
   @media screen and (max-width: 800px) {
@@ -35,14 +39,16 @@ export const SignInTitle = styled.h1`
   @media screen and (max-width: 800px) {
   flex-direction: column;
   margin-left: 25%;
+  color: black;
 
   }
 `;
 
 export const SignInFooter = styled(Link)`
   width: 200px;
-  margin-left: 500px;
+  margin-left: 550px;
   margin-top: 0px;
+  color: rgb(5, 91, 94);
 
   
   @media screen and (max-width: 800px) {
@@ -55,4 +61,5 @@ export const SignInFooter = styled(Link)`
 export const Password = styled(Link)`
   font-size: 15px;
   margin-left: 10px;
+  color:rgb(5, 91, 94);
 `

@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import FormInput from '../form-input/form-input';
 import CustomButton from '../custom-button/custom-button';
 import Logo from '../images/ecs2.jpg';
-//import axios from 'axios'
 import { connect } from 'react-redux';
-import { setAlert } from '../../Redux/Alert/alert.actions' ;
+import { toast } from 'react-toastify';
 import { signup } from '../../Redux/User/user.actions'
 import PropTypes from 'prop-types';
 
@@ -13,7 +12,7 @@ import PropTypes from 'prop-types';
 
 import { SignUpContainer, SignUpTitle, SignUpFooter, LogoContainer } from './SignUp.styles';
 
-const SignUp = ({ setAlert, signup }) => {
+const SignUp = ({ signup }) => {
 
   const [ userCredentials, setUserCredentials] = useState({
       name: '',
@@ -31,7 +30,7 @@ const SignUp = ({ setAlert, signup }) => {
       setUserCredentials({ name: '', email: '', password: '', confirmPassword: ''})
   
       if (password !== confirmPassword) {
-        setAlert("passwords don't match", 'danger');
+        toast.error("passwords don't match", 'danger');
       } else {
        signup({ name, email, password });
 
@@ -98,12 +97,11 @@ const SignUp = ({ setAlert, signup }) => {
   }
 
 SignUp.propTypes = {
-  setAlert: PropTypes.func.isRequired,
   signup: PropTypes.func.isRequired,
   
 }
 
 
 export default connect(null,
-   {setAlert, signup} )
+   {signup} )
    (SignUp);

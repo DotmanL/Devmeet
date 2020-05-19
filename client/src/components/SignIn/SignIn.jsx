@@ -72,7 +72,7 @@ const SignIn = ({ signin, isAuthenticated}) => {
           <Password to ='/forgotpassword'>Forgot your Password? </Password>
         
         </form>
-        <LogoContainer src={Logo} alt="sign IN" />
+        <LogoContainer src={Logo} alt="sign in" />
             <SignInFooter to ="/signup">I don't have a account </SignInFooter>  
         </SignInContainer>
   )

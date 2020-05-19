@@ -1,6 +1,7 @@
 import React, {Fragment, useEffect} from 'react';
 
-import './App.css';
+//import './App.css';
+import { GlobalStyle } from './global.styles';
 import { Switch, Route,} from 'react-router-dom';
 import "animate.css/animate.min.css";
 
@@ -13,9 +14,10 @@ import PostsPage from './Pages/Posts/Posts';
 import Forgot from './Pages/Forgot/Forgot';
 import Reset from './Pages/ResetPassword/Reset';
 import CreateProfile from './components/Profile-form/CreateProfile';
+import AddExperience from './components/Profile-form/AddExperience';
+import AddEducation from './components/Profile-form/AddEducation';
 
 
-import Alert from "./components/Alert/Alert"
 import PrivateRoute from './components/Routes/PrivateRoute';
 
 import { loadUser } from './Redux/User/user.actions'
@@ -26,6 +28,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Zoom  } from 'react-toastify';
+
 
 
 
@@ -48,8 +51,9 @@ const App = () => {
   
   return (
     <Fragment>
+      <GlobalStyle />
      <ToastContainer style= {styles} closeOnClick transition={Zoom}/>
-      <Alert />
+  
       <Switch>    
     <Route exact path ='/' component={HomePage}/>
    <Route exact path ='/signup' component={SignUpPage}/>
@@ -63,6 +67,8 @@ const App = () => {
    <Route exact path ='/resetpassword/:token' component={Reset}/>
    <PrivateRoute exact path ='/create-profile' component={CreateProfile}/>
    <PrivateRoute exact path ='/edit-profile' component={CreateProfile}/>
+   <PrivateRoute exact path ='/add-experience' component={AddExperience}/>
+   <PrivateRoute exact path ='/add-education' component={AddEducation}/>
      
   </Switch>
   

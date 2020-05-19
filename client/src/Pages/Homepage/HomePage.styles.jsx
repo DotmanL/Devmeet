@@ -7,7 +7,7 @@ flex-direction: column;
 height: 100vh;
 align-items: center;
 position: relative;
-padding-top: 20px;
+padding-top: 40px;
 text-align: center;
 background: rgb(5, 91, 94);
 `
@@ -27,6 +27,7 @@ export const HomeContent = styled.div`
   height: 100vh;
   margin-bottom: 20px;
   margin-top: 50px;
+  border: 3px solid white;
  
   @media screen and (max-width: 800px) {
     background-size: cover;

@@ -44,7 +44,7 @@ const HomePage = ({isAuthenticated}) => {
 }
 
 HomePage.propTypes ={
-  isAuthenticated: PropTypes.bool.isRequired,
+  isAuthenticated: PropTypes.bool,
 }
 
 const mapStateToProps = state => ({

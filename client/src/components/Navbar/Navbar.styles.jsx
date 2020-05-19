@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import {SignOut} from '@styled-icons/octicons/SignOut'
-import {Dashboard} from '@styled-icons/boxicons-solid/Dashboard'
- 
+
+ import {Profile} from '@styled-icons/remix-fill/Profile'
 
 
 export const So =styled(SignOut)`
@@ -38,7 +38,7 @@ display:none;
   }
 `
 
-export const Dash =styled(Dashboard)`
+export const Dash =styled(Profile)`
 color: white;
 width: 30px;
 height: 30px;
@@ -55,7 +55,7 @@ display: none;
 
 `
 
-export const DashB =styled(Dashboard)`
+export const DashB =styled(Profile)`
 color: white;
 width: 30px;
 height: 30px;
@@ -107,9 +107,9 @@ export const NavLeft = styled.div`
   margin-left: 40px;
 
   @media screen and ( max-width: 800px) {
-      margin-left: 60vw;
+      margin-left: 70%;
       font-size: 20px;
-      margin-top: -35px;
+      margin-top: -45px;
   }
 
 `;
@@ -125,6 +125,7 @@ export const NavRight = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: flex-end;
     font-size: 15px;
     margin-right: -10px;
@@ -133,7 +134,8 @@ export const NavRight = styled.div`
 
     @media screen and ( max-width: 800px) {
       margin-top: 3px;
-      margin-left: -320px;
+      margin-left: -105%;
+      
   }
 
     

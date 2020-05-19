@@ -7,8 +7,12 @@ export const SignInPageContainer = styled.div`
   width: 850px;
   display: flex;
   justify-content: space-between;
-  margin: 80px auto;
- 
+  margin-top: 70px;
+  margin-right: auto;
+margin-left: auto;
+margin-bottom: 20px;
+border: 3px solid black 0.9;
+
   @media screen and (max-width: 800px) {
    width: 345px;
   align-items: center;

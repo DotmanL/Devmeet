@@ -6,7 +6,7 @@ export const SignUpContainer = styled.div`
   flex-direction: column;
   width: 350px;
   margin-left: 40px;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
   margin-top: -10px;
   @media screen and (max-width: 800px) {
   width: 300px;
@@ -44,7 +44,7 @@ export const SignUpFooter = styled(Link)`
   width: 200px;
   margin-left: 500px;
   margin-top: 0px;
-
+  color:rgb(5, 91, 94);
   
   @media screen and (max-width: 800px) {
   margin-left: 0px;

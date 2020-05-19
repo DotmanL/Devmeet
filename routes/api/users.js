@@ -341,7 +341,7 @@ const payload = {
                 })
               }
               res.json({
-                message: `Great! Now you can login with your new password`,
+                message: `Great! Now you can Sign in with your new password`,
               })
             })
           })

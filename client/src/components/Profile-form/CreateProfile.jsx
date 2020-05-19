@@ -28,7 +28,9 @@ import {
   Ig,
   Scontainer,
   Bcontainer,
+  //Image
 } from './CreateProfile.styles'
+import { Prof } from '../Dashboard/Dashboard.styles'
 
 const initialState = {
   company: '',
@@ -103,9 +105,12 @@ const CreateProfile = ({
       <NavBar />
 
       <Container>
+     
         <FormContainer>
+       
           <Title>Create Your Profile</Title>
           <SubTitle>
+            <Prof />
             Let's get some information to make your profile stand out
           </SubTitle>
 
@@ -253,7 +258,9 @@ const CreateProfile = ({
             </Bcontainer>
           </form>
         </FormContainer>
+        {/* <Image></Image> */}
       </Container>
+     
     </div>
   )
 }

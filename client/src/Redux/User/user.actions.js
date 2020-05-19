@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import { setAlert } from "../Alert/alert.actions";
+
 import { toast } from 'react-toastify';
-//import {browserHistory} from '../../history'
+
 
 
 
@@ -70,7 +70,7 @@ export const signup = ({name, email, password}) => async dispatch => {
     const errors = err.response.data.errors;
     
     if (errors) {
-      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+      errors.forEach((error) =>(toast.error (error.msg)));
     }
    
     dispatch({
@@ -110,8 +110,9 @@ export const signin = ( email, password) => async dispatch => {
     const errors = err.response.data.errors;
     
     if (errors) {
-      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+      errors.forEach((error) =>(toast.error (error.msg)));
     }
+   
    
     dispatch({
       type: SIGN_IN_FAIL
@@ -147,10 +148,10 @@ export const activate = (token) => async dispatch => {
     toast.success('Activation Successful, Kindly Sign In with your details',{ autoClose: 8000,})
   } catch (err) {
     const errors = err.response.data.errors;
-    
     if (errors) {
-      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+      errors.forEach((error) =>(toast.error (error.msg)));
     }
+   
     dispatch({
       type: ACTIVATION_FAILURE
     })

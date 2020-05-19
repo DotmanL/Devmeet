@@ -10,7 +10,7 @@ const override = css`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 400px auto;
+  margin: 300px auto;
   border-color: red;
 `;
 const Spinner = () => {
