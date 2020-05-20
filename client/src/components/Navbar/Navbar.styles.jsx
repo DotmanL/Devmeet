@@ -107,7 +107,7 @@ export const NavLeft = styled.div`
   margin-left: 40px;
 
   @media screen and ( max-width: 800px) {
-      margin-left: 70%;
+      margin-left: 50%;
       font-size: 20px;
       margin-top: -45px;
   }

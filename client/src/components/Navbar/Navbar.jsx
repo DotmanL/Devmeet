@@ -27,7 +27,7 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
   const userLinks = (
     <NavRight>
 
-      <MenuLink to ='/developers'>
+      <MenuLink to ='/profiles'>
     Developers
     </MenuLink> 
 
@@ -58,7 +58,7 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
   const guestLinks =(
     
     <NavRight>
-      <MenuLink to ='/developers'>
+   <MenuLink to ='/profiles'>
     Developers
     </MenuLink> 
 

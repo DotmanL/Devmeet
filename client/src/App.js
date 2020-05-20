@@ -16,6 +16,9 @@ import Reset from './Pages/ResetPassword/Reset';
 import CreateProfile from './components/Profile-form/CreateProfile';
 import AddExperience from './components/Profile-form/AddExperience';
 import AddEducation from './components/Profile-form/AddEducation';
+import Profiles from './components/Profiles/Profiles'
+import Profile from './components/Profile/Profile'
+
 
 
 import PrivateRoute from './components/Routes/PrivateRoute';
@@ -60,7 +63,10 @@ const App = () => {
    
    <Route exact path ='/signin' component={SignInPage}/>
    <Route exact path ='/verifyaccount/:token' component={ConfirmationPage}/>
-   
+   <Route exact path ='/profiles' component={Profiles}/>
+
+   <Route exact path ='/profile/:id' component={Profile}/>
+
    <PrivateRoute exact path ='/dashboard' component={DashboardPage}/>
    <Route exact path ='/posts' component={PostsPage}/>
    <Route exact path ='/forgotpassword' component={Forgot}/>
