@@ -10,7 +10,8 @@ import {
   Location,
   List,
   PButton,
-  Ch
+  Ch,
+  ListL
 } from './ProfileItem.styles';
 
 const ProfileItem = ({profile: {
@@ -37,13 +38,13 @@ const ProfileItem = ({profile: {
    View Profile
    </PButton>
       <List>
-      <ul style={{'listStyle': 'none'}}>
+      <ListL>
       {skills.slice(0, 4).map((skill, index) => (
-        <li  key ={index}>
+        <li key ={index}>
             <Ch />{skill}
         </li>
       ))}
-      </ul>
+      </ListL>
       </List>
     
       </DevContainer>

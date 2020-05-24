@@ -16,7 +16,7 @@ export const Container = styled.div`
   align-items: center;
 
   @media screen and (max-width: 800px) {
-    width: 135vw;
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,6 +118,7 @@ export const Icons = styled.div`
     justify-content: space-evenly;
     flex-direction: row;
     margin-top: 20px;
+    width: 80vw;
   }
 `
 

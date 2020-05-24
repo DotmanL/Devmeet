@@ -20,7 +20,6 @@ margin-bottom: 20px;
 
 
 @media screen and ( max-width: 800px) {
-      width: 125vw;
       margin-left: auto;
       margin-right: auto;
       margin-top: 120px;

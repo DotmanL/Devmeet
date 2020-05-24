@@ -27,7 +27,7 @@ border: 3px solid black;
   font-family: "Montserrat-SemiBold";
 
   @media screen and ( max-width: 800px) {
-      margin-top: 90px;  
+      margin-top: 10px;  
       margin-left: 0px;
         
   }
@@ -66,8 +66,8 @@ margin: 80px auto;
 width: 95vw;
 
 @media screen and ( max-width: 800px) {
-      width: 145vw;
-      margin-top: 40px;
+      
+      margin-top: 90px;
   }
 `
 
@@ -81,7 +81,7 @@ margin: 20px auto;
 width: 95vw;
 
 @media screen and ( max-width: 800px) {
-      width: 125vw;
+    
       display: flex;
 flex-direction: column;
 align-items: center;    
@@ -108,10 +108,11 @@ margin: 20px auto;
 width: 45vw;
 
 @media screen and ( max-width: 800px) {
-      width: 125vw;
+  width: 80vw;
       display: flex;
 flex-direction: column;
 align-items: center;    
+text-align: center; 
   }
 `
 
@@ -126,10 +127,12 @@ border-radius: 6px;
 margin: 20px auto;
 width: 45vw;
 @media screen and ( max-width: 800px) {
-      width: 125vw;
+     
+  width: 80vw;
       display: flex;
 flex-direction: column;
-align-items: center;    
+align-items: center; 
+text-align: center;   
   }
 `
 export const Nec = styled.h2`

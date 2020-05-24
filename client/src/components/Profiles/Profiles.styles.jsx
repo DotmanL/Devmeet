@@ -3,16 +3,20 @@ import {SearchAlt} from '@styled-icons/boxicons-regular/SearchAlt'
 
 
 export const Container = styled.div`
-width: 850px;
+width: 85vw;
 border: 3px solid white;
 margin-right: auto;
 margin-left: auto;
 margin-top: 120px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 
 @media screen and (max-width: 800px) {
- font-size: 20px;
+
+  font-size: 20px;
  margin-top: 70px;
- width: 100vw;
  border: 0px;
 }
 `
@@ -25,24 +29,23 @@ height: 30px;
 export const Title = styled.h1`
 font-size: 30px;
 color: white;
-margin-left: 50px;
+
 margin-top: 20px;
 
 @media screen and (max-width: 800px) {
  font-size: 25px;
- margin-top: 95px;
+ margin-top: 5px;
 }
 `
 
 export const SubTitle = styled.h3`
 font-size: 30px;
 color: white;
-margin-left: 40px;
 margin-top: -20px;
 
 @media screen and (max-width: 800px) {
   margin-top: -10px;
-  font-size: 15px;
+  font-size: 13px;
 }
 `
 
@@ -56,6 +59,5 @@ margin-left: 40px;
 export const ProfilesL = styled.div`
  display: flex;
  flex-direction: column;
- align-content: center;
- justify-content: center;
+
 `

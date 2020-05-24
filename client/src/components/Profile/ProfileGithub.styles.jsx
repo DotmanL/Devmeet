@@ -12,7 +12,7 @@ padding-bottom: 20px;
 padding-right: 10px;
 
 @media screen and (max-width: 800px) {
-    width: 135vw;
+    
     display: flex;
     align-items: center;
     justify-content: center;
