@@ -100,7 +100,7 @@ const CreateProfile = ({
   }
 
   return (
-    <div>
+    <Fragment>
       <NavBar />
 
       <Container>
@@ -253,14 +253,14 @@ const CreateProfile = ({
 
             <Bcontainer>
               <Button type="submit"> Submit</Button>
-              <Boptional to="/dashboard">Go Back</Boptional>
+              <Boptional to="/dashboard">Back</Boptional>
             </Bcontainer>
           </form>
         </FormContainer>
         {/* <Image></Image> */}
       </Container>
      
-    </div>
+      </Fragment>
   )
 }
 

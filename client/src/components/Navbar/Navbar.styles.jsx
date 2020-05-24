@@ -29,7 +29,7 @@ display:none;
       width: 25px;
       height: 25px;
       display: inline-block;
-      margin-left: -13px;
+      margin-left: 5px;
       margin-top: 3px;
   }
 `

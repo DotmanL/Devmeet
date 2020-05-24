@@ -7,22 +7,15 @@ import {Instagram} from "@styled-icons/boxicons-logos/Instagram";
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-margin-top: 80px;
 border-radius: 10px;
 border: 3px solid white;
 background: black;
-height: 1000px;
-width: 1000px;
-margin-right: auto;
-margin-left: auto;
-margin-top: 90px;
+width: 95vw;
+margin: 90px auto;
+padding-bottom: 50px;
 
 @media screen and (max-width: 800px) {
-   width: 135vw;
-   height: 1530px;
-   margin-bottom: 10px;
-   margin-left: 7px;
-
+width: 95vw;
 }
 `
 export const Title = styled.h1`
@@ -30,7 +23,6 @@ font-size: 30px;
 color: white;
 margin-left: 40px;
 margin-top: -120px;
-
 `
 
 export const SubTitle = styled.h3`
@@ -44,23 +36,18 @@ margin-left: 40px;
 export const FormContainer = styled.div`
 margin-top: 150px;
 background: black;
-height: 800px;
-width: 94%;
+
+width: 85vw;
 margin-left: 20px;
 justify-content: space-between;
-
-
 @media screen and (max-width: 800px) {
-   width: 110vw;
-   margin-left: 40px;
-   height: 1480px;
-  
+ width: 85vw;
 }
 ;
 `
 
 export const Select = styled.select`
-  width: 50%;
+  width: 50vw;
   height: 35px;
   background: white;
   color: gray;
@@ -77,9 +64,8 @@ export const Select = styled.select`
     min-height: 20px;
     padding: 0px 2px 1px;
   }
-
   @media screen and (max-width: 800px) {
-   width: 80%;
+ 
 }
   `
 
@@ -91,46 +77,41 @@ export const Select = styled.select`
   `
 
   export const FormInput =styled.input`
-  width: 50%;
+  width: 50vw;
   height: 35px;
   background: white;
   margin-left: 30px;
   border-radius: 5px;
   margin-top: 15px;
   border: 1px solid black;
-
   @media screen and (max-width: 800px) {
-   width: 80%;
+    width: 70vw;
 }
   `
 
 export const FormInputText =styled.textarea`
-width: 50%;
-height: 35px;
+width: 50vw;
+height: 60px;
 background: white;
 margin-left: 30px;
 border-radius: 5px;
 margin-top: 15px;
 border: 1px solid black;
 @media screen and (max-width: 800px) {
-   width: 80%;
-   height: 45px;
+  width: 70vw;
 }
 `
 
 export const FormInputS =styled.input`
-  width: 50%;
+  width: 130px;
   height: 35px;
   background: white;
   margin-left: 10px;
   border-radius: 5px;
   margin-top: 25px;
   border: 1px solid black;
-
   @media screen and (max-width: 800px) {
-   width: 175px;
-   margin-left: 15px;
-   margin-top: 6px
+    width: 70vw;
 }
   `
 
@@ -140,30 +121,24 @@ border-radius: 3px;
 cursor: pointer;
 margin-top: 30px;
 height: 30px;
-width: 22%;
+width: 15vw;
 text-align: center;
 background: white;
 font-size: 12px;
-
-
 @media screen and (max-width: 800px) {
-   font-size: 10px;
-   height: 50px;
-    width: 70px;
-   margin-left: 30px;
+width: 40vw;
+margin-left: 10px;
 }
 `
-export const Soptional =styled.div`
+export const Soptional =styled.h4`
 color: white;
 font-size: 20px;
 margin-left: 260px;
 margin-top: -30px;
-@media screen and (max-width: 800px) {
-   width: 345px;
-   margin-left: 110px;
-   font-size: 15px;
-}
 
+@media screen and (max-width: 800px) {
+  margin-left: 175px;
+}
 `
 
 
@@ -174,9 +149,8 @@ width: 50px;
 margin-left: 20px;
 @media screen and (max-width: 800px) {
    
-   margin-top: 6px
+  
 }
-
 `
 export const Fb =styled(FacebookSquare)`
 color: darkblue;
@@ -186,15 +160,14 @@ margin-left: 20px;
 export const Scontainer =styled.div `
 display: flex;
 justify-content: flex-start;
-width: 70%;
 
 @media screen and (max-width: 800px) {
-   width: 345px;
-   margin-left: 0px;
+  
+   margin-left: -12px;
+   margin-top: 20px;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    flex-flow: column wrap;
-
 }
 `
 export const Yt =styled(Youtube)`
@@ -220,17 +193,10 @@ margin-left: 20px;
 export const Bcontainer =styled.div `
 display: flex;
 justify-content: flex-start;
-width: 70%;
 
-
+width: 60vw;
 @media screen and (max-width: 800px) {
-   width: 345px;
-   margin-left: -12px;
-   margin-top: 20px;
-   display: flex;
-   flex-direction: row;
-   flex-flow: column wrap;
-
+  width: 80vw;
 }
 `
 export const Button = styled.button`
@@ -297,6 +263,11 @@ export const Button = styled.button`
     &:hover i {
       -webkit-transform: translateX(4px);
       transform: translateX(4px); }
+      
+      @media screen and (max-width: 800px) {
+        width: 50vw;
+
+}
 `;
 
 
@@ -308,23 +279,7 @@ margin-top: 20px;
 font-size: 20px;
 
 @media screen and (max-width: 800px) {
-  margin-left: 220px;
-margin-top: -40px;
-font-size: 20px
+width: 30px;
+text-align: center;
 }
-
-
 `
-
-// export const Image = styled.div `
-// width: 220px;
-// height: 220px;
-// margin-left: 60vw;
-// display: flex;
-// flex-direction: column;
-// justify-content: flex-end;
-// margin-top: -1000px;
-// border: 2px solid white;
-// background: blue;
-
-// `

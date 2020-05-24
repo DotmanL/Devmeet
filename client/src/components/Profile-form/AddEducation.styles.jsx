@@ -1,23 +1,17 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
+
+
 export const Container = styled.div`
-margin-top: 80px;
 border-radius: 10px;
 border: 3px solid white;
 background: black;
-height: 850px;
-width: 1000px;
-margin-right: auto;
-margin-left: auto;
-margin-top: 90px;
-
+width: 95vw;
+margin: 90px auto;
+padding-bottom: 50px;
 @media screen and (max-width: 800px) {
-   width: 135vw;
-   height: 850px;
-  justify-content: center;
-   margin-bottom: 20px
-;
+  
 }
 `
 
@@ -45,17 +39,13 @@ margin-left: 40px;
 
 
 export const FormContainer = styled.div`
-margin-top: 20px;
+margin-top: 50px;
 background: black;
-height: 800px;
-width: 95%;
+width: 85vw;
 margin-left: 20px;
-
+justify-content: space-between;
 @media screen and (max-width: 800px) {
-   width: 110vw;
-   margin-left: 60px;
-   height: 800px;
-  
+ width: 85vw;
 }
 ;
 `
