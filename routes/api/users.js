@@ -4,7 +4,7 @@ const { check, validationResult } = require('express-validator')
 const gravatar = require('gravatar')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const config = require('config')
+//const config = require('config')
 const User = require('../../models/User')
 const normalize = require('normalize-url')
 const _ = require('lodash')
@@ -82,7 +82,7 @@ const payload = {
       
           jwt.sign(
           payload,
-          config.get('jwtSecret'), 
+          process.env.jwtSecret, 
           { expiresIn: 360000 }, //change the value to like 3600 which is 1hr, curreent value just for testing
           (err, token) => {
             if(err) throw err;
@@ -151,7 +151,7 @@ const payload = {
           const { token} = req.body
           
           if (token) {
-            jwt.verify(token, config.get('jwtSecret'), function (err, decoded) {
+            jwt.verify(token, process.env.jwtSecret, function (err, decoded) {
               if (err) {
                 return res.status(401).json({
                   error: 'Expired link. Signup again',
@@ -226,7 +226,7 @@ const payload = {
 
         jwt.sign(
           payload,
-          config.get('jwtSecret'), 
+          process.env.jwtSecret, 
           { expiresIn: 360000 }, //change the value to like 3600 which is 1hr, curreent value just for testing
           (err, token) => {
             if(err) throw err;
@@ -308,7 +308,7 @@ const payload = {
 
       try {
       if (resetPasswordLink) {
-        jwt.verify(resetPasswordLink, config.get('jwtSecret'), function (err, decoded) {
+        jwt.verify(resetPasswordLink, process.env.jwtSecret, function (err, decoded) {
           if (err) {
             return res.status(400).json({
               error: 'Expired link. Try again',

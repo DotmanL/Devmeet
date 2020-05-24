@@ -6,7 +6,7 @@ const User = require('../../models/User')
 const Post = require('../../models/Post')
 const { check, validationResult } = require('express-validator')
 const request = require("request")
-const config = require("config")
+//const config = require("config")
 const normalize = require('normalize-url')
 const checkObjectId = require('../../middleware/checkObjectId');
 
@@ -321,7 +321,7 @@ try {
     method: 'GET',
     headers: {
       'user-agent': 'node.js',
-      Authorization: `token ${config.get('OAUTH-TOKEN')}`
+      Authorization: `token ${process.env.OAUTHTOKEN}`
     }
   };
 
