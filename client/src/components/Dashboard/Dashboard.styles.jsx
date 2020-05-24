@@ -20,8 +20,10 @@ margin-bottom: 20px;
 
 
 @media screen and ( max-width: 800px) {
-      width: 95vw;
-      margin-left: 75px;
+      width: 125vw;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 120px;
       display: flex;
 align-items: center;
 text-align: center;

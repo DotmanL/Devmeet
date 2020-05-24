@@ -12,6 +12,8 @@ margin-top: 120px;
 @media screen and (max-width: 800px) {
  font-size: 20px;
  margin-top: 70px;
+ width: 100vw;
+ border: 0px;
 }
 `
 
@@ -28,7 +30,7 @@ margin-top: 20px;
 
 @media screen and (max-width: 800px) {
  font-size: 25px;
- margin-top: 10px;
+ margin-top: 95px;
 }
 `
 
@@ -40,7 +42,7 @@ margin-top: -20px;
 
 @media screen and (max-width: 800px) {
   margin-top: -10px;
-  font-size: 26px;
+  font-size: 15px;
 }
 `
 

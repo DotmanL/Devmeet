@@ -22,7 +22,7 @@ margin-top: 90px;
    height: 1530px;
    margin-bottom: 10px;
    margin-left: 7px;
-;
+
 }
 `
 export const Title = styled.h1`

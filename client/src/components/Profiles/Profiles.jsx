@@ -6,7 +6,7 @@ import {getProfiles} from '../../Redux/Profile/profile.actions';
 import ProfileItem from './ProfileItem';
 import NavBar from '../Navbar/Navbar';
 
-import {Title, SubTitle, Npf, ProfilesL, SA, Container} from './Profiles.styles'
+import {Title, SubTitle, ProfilesL, SA, Container} from './Profiles.styles'
 
 
 const Profiles = ({getProfiles, profile: { profiles, loading}}) => {
@@ -25,7 +25,7 @@ const Profiles = ({getProfiles, profile: { profiles, loading}}) => {
         <SubTitle><SA />Browse and Connect with developers</SubTitle>
     </Fragment>}
     <ProfilesL>
-      { profiles.length > 0 ? (profiles.map(profile => (<ProfileItem key={profile._id} profile={profile} />))) :( <Npf> No profiles found </Npf> )}
+      { profiles.length > 0 ? (profiles.map(profile => (<ProfileItem key={profile._id} profile={profile} />))) :( <Spinner />)}
     </ProfilesL>
     </Fragment>
     </Container>

@@ -1,4 +1,3 @@
-
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import {SignOut} from '@styled-icons/octicons/SignOut'
@@ -12,7 +11,6 @@ width: 30px;
 height: 30px;
 margin-left: 10px;
 cursor: pointer;
-
 @media screen and ( max-width: 800px) {
       width: 20px;
       height: 20px;
@@ -27,14 +25,12 @@ height: 30px;
 margin-left: 10px;
 cursor: pointer;
 display:none;
-
 @media screen and ( max-width: 800px) {
-      width: 15px;
-      height: 15px;
+      width: 25px;
+      height: 25px;
       display: inline-block;
       margin-left: -13px;
       margin-top: 3px;
-
   }
 `
 
@@ -45,14 +41,12 @@ height: 30px;
 margin-left: 30px;
 cursor: pointer;
 display: none;
-
 @media screen and ( max-width: 800px) {
-      width: 15px;
-      height: 15px;
+      width: 25px;
+      height: 25px;
       display: inline-block;
       margin-left: -5px;
   }
-
 `
 
 export const DashB =styled(Profile)`
@@ -63,12 +57,9 @@ margin-left: -5px;
 cursor: pointer;
 
 @media screen and ( max-width: 800px) {
-      width: 20px;
-      height: 20px;
+     
       display: none;
   }
-
-
 `
 
 
@@ -86,7 +77,6 @@ export const Nav = styled.div`
       width: 100%;
       height: 9vh;
   }
-
 `;
  
 export const NavHeader = styled.div`
@@ -105,13 +95,11 @@ export const NavLeft = styled.div`
   font-size: 10px;
   margin-top: -30px;
   margin-left: 40px;
-
   @media screen and ( max-width: 800px) {
-      margin-left: 50%;
+      margin-left: 65%;
       font-size: 20px;
-      margin-top: -45px;
+      margin-top: -55px;
   }
-
 `;
  
 export const NavCenter = styled.div`
@@ -131,23 +119,14 @@ export const NavRight = styled.div`
     margin-right: -10px;
     margin-top: -20px;
   
-
     @media screen and ( max-width: 800px) {
-      margin-top: 3px;
-      margin-left: -105%;
+      margin-top: -4px;
+      margin-left: -85%;
+      justify-content: space-around;
+      width: 80%;
       
   }
-
     
-
-    @media screen and ( max-width: 800px) {
-      width: 80%;
-  }
-
- 
-  svg {
-    margin-right: 20px;
-  }
 `;
 
 export const MenuLink = styled(Link)`
@@ -158,24 +137,20 @@ export const MenuLink = styled(Link)`
   
   padding: 10px 20px;
   cursor: pointer;
-
-
   @media screen and ( max-width: 800px) {
-      font-size: 13px;
+      font-size: 20px;
       padding: 5px 6px;
   }
 `;
 
 
 export const MenuLinkS =styled(MenuLink)`
-
 @media screen and ( max-width: 800px) {
       display: none;
   }
 `
 
 export const MenuLinkD =styled(MenuLink)`
-
 @media screen and ( max-width: 800px) {
       display: none;
   }
@@ -189,10 +164,8 @@ export const TitleLink = styled(Link)`
   margin-left: -40px;
   cursor: pointer;
   margin-top: 20px;
-
-
   @media screen and ( max-width: 800px) {
-      font-size: 15px;
+      font-size: 20px;
       padding: 5px 6px;
       margin-left: -100px;
   }

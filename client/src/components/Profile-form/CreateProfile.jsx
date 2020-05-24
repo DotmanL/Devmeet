@@ -91,7 +91,6 @@ const CreateProfile = ({
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    setFormData(initialState)
     createProfile(formData, history, profile ? true : false)
   }
 

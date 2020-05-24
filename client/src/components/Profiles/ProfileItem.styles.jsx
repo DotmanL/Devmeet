@@ -69,8 +69,6 @@ height: 100px
 export const Name = styled.h2`
 font-size: 20px;
 color: white;
-
-
 `
 
 export const Status = styled.p`
@@ -107,6 +105,9 @@ border: 3px solid black;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s; 
 
+  @media screen and (max-width: 800px) {
+  font-size: 16px;
+}
 ` 
 
 export const List =styled.div`
