@@ -6,7 +6,7 @@ body {
     font-family: 'Raleway', sans-serif;
     padding: 0px;
     margin: 0px;
-    background-color: rgb(5, 91, 94);
+    background-color: rgba(5, 91, 94);
     font-size: 1rem;
   line-height: 1.6;
  

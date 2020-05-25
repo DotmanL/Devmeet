@@ -9,7 +9,8 @@ import { FacebookSquare } from '@styled-icons/boxicons-logos/FacebookSquare'
 export const Container = styled.div`
   width: 90vw;
   margin-top: 10px;
-  background: gray;
+  background: black;
+  border: 2px solid darkblue; 
   display: flex;
   flex-direction: row;
   justify-content: center;

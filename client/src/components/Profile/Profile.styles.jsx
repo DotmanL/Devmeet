@@ -100,8 +100,8 @@ export const ProfileExpContainer = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-background: grey;
-border: 3px solid white;
+background: black;
+border: 2px solid darkblue;
 border-radius: 6px;
 
 margin: 20px auto;
@@ -120,8 +120,9 @@ export const ProfileduContainer = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-background: grey;
-border: 3px solid white;
+background: black;
+border: 2px solid darkblue;
+
 border-radius: 6px;
 
 margin: 20px auto;

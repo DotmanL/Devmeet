@@ -6,7 +6,7 @@ export const Main = styled.div`
 
 
 export const Container = styled.div`
-background: gray;
+background: black;
 border: 2px solid darkblue; 
 width: 90vw;
 display: flex;

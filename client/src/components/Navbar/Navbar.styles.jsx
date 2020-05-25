@@ -64,7 +64,7 @@ cursor: pointer;
 
 
 export const Nav = styled.div`
-  background-color: rgb(5, 91, 94);
+  background-color: rgba(5, 91, 94, 0.5);
   height: 8vh;
   width: 100%;
   border-bottom: 2px solid white;
@@ -76,6 +76,7 @@ export const Nav = styled.div`
   @media screen and ( max-width: 800px) {
       width: 100%;
       height: 9vh;
+      background: black;
   }
 `;
  
@@ -98,7 +99,7 @@ export const NavLeft = styled.div`
   @media screen and ( max-width: 800px) {
       margin-left: 65%;
       font-size: 20px;
-      margin-top: -55px;
+      margin-top: -50px;
   }
 `;
  

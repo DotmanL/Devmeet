@@ -17,6 +17,7 @@ import {
   DashB
   
   } from './Navbar.styles'
+import { Link } from 'react-router-dom';
 
 
 const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
@@ -41,8 +42,9 @@ const Navbar = ({ user: { isAuthenticated, loading}, signout}) => {
     Dashboard
     </MenuLinkD>
 
-  <Dash title="Dashboard" to='/dashboard'/>
-
+  <Link to ='/dashboard'>
+  <Dash title="Dashboard"/>
+  </Link>
 
     <MenuLinkS to = "/" onClick={signout}>
      SIGN OUT 

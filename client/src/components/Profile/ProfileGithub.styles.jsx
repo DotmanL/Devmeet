@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import {Github} from '@styled-icons/boxicons-logos/Github';
 
 export const Container =styled.div`
-background: gray;
+background: black;
+border: 2px solid darkblue;
 display: flex; 
 flex-direction: column;
 justify-content: center; 
