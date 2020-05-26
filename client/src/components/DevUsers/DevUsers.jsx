@@ -1,14 +1,50 @@
 import React from 'react'
-import {Container, Header} from './DevUsers.styles';
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 
+import PropTypes from 'prop-types'
+import { signout } from '../../Redux/User/user.actions';
+import {Container, Header, MenuC, DashMenu, DevMenu, ProfMenu, SoMenu} from './DevUsers.styles';
 
-const DevUsers = () => {
+const DevUsers = ({ 
+  user:{user},
+  signout
+}) => {
   return (
     <Container>
-     <Header to= '/' >Dev</Header>
+      <MenuC>
+      <Link to='/'>
+      <Header>Home</Header>
+      </Link>
+      <Link to={`/profile/${user && user._id}`}> 
+        <ProfMenu >My Profile</ProfMenu>
+        </Link>
+        <Link to='/dashboard'>
+      <DashMenu>Dashboard</DashMenu>
+      </Link>
+      <Link to='/profiles'>
+      <DevMenu>Developers</DevMenu>
+      </Link>
+
       
+          <Link to='/'>
+        <SoMenu onClick={signout} >Sign Out</SoMenu>
+        </Link>
+      </MenuC>
+
       </Container>
   )
 }
 
-export default DevUsers
+
+DevUsers.propTypes = {
+ user: PropTypes.object.isRequired,
+ signout: PropTypes.func.isRequired,
+  }
+
+const mapStateToProps = state => ({
+  user: state.user,
+
+})
+
+export default connect(mapStateToProps, { signout })(DevUsers)

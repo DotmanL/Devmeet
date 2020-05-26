@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: rgb(5, 91, 94);
+  background: black;
   border-left: 1px solid white;
-  width: 35%;
+  width: 200px;
   height: 1500px;
   display: flex;
   
@@ -22,7 +22,7 @@ width: 15vw;
 height: 20vh;
 display: flex;
 justify-content: center;
-margin: 60px auto;
+margin: 80px auto;
 
 @media screen and (max-width: 1000px) {
     display: none;

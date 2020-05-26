@@ -1,39 +1,58 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: rgb(5, 91, 94);
+  background: black;
   border-left: 1px solid white;
-  width: 80%;
-  height: 1500px;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  margin-top: 5px;
+  width: 850px;
   display: flex;
   flex-direction: column;
-
-  @media screen and (max-width: 800px) {
-      width: 10%;
-    
-  }
-
+  align-items: center;
   
-  @media screen and (max-width: 500px) {
-    border-left: 0px;
-    width: 100%;
- 
+  @media screen and (max-width: 800px) {
+  width: 100vw;
+    
   }
   
   `;
 
-export const Subheader = styled.div`
-background: greenyellow;
-margin-top: 100px;
-margin-left: 200px;
-width: 20vw;
-height: 100px;
-position: absolute;
+export const Header = styled.h2`
+color: white;
+font-size: 30px;
+align-self: flex-start;
+padding-left: 30px;
+margin-top: 90px;
+@media screen and (max-width: 800px) {
 
-@media screen and (max-width: 500px) {
-    width: 100vw;
-    margin-left: 0px;
- 
+    
   }
+`
 
+
+export const Welcome = styled.p`
+color: white;
+font-size: 25px;
+align-self: flex-start;
+padding-left: 30px;
+margin-top: -30px;
+@media screen and (max-width: 800px) {
+  font-size: 15px;
+    
+  }
+`
+
+export const Posts =styled.div`
+display: flex;
+background: black;
+flex-direction: column;
+justify-content: center;
+width: 99%;
+align-items: center;
+@media screen and (max-width: 800px) {
+     
+      width: 95vw;
+    
+  }
 `
