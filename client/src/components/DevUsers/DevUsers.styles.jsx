@@ -112,6 +112,6 @@ export const ProfMenu = styled(DashMenu)`
 `
 export const SoMenu = styled(DashMenu)`
 `
-export const Header =styled(DashMenu)`
+export const HomeLink =styled(DashMenu)`
 
 ` 

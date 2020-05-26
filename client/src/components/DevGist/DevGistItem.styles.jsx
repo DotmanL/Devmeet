@@ -5,10 +5,10 @@ import {CommentDots} from '@styled-icons/boxicons-solid/CommentDots'
 import {Delete} from '@styled-icons/material/Delete'
 
 export const Post =styled.div`
-background: white;
-border-bottom: 2px solid black;
+background: black;
+border-bottom: 1px solid white;
 margin-top: 0px;
-width: 93%;
+width: 100%;
 display: flex;
   flex-direction: row;
   @media screen and (max-width: 800px) {
@@ -36,7 +36,7 @@ export const UserImg = styled.img`
 `
 export const Name = styled.h4`
   font-size: 20px;
-  color: black; 
+  color: white; 
   margin-top: 10px;
   margin-left: 20px;
   @media screen and (max-width: 800px) {
@@ -47,6 +47,7 @@ export const Name = styled.h4`
 `
 export const UserDet =styled.div`
 display: flex;
+background: black;
 height: 90px;
   flex-direction: column;
   align-items: center;
@@ -60,9 +61,10 @@ height: 90px;
 
 export const PostContainer = styled.div`
   display: flex;
+  background: black;
   flex-direction: column;
-  padding-bottom: 10px;
-  margin-left: -20px;
+  padding-bottom: 5px;
+  margin-left: -8px;
   
   @media screen and (max-width: 800px) {
    margin-left: 0px;
@@ -71,7 +73,7 @@ export const PostContainer = styled.div`
 
 export const PostText = styled.p`
   font-size: 18px;
-  color: black; 
+  color: white; 
   margin-top: -25px;
   padding-left: 20px;
   width: 90%;
@@ -86,7 +88,7 @@ export const PostText = styled.p`
 
 export const PostDate = styled.p`
   font-size: 15px;
-  color: black; 
+  color: white; 
   align-self: flex-start;
   padding-left: 20px;
   margin-top: -15px;
@@ -105,15 +107,14 @@ export const LowerC =styled.div`
   text-align: center;
   @media screen and ( max-width: 800px) {
    padding-left: 0px;
+   margin-top: -2px;
      }
  
   
 
 `
 export const LikeB=styled.button`
- border: 3px solid black;
   border-radius: 5px;
-  border: 2px solid #fff;
   cursor: pointer;
   background: blue;
   color: #fff;

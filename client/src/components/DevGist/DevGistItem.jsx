@@ -42,9 +42,18 @@ const DevGistItem = ({
             Posted on <Moment format="YYYY/MM/DD">{date}</Moment>
           </PostDate>
           <LowerC>
-          <LikeB> <Lk title='like' /> {likes.length}</LikeB>
+          <LikeB> <Lk title='like' />{''} {likes.length > 0 && (
+            <span>{likes.length}</span>
+          )} </LikeB>
           <UnlikeB> <Dk title='Unlike' /> </UnlikeB>
-          <DiscB><Cm title='Comments'> {comments.length}</Cm></DiscB>
+          <Link to={`/post/${_id}`}>          
+          <DiscB><Cm title='Comments'/>
+          {comments.length > 0 && (
+            <span>{comments.length}</span>
+          )} 
+          </DiscB>
+          </Link>
+
           {!userP.loading && user === userP.user._id && (<DelB> <Dl title='Delete' /> 
 
             </DelB>)}

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import PropTypes from 'prop-types'
 import { signout } from '../../Redux/User/user.actions';
-import {Container, Header, MenuC, DashMenu, DevMenu, ProfMenu, SoMenu} from './DevUsers.styles';
+import {Container, HomeLink, MenuC, DashMenu, DevMenu, ProfMenu, SoMenu} from './DevUsers.styles';
 
 const DevUsers = ({ 
   user:{user},
@@ -14,7 +14,7 @@ const DevUsers = ({
     <Container>
       <MenuC>
       <Link to='/'>
-      <Header>Home</Header>
+      <HomeLink>Home</HomeLink>
       </Link>
       <Link to={`/profile/${user && user._id}`}> 
         <ProfMenu >My Profile</ProfMenu>

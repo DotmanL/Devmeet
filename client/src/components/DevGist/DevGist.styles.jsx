@@ -13,8 +13,7 @@ export const Container = styled.div`
   
   @media screen and (max-width: 800px) {
     width: 100vw;
-    border: 0px;
-    
+ border: 1px solid black;
   }
   
   `;
@@ -49,7 +48,7 @@ display: flex;
 background: black;
 flex-direction: column;
 justify-content: center;
-width: 99%;
+width: 100%;
 align-items: center;
 padding-bottom: 250px;
 @media screen and (max-width: 800px) {
