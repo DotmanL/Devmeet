@@ -12,7 +12,8 @@ export const Container = styled.div`
   align-items: center;
   
   @media screen and (max-width: 800px) {
-  width: 100vw;
+    width: 100vw;
+    border: 0px;
     
   }
   
@@ -50,6 +51,7 @@ flex-direction: column;
 justify-content: center;
 width: 99%;
 align-items: center;
+padding-bottom: 250px;
 @media screen and (max-width: 800px) {
      
       width: 95vw;

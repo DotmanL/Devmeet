@@ -7,7 +7,7 @@ width: 85vw;
 border: 3px solid white;
 margin-right: auto;
 margin-left: auto;
-margin-top: 120px;
+margin-top: 90px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -16,7 +16,7 @@ justify-content: center;
 @media screen and (max-width: 800px) {
 
   font-size: 20px;
- margin-top: 70px;
+ margin-top: 80px;
  border: 0px;
 }
 `
@@ -34,7 +34,7 @@ margin-top: 20px;
 
 @media screen and (max-width: 800px) {
  font-size: 25px;
- margin-top: 5px;
+ margin-top: 18px;
 }
 `
 

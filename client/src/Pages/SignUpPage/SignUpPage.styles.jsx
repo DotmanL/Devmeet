@@ -7,7 +7,7 @@ export const SignUpPageContainer = styled.div`
   width: 850px;
   display: flex;
   justify-content: space-between;
-  margin-top: 70px;
+  margin-top: 120px;
   margin-right: auto;
 margin-left: auto;
 margin-bottom: 20px;

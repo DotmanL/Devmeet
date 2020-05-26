@@ -121,7 +121,7 @@ export const NavRight = styled.div`
     margin-top: -20px;
   
     @media screen and ( max-width: 800px) {
-      margin-top: -4px;
+      margin-top: 0px;
       margin-left: -85%;
       justify-content: space-around;
       width: 80%;

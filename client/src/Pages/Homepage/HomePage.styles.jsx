@@ -26,7 +26,7 @@ export const HomeContent = styled.div`
   width: 95vw;
   height: 100vh;
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 72px;
   border: 3px solid white;
  
   @media screen and (max-width: 800px) {
@@ -84,12 +84,18 @@ export const SignInButton = styled(Button)`
 background-color: green;
 margin-left: 20px;
 color: white;
-
+@media screen and (max-width: 800px) {
+    font-size: 15px;
+}
 
 `;
  
 export const SignUpButton = styled(Button)` 
   background-color: green;
   color: white;
+  
+  @media screen and (max-width: 800px) {
+    font-size: 15px;
+}
   
 `;

@@ -5,5 +5,4 @@ export const PostsPageContainer = styled.div`
   width: 100%;
   flex-direction: row;
   background: orange;
- 
   `;

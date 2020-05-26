@@ -62,12 +62,14 @@ background: black;
 border: 3px solid white;
 border-radius: 6px;
 padding-bottom: 30px;
-margin: 80px auto;
+margin-top: 80px;
+margin-right: auto;
+margin-left: auto;
 width: 95vw;
 
 @media screen and ( max-width: 800px) {
       
-      margin-top: 90px;
+      margin-top: 110px;
   }
 `
 

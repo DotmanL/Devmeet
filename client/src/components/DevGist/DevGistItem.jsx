@@ -31,9 +31,10 @@ const DevGistItem = ({
       <Post>
         <UserDet>
           <UserImg src={avatar} />
-          <Name>{name}</Name>
+       
         </UserDet>
         <PostContainer>
+        <Name>{name}</Name>
           <PostText>
           {text}
           </PostText>
@@ -56,6 +57,7 @@ const DevGistItem = ({
 
 DevGistItem.propTypes = {
   userP: PropTypes.object.isRequired,
+  post: PropTypes.object.isRequired,
 }
 const mapStateToProps = (state) => ({
   userP: state.user,

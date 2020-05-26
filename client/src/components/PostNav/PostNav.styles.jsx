@@ -11,34 +11,32 @@ height: 75px;
 position: fixed;
 display: flex;
 flex-direction: row;
-
-
   top: 0;
   z-index: 1;
 
   @media screen and (max-width: 800px) {
-   
+   width: 100vw;
   }
 
  
 `;
 
-export const Circle = styled.div`
+export const Circle = styled.img`
 background: white;
-
 border-radius: 50%;
-display: none;
 width: 50px;
 height: 50px;
 margin-top: 15px;
+margin-left: 10px;
+display: none;
 
 @media screen and (max-width: 800px) {
-  display: inline-block;
+  display: flex;
   width: 50px;
 height: 50px;
 background: white;
 border-radius: 50%;
-margin-left: -45vw;
+margin-left: 5vw;
 
   }
 
@@ -50,7 +48,6 @@ export const Header = styled.h2`
 color: white;
 margin-left: 20px;
 @media screen and (max-width: 800px) {
-  margin-left: 380px;
 
   }
 

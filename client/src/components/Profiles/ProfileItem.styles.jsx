@@ -75,7 +75,7 @@ height: 100px
 export const Name = styled.h2`
 font-size: 20px;
 color: white;
-margin-top: 0px;
+margin-top: 50px;
 `
 
 export const Status = styled.p`
@@ -132,7 +132,7 @@ color: white;
 export const ListL =styled.ul`
 list-style: none;
 margin-left: 40vw;
-margin-top: -20vh;
+margin-top: -15vh;
 
 
 @media screen and (max-width: 800px) {

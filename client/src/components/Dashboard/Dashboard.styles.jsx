@@ -14,7 +14,7 @@ border: 2px solid white;
 border-radius: 3px;
 width: 95vw;
 padding-bottom: 30px;
-margin-top: 80px;
+margin-top: 115px;
 border-radius: 5px;
 margin-bottom: 20px;
 
@@ -22,7 +22,7 @@ margin-bottom: 20px;
 @media screen and ( max-width: 800px) {
       margin-left: auto;
       margin-right: auto;
-      margin-top: 120px;
+      margin-top: 100px;
       display: flex;
 align-items: center;
 text-align: center;

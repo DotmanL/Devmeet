@@ -1,14 +1,28 @@
 import React from 'react'
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import { Nav, Header, Circle } from './PostNav.styles';
 
-const PostNav = () => {
+const PostNav = ({
+  user: {user},
+}) => {
   return (
 <Nav>
-<Circle> </Circle>
+<Circle src={user && user.avatar} />
 <Header> Home </Header>
 
     </Nav>
   )
 }
 
-export default PostNav
+PostNav.propTypes ={
+  user: PropTypes.object.isRequired,
+  
+}
+
+
+const mapStateToProps = state =>({
+  user: state.user,
+
+})
+export default connect(mapStateToProps)(PostNav)
