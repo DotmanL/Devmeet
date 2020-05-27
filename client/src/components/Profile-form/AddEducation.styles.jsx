@@ -8,7 +8,9 @@ border-radius: 10px;
 border: 3px solid white;
 background: black;
 width: 95vw;
-margin: 90px auto;
+margin-top: 10vh;
+margin-right: auto;
+margin-left: auto;
 padding-bottom: 50px;
 @media screen and (max-width: 800px) {
   
@@ -200,7 +202,7 @@ margin-top: 20px;
 font-size: 20px;
 
 @media screen and (max-width: 800px) {
-  margin-left: 220px;
+  margin-left: 200px;
 margin-top: -40px;
 font-size: 20px
 }

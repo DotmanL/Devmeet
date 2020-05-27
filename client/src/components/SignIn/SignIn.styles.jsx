@@ -10,7 +10,7 @@ export const SignInContainer = styled.div`
   margin-top: 20px;
   
   @media screen and (max-width: 800px) {
-  width: 300px;
+  width: 85vw;
   }
 `;
 
@@ -25,9 +25,9 @@ export const LogoContainer = styled.img`
 
   @media screen and (max-width: 800px) {
   flex-direction: column;
-  margin-left: -5px;
+  margin-left: -10px;
   margin-top: 30px;
-  width: 300px;
+  width: 90vw;
   height: 200px;
   }
 `;

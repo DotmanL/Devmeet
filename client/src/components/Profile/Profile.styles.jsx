@@ -22,13 +22,15 @@ border: 3px solid black;
   justify-content: center;
   padding: 0;
   background: black;
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   font-family: "Montserrat-SemiBold";
 
   @media screen and ( max-width: 800px) {
       margin-top: 10px;  
       margin-left: 0px;
+      font-weight: 100;
+      font-size: 13px;
         
   }
 `
@@ -62,14 +64,15 @@ background: black;
 border: 3px solid white;
 border-radius: 6px;
 padding-bottom: 30px;
-margin-top: 80px;
+margin-top: 9vh;
 margin-right: auto;
 margin-left: auto;
 width: 95vw;
 
 @media screen and ( max-width: 800px) {
-      
-      margin-top: 110px;
+  width: 97vw;
+  border: 0px solid white;
+      margin-top: 10vh;
   }
 `
 

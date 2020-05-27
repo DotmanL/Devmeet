@@ -7,14 +7,15 @@ export const SignUpPageContainer = styled.div`
   width: 850px;
   display: flex;
   justify-content: space-between;
-  margin-top: 120px;
+  margin-top: 10vh;
   margin-right: auto;
 margin-left: auto;
 margin-bottom: 20px;
 border: 3px solid black 0.9;
  
   @media screen and (max-width: 800px) {
-   width: 345px;
+   width: 95vw;
+  
   
   
   

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Moment from 'react-moment'
 import { connect } from 'react-redux'
-import {addLike, removeLike} from '../../Redux/Post/post.actions';
+import {addLike, removeLike, deletePost} from '../../Redux/Post/post.actions';
 
 import {
   Post,
@@ -22,8 +22,10 @@ import {
 } from './DevGistItem.styles'
 
 const DevGistItem = ({
+
   addLike,
   removeLike,
+  deletePost,
   userP,
   post: { _id, name, avatar, user, likes, text, comments, date },
 }) => {
@@ -32,10 +34,14 @@ const DevGistItem = ({
       <Post>
       
         <PostContainer>
+               
         <UserDet>
-          <UserImg src={avatar} />
-       
+        <Link to={`/profile/${user}`}>
+          <UserImg src={avatar}>
+            </UserImg>
+            </Link>
         </UserDet>
+       
         <Name>{name}</Name>
           <PostText>
           {text}
@@ -61,7 +67,7 @@ const DevGistItem = ({
           </Cm>
           </Link>
 
-          {!userP.loading && user === userP.user._id && ( <Dl title='Delete'> 
+          {!userP.loading && user === userP.user._id && ( <Dl title='Delete' onClick= {() => deletePost(_id)} > 
             </Dl>
            )}
             </LowerC>
@@ -75,9 +81,16 @@ const DevGistItem = ({
 DevGistItem.propTypes = {
   userP: PropTypes.object.isRequired,
   post: PropTypes.object.isRequired,
+  deletePost: PropTypes.func.isRequired,
+  removeLike: PropTypes.func.isRequired,
+  addLike: PropTypes.func.isRequired,
+ 
+  
+
 }
 const mapStateToProps = (state) => ({
   userP: state.user,
+  
 })
 
-export default connect(mapStateToProps, {addLike, removeLike})(DevGistItem)
+export default connect(mapStateToProps, {addLike, removeLike, deletePost})(DevGistItem)

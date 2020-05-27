@@ -101,12 +101,13 @@ export const NavLeft = styled.div`
       font-size: 20px;
       margin-top: -50px;
   }
+
+  @media screen and ( max-width: 335px) {
+      margin-top: -90px;
+  }
 `;
  
-export const NavCenter = styled.div`
-  width: 33.333%;
-  text-align: center;
-`;
+
  
  
 export const NavRight = styled.div`
@@ -126,6 +127,10 @@ export const NavRight = styled.div`
       justify-content: space-around;
       width: 80%;
       
+  }
+  @media screen and ( max-width: 335px) {
+    
+     margin-top: -18px;
   }
     
 `;

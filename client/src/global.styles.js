@@ -15,6 +15,7 @@ body {
     @media screen and ( max-width: 800px) {
         padding: 0px;
     margin: 0px;
+    background: black;
     }
 }
 

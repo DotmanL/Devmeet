@@ -16,7 +16,7 @@ export const Container = styled.div`
 border-radius: 10px;
 border: 2px solid white;
 background: black;
-width: 80vw;
+width: 93vw;
 margin-right: auto;
 margin-left: auto;
 flex-direction: row;
