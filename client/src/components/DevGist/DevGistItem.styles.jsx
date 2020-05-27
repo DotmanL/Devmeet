@@ -22,8 +22,8 @@ export const UserImg = styled.img`
   background: purple;
   border-radius: 50%;
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 89px;
+  height: 89px;
   margin-left: -5px;
 
   @media screen and (max-width: 800px) {
@@ -34,8 +34,8 @@ export const UserImg = styled.img`
 export const Name = styled.h4`
   font-size: 20px;
   color: white;
-  margin-top: -60px;
-  padding-left: 90px;
+  margin-top: -90px;
+  padding-left: 98px;
   @media screen and (max-width: 800px) {
     padding-left: 80px;
     font-size: 15px;
@@ -44,9 +44,9 @@ export const Name = styled.h4`
 export const UserDet = styled.div`
   display: flex;
   background: black;
-  height: 70px;
+  height: 93px;
   margin-top: 5px;
-  width: 70px;
+  width: 93px;
   flex-direction: row;
   padding-left: 10px;
   padding-right: 10px;
@@ -69,8 +69,8 @@ export const PostText = styled.p`
   font-size: 18px;
   color: white;
   margin-top: -25px;
-  padding-left: 90px;
-  width: 90%;
+  padding-left: 98px;
+  width: 95%;
   @media screen and (max-width: 800px) {
     font-size: 15px;
     padding-left: 80px;
@@ -82,7 +82,7 @@ export const PostDate = styled.p`
   font-size: 15px;
   color: white;
   align-self: flex-start;
-  padding-left: 90px;
+  padding-left: 98px;
   margin-top: -15px;
 
   @media screen and (max-width: 800px) {
@@ -94,7 +94,7 @@ export const Lower = styled.div`
   display: flex;
   background: black;
   flex-direction: column;
-  padding-left: 65px;
+  padding-left: 95px;
   @media screen and (max-width: 800px) {
     padding-left: 80px;
     

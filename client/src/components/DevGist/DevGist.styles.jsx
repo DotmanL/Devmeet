@@ -19,6 +19,14 @@ export const Container = styled.div`
   
   `;
 
+export const Cover =styled.div`
+background: black;
+display: flex;
+flex-direction: column;
+width: 100%;
+margin-top:-8px;
+border-bottom: 1px solid white;
+`
 export const Header = styled.h2`
 color: white;
 font-size: 30px;
