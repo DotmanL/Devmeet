@@ -39,6 +39,7 @@ export const Name = styled.h4`
   @media screen and (max-width: 800px) {
     padding-left: 80px;
     font-size: 15px;
+    margin-top: -60px;
   }
 `
 export const UserDet = styled.div`
