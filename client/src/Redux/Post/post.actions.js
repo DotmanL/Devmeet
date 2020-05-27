@@ -1,4 +1,4 @@
-import {GET_POSTS, POST_ERROR} from'./post.types'
+import {GET_POSTS, POST_ERROR, UPDATE_LIKES} from'./post.types'
 import axios from 'axios';
 
  import { toast } from 'react-toastify';
@@ -13,7 +13,46 @@ import axios from 'axios';
       type: GET_POSTS,
       payload: res.data
     })
-    toast.success('Posts Loaded');
+  
+   } catch (err) {
+    dispatch({
+      type: POST_ERROR,
+      payload: {msg: err.response.statusText, status: err.response.status }
+    })  
+  }
+ }
+//Add like function
+
+ export const addLike = (id) => async dispatch => {
+
+  try {
+    const res = await axios.put(`/api/posts/like/${id}`)
+
+    dispatch({
+      type: UPDATE_LIKES,
+      payload: {id, likes: res.data}
+    })
+    toast.success('Post liked');
+   } catch (err) {
+    dispatch({
+      type: POST_ERROR,
+      payload: {msg: err.response.statusText, status: err.response.status }
+    })  
+  }
+ }
+
+ //removwe like function
+
+ export const removeLike = (id) => async dispatch => {
+
+  try {
+    const res = await axios.put(`/api/posts/unlike/${id}`)
+
+    dispatch({
+      type: UPDATE_LIKES,
+      payload: {id, likes: res.data}
+    })
+    toast.success('Post Unliked');
    } catch (err) {
     dispatch({
       type: POST_ERROR,

@@ -16,6 +16,9 @@ flex-direction: row;
 
   @media screen and (max-width: 800px) {
    width: 100vw;
+   border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid white;
   }
 
  

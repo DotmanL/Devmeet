@@ -8,6 +8,7 @@ export const Container = styled.div`
   margin-top: 5px;
   width: 850px;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   
@@ -51,6 +52,7 @@ justify-content: center;
 width: 100%;
 align-items: center;
 padding-bottom: 250px;
+position: relative;
 @media screen and (max-width: 800px) {
      
       width: 95vw;

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Moment from 'react-moment'
 import { connect } from 'react-redux'
+import {addLike, removeLike} from '../../Redux/Post/post.actions';
+
 import {
   Post,
   UserImg,
@@ -11,10 +13,7 @@ import {
   UserDet,
   PostText,
   PostDate,
-  LikeB,
-  UnlikeB,
-  DiscB,
-  DelB,
+  Lower,
   LowerC,
   Lk,
   Dk,
@@ -23,42 +22,51 @@ import {
 } from './DevGistItem.styles'
 
 const DevGistItem = ({
+  addLike,
+  removeLike,
   userP,
   post: { _id, name, avatar, user, likes, text, comments, date },
 }) => {
   return (
     <Fragment>
       <Post>
+      
+        <PostContainer>
         <UserDet>
           <UserImg src={avatar} />
        
         </UserDet>
-        <PostContainer>
         <Name>{name}</Name>
           <PostText>
           {text}
           </PostText>
+         
           <PostDate>
             Posted on <Moment format="YYYY/MM/DD">{date}</Moment>
           </PostDate>
+          </PostContainer>
+          <Lower>
           <LowerC>
-          <LikeB> <Lk title='like' />{''} {likes.length > 0 && (
-            <span>{likes.length}</span>
-          )} </LikeB>
-          <UnlikeB> <Dk title='Unlike' /> </UnlikeB>
-          <Link to={`/post/${_id}`}>          
-          <DiscB><Cm title='Comments'/>
-          {comments.length > 0 && (
-            <span>{comments.length}</span>
+      
+        <Lk title='like' onClick= {() => addLike(_id)} />{''} {likes.length > 0 && (
+            <span style={{'color':'white'}}>{likes.length}</span>
           )} 
-          </DiscB>
+          <Dk title='Unlike' onClick= {() => removeLike(_id)} /> 
+         
+          <Link to={`/post/${_id}`}>          
+        <Cm title='Comments'>
+          {comments.length > 0 && (
+            <span style={{'color':'white'}}>{comments.length}</span>
+          )} 
+          </Cm>
           </Link>
 
-          {!userP.loading && user === userP.user._id && (<DelB> <Dl title='Delete' /> 
-
-            </DelB>)}
+          {!userP.loading && user === userP.user._id && ( <Dl title='Delete'> 
+            </Dl>
+           )}
             </LowerC>
-        </PostContainer>
+            </Lower>
+      
       </Post>
     </Fragment>
   )
@@ -72,4 +80,4 @@ const mapStateToProps = (state) => ({
   userP: state.user,
 })
 
-export default connect(mapStateToProps, {})(DevGistItem)
+export default connect(mapStateToProps, {addLike, removeLike})(DevGistItem)

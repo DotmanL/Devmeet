@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 import PropTypes from 'prop-types'
@@ -13,23 +12,19 @@ const DevUsers = ({
   return (
     <Container>
       <MenuC>
-      <Link to='/'>
-      <HomeLink>Home</HomeLink>
-      </Link>
-      <Link to={`/profile/${user && user._id}`}> 
-        <ProfMenu >My Profile</ProfMenu>
-        </Link>
-        <Link to='/dashboard'>
-      <DashMenu>Dashboard</DashMenu>
-      </Link>
-      <Link to='/profiles'>
-      <DevMenu>Developers</DevMenu>
-      </Link>
-
+      <HomeLink as='a' href="/">Home</HomeLink>
+    
+     
+        <ProfMenu as="a" href={`/profile/${user && user._id}`} >My Profile</ProfMenu>
       
-          <Link to='/'>
-        <SoMenu onClick={signout} >Sign Out</SoMenu>
-        </Link>
+       
+      <DashMenu as='a' href="/dashboard">Dashboard</DashMenu>
+    
+   
+      <DevMenu as='a' href="/profiles">Developers</DevMenu>
+        
+        <SoMenu as='a' href="/" onClick={signout} >Sign Out</SoMenu>
+    
       </MenuC>
 
       </Container>
