@@ -18,7 +18,6 @@ export const PostsPageContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
-  height: 100vh;
 `
 
 export const Container = styled.div`
@@ -76,5 +75,9 @@ export const Circle =styled.div`
   }
 `
 
-
+export const Comments =styled.div`
+background: yellow;
+flex-direction: column;
+display: flex;
+`
  

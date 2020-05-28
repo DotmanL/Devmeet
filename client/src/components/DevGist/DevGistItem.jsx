@@ -1,10 +1,12 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Moment from 'react-moment'
 import { connect } from 'react-redux'
 import {addLike, removeLike, deletePost} from '../../Redux/Post/post.actions';
-
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
+import GistInput from '../Gist/GistInput';
 import {
   Post,
   UserImg,
@@ -18,18 +20,33 @@ import {
   Lk,
   Dk,
   Cm,
-  Dl
+  Dl,
+  Pc,
+  Mb
 } from './DevGistItem.styles'
 
-const DevGistItem = ({
 
+
+
+const DevGistItem = ({
   addLike,
   removeLike,
   deletePost,
   userP,
-  post: { _id, name, avatar, user, likes, text, comments, date },
+  post: { _id, name, avatar, user, likes, text, comments, date, },
   showActions
 }) => {
+
+  const [open, setOpen] = useState(false)
+
+  const onOpenModal = () => {
+    setOpen(true);
+  };
+ 
+ const  onCloseModal = () => {
+    setOpen(false);
+  };
+
   return (
     <Fragment>
       <Post>
@@ -67,13 +84,41 @@ const DevGistItem = ({
           )} 
           <Dk title='Unlike' onClick= {() => removeLike(_id)} /> 
          
-          <Link to={`/posts/${_id}`}>          
-        <Cm title='Comments'>
+           <Pc>    
+        <Cm title='Comments' onClick={onOpenModal}>
+          {comments.length > 0 && (
+            <span style={{'color':'white'}}>{comments.length}</span>
+          )} 
+
+
+          </Cm>
+          <Modal open={open} onClose={onCloseModal}  
+           styles={{
+          modal: {
+            animation: `${
+              open ? 'customEnterAnimation' : 'customLeaveAnimation'
+            } 500ms`,
+          },
+        }} center>
+          <GistInput postId={_id} />
+        </Modal>
+        </Pc>
+
+
+        <Mb> 
+        <Link to={`/posts/${_id}`}>      
+        <Cm title='Comments' onClick={onOpenModal}>
           {comments.length > 0 && (
             <span style={{'color':'white'}}>{comments.length}</span>
           )} 
           </Cm>
           </Link>
+          <Modal open={open} onClose={onCloseModal} center>
+          <GistInput postId={_id} />
+        </Modal>
+        </Mb>
+
+          
 
           {!userP.loading && user === userP.user._id && ( <Dl title='Delete' onClick= {() => deletePost(_id)} > 
             </Dl>
@@ -96,7 +141,6 @@ DevGistItem.defaultProps ={
 
 DevGistItem.propTypes = {
   userP: PropTypes.object.isRequired,
-  post: PropTypes.object.isRequired,
   deletePost: PropTypes.func.isRequired,
   removeLike: PropTypes.func.isRequired,
   addLike: PropTypes.func.isRequired,

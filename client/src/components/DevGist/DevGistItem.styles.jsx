@@ -4,9 +4,30 @@ import { Dislike } from '@styled-icons/boxicons-regular/Dislike'
 import { CommentDots } from '@styled-icons/boxicons-solid/CommentDots'
 import { Delete } from '@styled-icons/material/Delete'
 
+
+
+export const Pc = styled.div`
+cursor: pointer;
+
+@media screen and (max-width: 800px) {
+    display: none;
+  }
+`
+export const Mb = styled.div`
+display: none;
+@media screen and (max-width: 800px) {
+    display: flex;
+    cursor: pointer;
+
+
+  }
+`
+
+
+
 export const Post = styled.div`
   background: black;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid gray;
   margin-top: 0px;
   width: 100%;
   display: flex;
