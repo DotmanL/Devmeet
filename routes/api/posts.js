@@ -29,7 +29,7 @@ router.post('/', [ auth, [
       text: req.body.text,
       name: user.name,
       avatar: user.avatar,
-      user: req.user.id
+      user: req.user.id,
     });
 
      const post = await newPost.save();
@@ -48,7 +48,7 @@ router.post('/', [ auth, [
 router.get('/', auth, async (req, res) => {
 
   try {
-    const posts = await Post.find().sort({ date: 1 });
+    const posts = await Post.find().sort({ date: -1 });
     res.json(posts)
   } catch (err) {
     console.error(err.message)

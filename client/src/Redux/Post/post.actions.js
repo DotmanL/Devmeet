@@ -1,4 +1,4 @@
-import {GET_POSTS, POST_ERROR, UPDATE_LIKES, DELETE_POST} from'./post.types'
+import {GET_POSTS, POST_ERROR, UPDATE_LIKES, DELETE_POST, ADD_POST} from'./post.types'
 import axios from 'axios';
 
  import { toast } from 'react-toastify';
@@ -32,7 +32,7 @@ import axios from 'axios';
       type: UPDATE_LIKES,
       payload: {id, likes: res.data}
     })
-    toast.success('Post liked');
+    toast.info('Post liked');
    } catch (err) {
     dispatch({
       type: POST_ERROR,
@@ -52,7 +52,7 @@ import axios from 'axios';
       type: UPDATE_LIKES,
       payload: {id, likes: res.data}
     })
-    toast.success('Post Unliked');
+    toast.info('Post Unliked');
    } catch (err) {
     dispatch({
       type: POST_ERROR,
@@ -74,6 +74,33 @@ import axios from 'axios';
         payload: id
       })
       toast.success('Post Removed');
+     } catch (err) {
+      dispatch({
+        type: POST_ERROR,
+        payload: {msg: err.response.statusText, status: err.response.status }
+      })  
+    }
+   }
+
+    //Add post
+
+  export const addPost = (formData) => async dispatch => {
+
+    const config ={
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    
+    try {
+      
+   const res =  await axios.post('/api/posts', formData, config)
+  
+      dispatch({
+        type: ADD_POST,
+        payload: res.data
+      })
+      toast.success('Post Created');
      } catch (err) {
       dispatch({
         type: POST_ERROR,

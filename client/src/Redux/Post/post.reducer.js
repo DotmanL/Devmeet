@@ -1,4 +1,4 @@
-import { GET_POSTS, POST_ERROR, UPDATE_LIKES, DELETE_POST } from "./post.types";
+import { GET_POSTS, POST_ERROR, UPDATE_LIKES, DELETE_POST, ADD_POST } from "./post.types";
 
 
 const initialState = {
@@ -21,13 +21,19 @@ switch (type) {
     posts: payload,
     loading: false
   }
- 
+
   case POST_ERROR: 
   return {
     ...state,
     error: payload,
     loading: false
   }
+  case ADD_POST:
+    return {
+      ...state,
+      posts: [payload, ...state.posts],
+      loading: false
+    }
 case UPDATE_LIKES:
   return{
     ...state,

@@ -5,7 +5,7 @@ background: black;
 border-left: 1px solid white;
 border-right: 1px solid white;
 border-bottom: 1px solid white;
-width: 834px;
+width: 732px;
 text-align: center;
 height: 75px;
 position: fixed;

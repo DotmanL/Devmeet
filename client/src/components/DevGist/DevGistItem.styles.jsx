@@ -6,7 +6,7 @@ import { Delete } from '@styled-icons/material/Delete'
 
 export const Post = styled.div`
   background: black;
-  border-bottom: 0.5px solid white;
+  border-bottom: 1px solid whitesmoke;
   margin-top: 0px;
   width: 100%;
   display: flex;
@@ -15,7 +15,7 @@ export const Post = styled.div`
 
   @media screen and (max-width: 800px) {
     width: 100%;
-    border-bottom: 0.8px solid white;
+    border-bottom: 0.9px solid white;
   }
 `
 
@@ -40,7 +40,7 @@ export const Name = styled.h4`
   margin-top: -90px;
   padding-left: 110px;
   @media screen and (max-width: 800px) {
-    padding-left: 80px;
+    padding-left: 85px;
     font-size: 15px;
     margin-top: -60px;
   }
@@ -76,7 +76,7 @@ export const PostText = styled.p`
   width: 95%;
   @media screen and (max-width: 800px) {
     font-size: 15px;
-    padding-left: 80px;
+    padding-left: 85px;
     width: 100%;
   }
 `
@@ -89,7 +89,7 @@ export const PostDate = styled.p`
   margin-top: -15px;
 
   @media screen and (max-width: 800px) {
-    padding-left: 80px;
+    padding-left: 85px;
     margin-top: -10px;
   }
 `

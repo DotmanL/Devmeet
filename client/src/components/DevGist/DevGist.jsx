@@ -7,6 +7,7 @@ import Spinner from '../Spinner/Spinner';
 import {getPosts} from '../../Redux/Post/post.actions';
 import DevGistItem from './DevGistItem'
 import { Container, Header, Welcome, Posts, Cover } from './DevGist.styles';
+import DevGistInput from './DevGistInput';
 
 const DevGist = (
   {getPosts, 
@@ -23,6 +24,7 @@ const DevGist = (
       <Header>Posts</Header>
       <Welcome>Welcome to the DevMeet</Welcome>
       </Cover>
+      <DevGistInput />
       <Posts>
         {posts.map(post => (
           <DevGistItem  key={post._id} post={post}/>

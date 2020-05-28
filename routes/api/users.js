@@ -9,7 +9,7 @@ const User = require('../../models/User')
 const normalize = require('normalize-url')
 const _ = require('lodash')
 
-//const Token = require('../../models/Token')
+
 //const sgMail = require('@sendgrid/mail');
 //sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
