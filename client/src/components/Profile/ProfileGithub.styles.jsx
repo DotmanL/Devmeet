@@ -46,7 +46,7 @@ border: #ccc solid 1px;
 }
 `
 
-export const RepoN = styled.h4`
+export const RepoN = styled.h3`
 color: white;
 margin-left: 10px;
 `

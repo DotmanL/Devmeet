@@ -28,6 +28,7 @@ const DevGistItem = ({
   deletePost,
   userP,
   post: { _id, name, avatar, user, likes, text, comments, date },
+  showActions
 }) => {
   return (
     <Fragment>
@@ -41,17 +42,24 @@ const DevGistItem = ({
             </UserImg>
             </Link>
         </UserDet>
-       
+
+        <Link to={`/profile/${user}`}>
         <Name>{name}</Name>
+        </Link>
+        
+        <Link to={`/posts/${_id}`}>
           <PostText>
           {text}
           </PostText>
          
           <PostDate>
-            Posted on <Moment format="YYYY/MM/DD">{date}</Moment>
+            <Moment format=" h:mm A ~ MMMM Do, YYYY">{date}</Moment>
           </PostDate>
+          </Link>
           </PostContainer>
-          <Lower>
+          
+          {showActions && (<Fragment>
+            <Lower>
           <LowerC>
       
         <Lk title='like' onClick= {() => addLike(_id)} />{''} {likes.length > 0 && (
@@ -59,7 +67,7 @@ const DevGistItem = ({
           )} 
           <Dk title='Unlike' onClick= {() => removeLike(_id)} /> 
          
-          <Link to={`/post/${_id}`}>          
+          <Link to={`/posts/${_id}`}>          
         <Cm title='Comments'>
           {comments.length > 0 && (
             <span style={{'color':'white'}}>{comments.length}</span>
@@ -72,11 +80,19 @@ const DevGistItem = ({
            )}
             </LowerC>
             </Lower>
+            
+            </Fragment>)
+            }
+          
       
       </Post>
     </Fragment>
   )
-}
+};
+
+DevGistItem.defaultProps ={
+  showActions: true
+};
 
 DevGistItem.propTypes = {
   userP: PropTypes.object.isRequired,

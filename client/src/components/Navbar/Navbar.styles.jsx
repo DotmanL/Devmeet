@@ -76,7 +76,8 @@ export const Nav = styled.div`
   @media screen and ( max-width: 800px) {
       width: 100%;
       height: 9vh;
-     
+      background-color: black;
+      border-bottom: 1px solid white;
   }
 `;
  
@@ -119,10 +120,10 @@ export const NavRight = styled.div`
     justify-content: flex-end;
     font-size: 15px;
     margin-right: -10px;
-    margin-top: -20px;
+    margin-top: -27px;
   
     @media screen and ( max-width: 800px) {
-      margin-top: 0px;
+      margin-top: -3px;
       margin-left: -85%;
       justify-content: space-around;
       width: 80%;

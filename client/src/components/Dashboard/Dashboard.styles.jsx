@@ -11,18 +11,18 @@ text-align: center;
 flex-direction: column;
 background: black;
 border: 2px solid white;
-border-radius: 3px;
 width: 95vw;
 padding-bottom: 30px;
 margin-top: 10vh;
 border-radius: 5px;
-margin-bottom: 20px;
 
 
 @media screen and ( max-width: 800px) {
       margin-left: auto;
       margin-right: auto;
       display: flex;
+      border: 0px solid white;
+      width: 100vw;
 align-items: center;
 text-align: center;
 flex-direction: column;
@@ -131,16 +131,16 @@ border: 3px solid black;
 
  export const Add = styled.div`
  display: flex;
- align-items: center;
+ font-size: 15px;
+font-weight: 100;
  flex-direction: row;
- justify-content: center;
+ padding: 5px 5px;
  margin-top: 0px;
 
  @media screen and ( max-width: 800px) {
   display: flex;
- align-items: center;
  flex-direction: row;
- justify-content: center;
+font-size: 12px;
   }
  `
 

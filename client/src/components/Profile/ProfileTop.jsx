@@ -28,7 +28,7 @@ const ProfileTop = ({ profile, user, profile: {
   return (
     <Fragment>
 <Container>
-<Circle src={avatar} />
+<Circle src={avatar} alt="img"/>
 <DetContainer>
   <Title>{name}</Title>
   <Status>{status} at <span>{company}</span></Status>
@@ -41,31 +41,31 @@ const ProfileTop = ({ profile, user, profile: {
   </DetContainer>
   <Icons>
     {website && (
-      <a href ={website} target ='_blank' rel="noopener noreferrer">
+      <a href ={website} alt="website" target ='_blank' rel="noopener noreferrer">
       <Webb  />
       </a>)}
       
       {social && social.twitter && (
-        <a href ={social.twitter} target ='_blank' rel="noopener noreferrer">
+        <a href ={social.twitter} target ='_blank' alt="twitter" rel="noopener noreferrer">
         <Twit  />
         </a>)}
         {social && social.linkedin && (
-          <a href ={social.linkedin} target ='_blank' rel="noopener noreferrer">
+          <a href ={social.linkedin} target ='_blank' alt="linkedin" rel="noopener noreferrer">
           <Linked  />
           </a>
         )}
           {social && social.instagram && (
-          <a href ={social.instagram} target ='_blank' rel="noopener noreferrer">
+          <a href ={social.instagram} target ='_blank' alt="instagram" rel="noopener noreferrer">
           <Ig  />
           </a>
         )}
         {social && social.youtube && (
-          <a href ={social.youtube} target ='_blank' rel="noopener noreferrer">
+          <a href ={social.youtube} target ='_blank' alt="youtube" rel="noopener noreferrer">
           <Yt  />
           </a>
         )}
         {social && social.facebook && (
-          <a href ={social.facebook} target ='_blank' rel="noopener noreferrer">
+          <a href ={social.facebook} target ='_blank' alt="facebook" rel="noopener noreferrer">
           <Fb  />
           </a>
         )}

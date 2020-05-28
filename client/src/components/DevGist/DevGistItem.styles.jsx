@@ -14,13 +14,13 @@ export const Post = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    width: 100%;
+    width: 100vw;
     border-bottom: 0.9px solid white;
   }
 `
 
 export const UserImg = styled.img`
-  background: purple;
+  background: white;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
@@ -39,6 +39,10 @@ export const Name = styled.h4`
   color: white;
   margin-top: -90px;
   padding-left: 110px;
+
+  :hover {
+    text-decoration: underline;
+  }
   @media screen and (max-width: 800px) {
     padding-left: 85px;
     font-size: 15px;
@@ -71,26 +75,30 @@ export const PostContainer = styled.div`
 export const PostText = styled.p`
   font-size: 18px;
   color: white;
-  margin-top: -25px;
+  margin-top: -60px;
   padding-left: 110px;
   width: 95%;
   @media screen and (max-width: 800px) {
     font-size: 15px;
     padding-left: 85px;
     width: 100%;
+    margin-top: -40px;
   }
 `
 
 export const PostDate = styled.p`
-  font-size: 15px;
-  color: white;
+  font-size: 13px;
+  color: gray;
   align-self: flex-start;
   padding-left: 110px;
-  margin-top: -15px;
+  margin-top: -10px;
+  border-bottom: 1px solid gray;
+  width: 100%;
 
   @media screen and (max-width: 800px) {
     padding-left: 85px;
     margin-top: -10px;
+   
   }
 `
 export const Lower = styled.div`
@@ -117,7 +125,7 @@ export const LowerC = styled.div`
 `
 
 export const Lk = styled(Like)`
-  color: white;
+  color: gray;
   width: 30px;
   height: 30px;
   margin-left: 3px;
@@ -129,7 +137,7 @@ export const Lk = styled(Like)`
   }
 `
 export const Dk = styled(Dislike)`
-  color: white;
+   color: gray;
   width: 30px;
   height: 30px;
   margin-left: 166.4px;
@@ -141,7 +149,7 @@ export const Dk = styled(Dislike)`
   }
 `
 export const Cm = styled(CommentDots)`
-  color: white;
+   color: gray;
   width: 30px;
   height: 30px;
   margin-left: 166.4px;
@@ -155,7 +163,7 @@ export const Cm = styled(CommentDots)`
 `
 
 export const Dl = styled(Delete)`
-  color: white;
+  color: red;
   width: 30px;
   height: 30px;
   margin-left: 150px;

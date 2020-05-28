@@ -18,7 +18,7 @@ import AddExperience from './components/Profile-form/AddExperience';
 import AddEducation from './components/Profile-form/AddEducation';
 import Profiles from './components/Profiles/Profiles'
 import Profile from './components/Profile/Profile'
-
+import Gist from './components/Gist/Gist'
 
 
 import PrivateRoute from './components/Routes/PrivateRoute';
@@ -69,6 +69,8 @@ const App = () => {
 
    <PrivateRoute exact path ='/dashboard' component={DashboardPage}/>
    <PrivateRoute exact path ='/posts' component={PostsPage}/>
+   <PrivateRoute exact path ='/posts/:id' component={Gist}/>
+
    <Route exact path ='/forgotpassword' component={Forgot}/>
    <Route exact path ='/resetpassword/:token' component={Reset}/>
    <PrivateRoute exact path ='/create-profile' component={CreateProfile}/>

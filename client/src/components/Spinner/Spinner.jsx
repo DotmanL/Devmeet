@@ -9,9 +9,17 @@ const override = css`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin: 300px auto;
+
+  margin-top: 50vh;
   border-color: red;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50vh;
+  }
 `;
 const Spinner = () => {
   return (
