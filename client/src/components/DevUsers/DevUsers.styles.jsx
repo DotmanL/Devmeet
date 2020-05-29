@@ -1,4 +1,10 @@
 import styled from 'styled-components';
+import {Home} from '@styled-icons/entypo/Home'
+import {Profile} from '@styled-icons/remix-fill/Profile'
+import {User} from '@styled-icons/boxicons-solid/User';
+import {DeveloperMode} from '@styled-icons/material/DeveloperMode'
+import {SignOut} from '@styled-icons/octicons/SignOut'
+
 
 
 
@@ -12,8 +18,15 @@ export const Container = styled.div`
   position: relative;
 
   
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 500px) {
     display: none;
+  }
+  @media screen and (min-width: 500px) and (max-width: 1086px) {
+    display: flex;
+    background: black;
+    flex-direction: column;
+  text-align: center;
+  position: relative;
   
   }
   `;
@@ -21,13 +34,27 @@ export const Container = styled.div`
 export const MenuC =styled.div`
 width: 85%;
 margin-left: 15px;
-margin-top: 20px;
+margin-top: 30px;
 position: fixed;
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
+  display: none;
 }
 
+
+@media screen and (min-width: 500px) and (max-width: 1086px) {
+    display: flex;
+    background: black;
+    position: fixed;
+    flex-direction: column;
+    width: 9.5vw;
+    margin-left: 0px;
+    margin-top: 30px;
+
+
+  }
 `
+
 
   export const DashMenu =styled.button`
     border: 3px solid black;
@@ -93,16 +120,12 @@ position: fixed;
     &:hover i {
       -webkit-transform: translateX(4px);
       transform: translateX(4px); }
-      
-      @media screen and (max-width: 800px) {
-        width: 90px;
-        height: 30px;
-        margin-left: 0px;
-      }
-        @media screen and (max-width: 1024px) {
-       display: none;  
 
-}
+      @media screen and (min-width: 500px) and (max-width: 1063px) {
+    display: none;
+
+  }
+
 `
 
 export const DevMenu = styled(DashMenu)`
@@ -115,3 +138,79 @@ export const SoMenu = styled(DashMenu)`
 export const HomeLink =styled(DashMenu)`
 
 ` 
+
+export const Hm =styled(Home)`
+  cursor: pointer;
+  display: none;
+
+  @media screen and (min-width: 500px) and (max-width: 1063px) {
+    display: flex;
+    color: white;
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 70px;
+  cursor: pointer;   
+  }
+`
+
+export const Db =styled(Profile)`
+  cursor: pointer;
+  display: none;
+
+  @media screen and (min-width: 500px) and (max-width: 1063px) {
+    display: flex;
+    color: white;
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 30px;
+  cursor: pointer;   
+  }
+`
+
+export const Us =styled(User)`
+  cursor: pointer;
+  display: none;
+
+  @media screen and (min-width: 500px) and (max-width: 1063px) {
+    display: flex;
+    color: white;
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 30px;
+  cursor: pointer;   
+  }
+`
+
+export const Dv =styled(DeveloperMode)`
+  cursor: pointer;
+  display: none;
+
+  @media screen and (min-width: 500px) and (max-width: 1063px) {
+    display: flex;
+    color: white;
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 30px;
+  cursor: pointer;   
+  }
+`
+
+export const So =styled(SignOut)`
+  cursor: pointer;
+  display: none;
+
+  @media screen and (min-width: 500px) and (max-width: 1063px) {
+    display: flex;
+    color: white;
+  width: 55px;
+  height: 55px;
+  margin-left: 10px;
+  margin-top: 30px;
+  cursor: pointer;   
+  }
+`
+

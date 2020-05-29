@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {Container, Cover, Header, FormContainer, FormInput, Button} from './GistInput.styles'
 import {addComment} from '../../Redux/Post/post.actions';
 
+
 const GistInput = ({ postId, addComment }) => {
   
   const[text, setText]=useState('');
@@ -11,7 +12,9 @@ const GistInput = ({ postId, addComment }) => {
   return (
     <Container>
     <Cover>
+
       <Header>Leave a Comment</Header>
+     
     </Cover>
     <form    onSubmit={e => {
           e.preventDefault();

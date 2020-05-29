@@ -25,7 +25,7 @@ import {
   Mb
 } from './DevGistItem.styles'
 
-
+import './CmModal.css'
 
 
 const DevGistItem = ({
@@ -50,9 +50,9 @@ const DevGistItem = ({
   return (
     <Fragment>
       <Post>
-      
+     
         <PostContainer>
-               
+       
         <UserDet>
         <Link to={`/profile/${user}`}>
           <UserImg src={avatar}>
@@ -84,26 +84,29 @@ const DevGistItem = ({
           )} 
           <Dk title='Unlike' onClick= {() => removeLike(_id)} /> 
          
+
            <Pc>    
         <Cm title='Comments' onClick={onOpenModal}>
           {comments.length > 0 && (
             <span style={{'color':'white'}}>{comments.length}</span>
           )} 
-
-
           </Cm>
-          <Modal open={open} onClose={onCloseModal}  
-           styles={{
-          modal: {
-            animation: `${
-              open ? 'customEnterAnimation' : 'customLeaveAnimation'
-            } 500ms`,
-          },
-        }} center>
-          <GistInput postId={_id} />
-        </Modal>
-        </Pc>
 
+          <Modal open={open} onClose={onCloseModal} 
+            classNames={{
+              overlay: 'customOverlay',
+              modal: 'customModal',
+            }}
+            >
+
+          <GistInput
+         
+          postId={_id} />
+         
+        </Modal>
+        
+        </Pc>
+        
 
         <Mb> 
         <Link to={`/posts/${_id}`}>      
@@ -113,9 +116,6 @@ const DevGistItem = ({
           )} 
           </Cm>
           </Link>
-          <Modal open={open} onClose={onCloseModal} center>
-          <GistInput postId={_id} />
-        </Modal>
         </Mb>
 
           

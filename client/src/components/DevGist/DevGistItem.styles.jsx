@@ -34,9 +34,9 @@ export const Post = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 500px) {
     width: 100vw;
-    border-bottom: 0.9px solid white;
+    border-bottom: 1px solid gray;
   }
 `
 
@@ -119,6 +119,7 @@ export const PostDate = styled.p`
   @media screen and (max-width: 800px) {
     padding-left: 85px;
     margin-top: -10px;
+    border-bottom: 1px solid gray;
    
   }
 `

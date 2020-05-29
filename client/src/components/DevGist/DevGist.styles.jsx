@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background: black;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  border-top: 1px solid white;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-top: 1px solid gray;
   margin-top: 5px;
   width: 850px;
   display: flex;
@@ -26,7 +26,8 @@ display: flex;
 flex-direction: column;
 width: 100%;
 margin-top:-8px;
-border-bottom: 1px solid white;
+border-bottom: 1px solid gray;
+
 `
 export const Header = styled.h2`
 color: white;
@@ -63,8 +64,7 @@ align-items: center;
 padding-bottom: 250px;
 position: relative;
 @media screen and (max-width: 800px) {
-     
-      width: 95vw;
+    width: 90vw;
     
   }
 `
