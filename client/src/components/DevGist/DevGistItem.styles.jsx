@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Like } from '@styled-icons/boxicons-solid/Like'
 import { Dislike } from '@styled-icons/boxicons-regular/Dislike'
 import { CommentDots } from '@styled-icons/boxicons-solid/CommentDots'
-import { Delete } from '@styled-icons/material/Delete'
+import { Delete } from '@styled-icons/typicons/Delete'
 import {CloseCircle} from '@styled-icons/evaicons-solid/CloseCircle'
 
 export const Pc = styled.div`
@@ -17,7 +17,7 @@ export const Mb = styled.div`
 display: none;
 @media screen and (max-width: 800px) {
     display: flex;
-    cursor: pointer;
+    position: relative;
 
 
   }
@@ -206,13 +206,13 @@ export const Dl = styled(Delete)`
   color: red;
   width: 30px;
   height: 30px;
-  margin-left: 150px;
+  margin-left: 120px;
   cursor: pointer;
 
   @media screen and (max-width: 800px) {
     width: 20px;
     height: 20px;
-    margin-left: 50px;
+    margin-left: 30px;
   }
 `
 

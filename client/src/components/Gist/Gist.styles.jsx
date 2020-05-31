@@ -17,8 +17,9 @@ export const Ar = styled(ArrowBack) `
 export const PostsPageContainer = styled.div`
   display: flex;
   width: 100%;
+  height: auto;
   flex-direction: row;
-  height: 110vh;
+  position: relative;
   
 `
 
@@ -34,9 +35,10 @@ export const Container = styled.div`
 `
 export const TopCover = styled.div`
   background: black;
-  width: 100%;
+  width: 68.2%;
   display: flex;
   position: fixed;
+  border-bottom: 1px solid gray;
   top: 0;
   z-index: 1;
   flex-direction: row;

@@ -10,18 +10,18 @@ import { signout } from '../../Redux/User/user.actions'
 import { Nav, Header, Circle, NavM, Dl, Hm, Db, Dv, Pp, So, Hd, CircleC } from './PostNav.styles'
 const PostNav = ({
   user: {user},
+  signout
 }) => {
 
   
   return (
 <Nav>
+  
 
 <ResponsiveMenu
 menuOpenButton={<Circle src={user && user.avatar} /> }
 menuCloseButton={<Dl />}
 changeMenuOn="500px"
-largeMenuClassName=""
-smallMenuClassName="sm"
 menu={
   <NavM>
 
@@ -45,10 +45,10 @@ menu={
          <h3> Developers <Dv/></h3>
         </Link>
         
-        <Link to='/'  onClick={signout} >
-         <h3> Sign Out <So/></h3>
-        </Link>
-
+          <Link to = '/'>
+         <h3 onClick={signout}> Sign out <So/></h3>
+         </Link>
+ 
 
       </NavM>
     }

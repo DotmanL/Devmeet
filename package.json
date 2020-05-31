@@ -36,8 +36,12 @@
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "pug": "^2.0.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-icons": "^3.10.0",
+    "react-is": "^16.8.6",
     "request": "^2.88.2",
+    "styled-components": "^5.0.0",
     "styled-table-component": "^4.0.0"
   },
   "devDependencies": {

@@ -12,7 +12,7 @@ justify-content: center;
 
 @media screen and (max-width: 800px) {
   width: 100vw;
-  border-bottom: 0.9px solid white;
+  border-bottom: 0.9px solid gray;
 }
 `
 

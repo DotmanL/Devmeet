@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { XSquare } from '@styled-icons/feather/XSquare'
+import { Delete } from '@styled-icons/typicons/Delete'
 import {Home} from '@styled-icons/entypo/Home'
 import {Profile} from '@styled-icons/remix-fill/Profile'
 import {UserRectangle} from '@styled-icons/boxicons-solid/UserRectangle';
@@ -68,7 +68,7 @@ margin-left: 20px;
   color: white;
 margin-left: 80px;
 position: fixed;
-z-index: -8;
+z-index: -4;
 
 }
 `
@@ -85,8 +85,9 @@ height: 100vh;
 display: flex;
 flex-direction: column;
 text-align: center;
-margin-top: -50px;
+margin-top: -70px;
 padding-top: 70px;
+
 
 }
 
@@ -173,7 +174,6 @@ export const Dv =styled(DeveloperMode)`
 `
 
 export const So =styled(SignOut)`
-  cursor: pointer;
   display: none;
 
   @media screen and (max-width: 800px) {
@@ -183,22 +183,21 @@ export const So =styled(SignOut)`
   height: 40px;
   margin-top: -30px;
   margin-left: 10px;
-  cursor: pointer; 
   }
 `
 
 
-export const Dl = styled(XSquare)`
+export const Dl = styled(Delete)`
  
    display: none;
   @media screen and (max-width: 800px) {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin-left: 150px;
     margin-top: 30px;
     color: white;
     display: flex;
-
+    
    
   }
 `

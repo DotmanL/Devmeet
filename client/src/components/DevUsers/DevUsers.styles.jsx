@@ -12,6 +12,7 @@ export const Container = styled.div`
   background: black;
   border-right: 1px solid gray;
   width: 200px; 
+  height: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -122,7 +123,7 @@ position: fixed;
       -webkit-transform: translateX(4px);
       transform: translateX(4px); }
 
-      @media screen and (min-width: 500px) and (max-width: 1063px) {
+      @media screen and (min-width: 500px) and (max-width: 1086px) {
     display: none;
 
   }
@@ -144,7 +145,7 @@ export const Hm =styled(Home)`
   cursor: pointer;
   display: none;
 
-  @media screen and (min-width: 500px) and (max-width: 1063px) {
+  @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
     color: white;
   width: 40px;
@@ -159,7 +160,7 @@ export const Db =styled(Profile)`
   cursor: pointer;
   display: none;
 
-  @media screen and (min-width: 500px) and (max-width: 1063px) {
+  @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
     color: white;
   width: 40px;
@@ -174,7 +175,7 @@ export const Us =styled(User)`
   cursor: pointer;
   display: none;
 
-  @media screen and (min-width: 500px) and (max-width: 1063px) {
+  @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
     color: white;
   width: 40px;
@@ -189,7 +190,7 @@ export const Dv =styled(DeveloperMode)`
   cursor: pointer;
   display: none;
 
-  @media screen and (min-width: 500px) and (max-width: 1063px) {
+  @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
     color: white;
   width: 40px;
@@ -200,18 +201,18 @@ export const Dv =styled(DeveloperMode)`
   }
 `
 
-export const So =styled(SignOut)`
+export const Soss =styled(SignOut)`
   cursor: pointer;
   display: none;
 
-  @media screen and (min-width: 500px) and (max-width: 1063px) {
-    display: flex;
+  @media screen and (min-width: 500px) and (max-width: 1088px) {
+      display: flex;
     color: white;
   width: 55px;
   height: 55px;
   margin-left: 10px;
   margin-top: 30px;
-  cursor: pointer;   
+ position: relative;   
   }
 `
 

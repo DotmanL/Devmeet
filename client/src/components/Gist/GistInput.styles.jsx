@@ -9,7 +9,7 @@ padding-bottom: 10px;
 border-bottom: 1px solid gray;
 
 border: 10px;
-margin-top: -45px;
+margin-top: -35px;
 margin-left: 4px;
 
 @media screen and (max-width: 800px) {

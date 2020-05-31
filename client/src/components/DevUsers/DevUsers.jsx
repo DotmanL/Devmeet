@@ -15,7 +15,7 @@ import {
   ProfMenu,
   Us,
   SoMenu,
-  So
+  Soss
 } from './DevUsers.styles'
 
 const DevUsers = ({ user: { user }, signout }) => {
@@ -46,17 +46,19 @@ const DevUsers = ({ user: { user }, signout }) => {
         <DevMenu as="a" href="/profiles">
           Developers
         </DevMenu>
+
         <Link to='/profiles'>
         <Dv/>
         </Link>
 
-        <SoMenu as="a" href="/" onClick={signout}>
-          Sign Out
+         
+        <SoMenu onClick={signout}>
+         Sign Out
         </SoMenu>
-        <Link to='/'  onClick={signout} >
-        <So/>
-        </Link>
-
+       
+        
+        <Soss onClick={signout}/>
+              
       </MenuC>
     </Container>
   )
