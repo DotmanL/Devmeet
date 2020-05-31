@@ -22,8 +22,8 @@ export const PostsPageContainer = styled.div`
 
 export const Container = styled.div`
   background: black;
-  border-right: 1px solid white;
-  border-top: 1px solid white;
+  border-right: 1px solid gray;
+  border-top: 1px solid gray;
   display: flex;
   position: relative;
   flex-direction: column;

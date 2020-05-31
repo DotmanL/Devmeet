@@ -1,25 +1,8 @@
-import React, {Fragment, useEffect} from 'react';
+import React, {Fragment, useEffect, lazy, Suspense} from 'react';
 
-//import './App.css';
 import { GlobalStyle } from './global.styles';
 import { Switch, Route,} from 'react-router-dom';
 import "animate.css/animate.min.css";
-
-import HomePage from './Pages/Homepage/HomePage';
-import SignInPage from './Pages/SignInPage/SignInPage';
-import SignUpPage from './Pages/SignUpPage/SignUpPage';
-import ConfirmationPage from './Pages/Confirmation Page/Confirmation Page'
-import DashboardPage from './Pages/DashboardPage/DashboardPage';
-import PostsPage from './Pages/Posts/Posts';
-import Forgot from './Pages/Forgot/Forgot';
-import Reset from './Pages/ResetPassword/Reset';
-import CreateProfile from './components/Profile-form/CreateProfile';
-import AddExperience from './components/Profile-form/AddExperience';
-import AddEducation from './components/Profile-form/AddEducation';
-import Profiles from './components/Profiles/Profiles'
-import Profile from './components/Profile/Profile'
-import Gist from './components/Gist/Gist'
-
 
 import PrivateRoute from './components/Routes/PrivateRoute';
 
@@ -29,10 +12,25 @@ import store from './Redux/store';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import { Zoom  } from 'react-toastify';
+import Spinner from './components/Spinner/Spinner';
+import ErrorBoundary from './components/error-boundary/error-boundary';
 
 
+const HomePage = lazy(() => import ('./Pages/Homepage/HomePage'))
+const SignInPage = lazy(() => import('./Pages/SignInPage/SignInPage'))
+const SignUpPage = lazy(() => import('./Pages/SignUpPage/SignUpPage'))
+const ConfirmationPage = lazy(() => import('./Pages/Confirmation Page/Confirmation Page'))
+const DashboardPage = lazy(() => import('./Pages/DashboardPage/DashboardPage'))
+const PostsPage = lazy(() => import('./Pages/Posts/Posts'))
+const Forgot = lazy(() => import('./Pages/Forgot/Forgot'))
+const Reset = lazy(() => import('./Pages/ResetPassword/Reset'))
+const CreateProfile = lazy(() => import('./components/Profile-form/CreateProfile'))
+const AddExperience = lazy(() => import('./components/Profile-form/AddExperience'))
+const AddEducation = lazy(() => import('./components/Profile-form/AddEducation'))
+const Profiles = lazy(() => import('./components/Profiles/Profiles'))
+const Profile = lazy(() => import('./components/Profile/Profile'))
+const Gist = lazy(() => import('./components/Gist/Gist'))
 
 
 // if (localStorage.token) {
@@ -57,7 +55,9 @@ const App = () => {
       <GlobalStyle />
      <ToastContainer style= {styles} closeOnClick transition={Zoom}/>
   
-      <Switch>    
+      <Switch>  
+      <ErrorBoundary>
+        <Suspense fallback={<Spinner/>}>
     <Route exact path ='/' component={HomePage}/>
    <Route exact path ='/signup' component={SignUpPage}/>
    
@@ -77,7 +77,8 @@ const App = () => {
    <PrivateRoute exact path ='/edit-profile' component={CreateProfile}/>
    <PrivateRoute exact path ='/add-experience' component={AddExperience}/>
    <PrivateRoute exact path ='/add-education' component={AddEducation}/>
-     
+   </Suspense> 
+   </ErrorBoundary>
   </Switch>
   
     </Fragment>

@@ -5,12 +5,12 @@ width: 100%;
 display: flex;
 flex-direction: column;
 padding-bottom: 10px;
-border-bottom: 1px solid white;
+border-bottom: 1px solid gray;
 `
 
 export const Cover =styled.div`
 background: black;
-border-bottom: 1px solid white;
+border-bottom: 1px solid gray;
 width: 100%;
 color: white;
 `
@@ -103,6 +103,6 @@ export const Button = styled.button`
       @media screen and (max-width: 800px) {
         width: 90px;
         height: 30px;
-        margin-left: 0px;
+        margin-left: 10px;
       }
 `

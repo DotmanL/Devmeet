@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux';
 import {Container, Cover, Header, FormContainer, FormInput, Button} from './GistInput.styles'
-import {addComment} from '../../Redux/Post/post.actions';
-
+import {addComment, deleteComment} from '../../Redux/Post/post.actions';
+//import CommentItem from './CommentItem';
 
 const GistInput = ({ postId, addComment }) => {
   
@@ -14,7 +14,7 @@ const GistInput = ({ postId, addComment }) => {
     <Cover>
 
       <Header>Leave a Comment</Header>
-     
+      {/* <CommentItem postId  /> */}
     </Cover>
     <form    onSubmit={e => {
           e.preventDefault();
@@ -41,6 +41,7 @@ const GistInput = ({ postId, addComment }) => {
 
 GistInput.propTypes = {
 addComment: PropTypes.func.isRequired,
+comment: PropTypes.object.isRequired,
 }
 
-export default connect(null, {addComment}) (GistInput)
+export default connect(null, {addComment, deleteComment}) (GistInput)

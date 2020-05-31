@@ -10,7 +10,7 @@ import {SignOut} from '@styled-icons/octicons/SignOut'
 
 export const Container = styled.div`
   background: black;
-  border-right: 1px solid white;
+  border-right: 1px solid gray;
   width: 200px; 
   display: flex;
   flex-direction: column;
@@ -22,6 +22,7 @@ export const Container = styled.div`
     display: none;
   }
   @media screen and (min-width: 500px) and (max-width: 1086px) {
+    width: 9.5vw;
     display: flex;
     background: black;
     flex-direction: column;
@@ -47,7 +48,7 @@ position: fixed;
     background: black;
     position: fixed;
     flex-direction: column;
-    width: 9.5vw;
+    width: 8.5vw;
     margin-left: 0px;
     margin-top: 30px;
 
@@ -146,8 +147,8 @@ export const Hm =styled(Home)`
   @media screen and (min-width: 500px) and (max-width: 1063px) {
     display: flex;
     color: white;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin-left: 10px;
   margin-top: 70px;
   cursor: pointer;   
@@ -161,8 +162,8 @@ export const Db =styled(Profile)`
   @media screen and (min-width: 500px) and (max-width: 1063px) {
     display: flex;
     color: white;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin-left: 10px;
   margin-top: 30px;
   cursor: pointer;   
@@ -176,8 +177,8 @@ export const Us =styled(User)`
   @media screen and (min-width: 500px) and (max-width: 1063px) {
     display: flex;
     color: white;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin-left: 10px;
   margin-top: 30px;
   cursor: pointer;   
@@ -191,8 +192,8 @@ export const Dv =styled(DeveloperMode)`
   @media screen and (min-width: 500px) and (max-width: 1063px) {
     display: flex;
     color: white;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin-left: 10px;
   margin-top: 30px;
   cursor: pointer;   

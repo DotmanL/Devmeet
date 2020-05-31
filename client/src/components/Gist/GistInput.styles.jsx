@@ -5,14 +5,14 @@ width: 100%;
 display: flex;
 flex-direction: column;
 padding-bottom: 10px;
-border-bottom: 1px solid white;
+border-bottom: 1px solid gray;
 background: black;
 border: 10px;
 `
 
 export const Cover =styled.div`
 background: white;
-border-bottom: 1px solid white;
+border-bottom: 1px solid gray;
 width: 100%;
 color: white;
 `
@@ -31,7 +31,7 @@ width: 100%;
 export const FormInput =styled.textarea`
 width: 100%;
 background: lightgray;
-border: 2px solid white;
+border: 2px solid gray;
 padding-top: 10px;
 padding-left: 10px;
 height:200px;

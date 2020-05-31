@@ -53,7 +53,7 @@ const DevUsers = ({ user: { user }, signout }) => {
         <SoMenu as="a" href="/" onClick={signout}>
           Sign Out
         </SoMenu>
-        <Link to='/dashboard'  onClick={signout} >
+        <Link to='/'  onClick={signout} >
         <So/>
         </Link>
 

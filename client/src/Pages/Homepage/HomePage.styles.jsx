@@ -10,6 +10,9 @@ position: relative;
 padding-top: 40px;
 text-align: center;
 background: rgb(5, 91, 94);
+@media screen and (max-width: 800px) {
+  background: black;
+  }
 `
 
 export const HomeContent = styled.div`
@@ -26,7 +29,7 @@ export const HomeContent = styled.div`
   width: 95vw;
   height: 100vh;
   margin-bottom: 20px;
-  margin-top: 72px;
+  margin-top: 5vh;
   border: 3px solid white;
  
   @media screen and (max-width: 800px) {
