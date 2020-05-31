@@ -7,15 +7,18 @@ flex-direction: column;
 align-items: flex-start;
 padding-bottom: 10px;
 border-bottom: 1px solid gray;
-background: black;
+
 border: 10px;
-margin-top: -18px;
+margin-top: -45px;
 margin-left: 4px;
+
+@media screen and (max-width: 800px) {
+  margin-top: -50px;
+  }
 `
 
 
 export const CoverL =styled.div`
-background: black;
 width: 100px;
 height: 60px;
 display: flex;

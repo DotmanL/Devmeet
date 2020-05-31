@@ -5,7 +5,6 @@ import { CommentDots } from '@styled-icons/boxicons-solid/CommentDots'
 import { Delete } from '@styled-icons/material/Delete'
 import {CloseCircle} from '@styled-icons/evaicons-solid/CloseCircle'
 
-
 export const Pc = styled.div`
 cursor: pointer;
 display: flex;
@@ -23,6 +22,8 @@ display: none;
 
   }
 `
+
+
 
 
 
@@ -216,7 +217,7 @@ export const Dl = styled(Delete)`
 `
 
 export const ModalC =styled.div`
-background: darkslategrey;
+background-color: black;
 color: white;
 flex-direction: column;
 `
@@ -267,14 +268,14 @@ export const ModalD = styled.p`
 
 export const ModalClose = styled(CloseCircle)`
   color: white;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
 
   margin-left: 166.4px;
   cursor: pointer;
   @media screen and (max-width: 800px) {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
    
     margin-left: 50px;
   }

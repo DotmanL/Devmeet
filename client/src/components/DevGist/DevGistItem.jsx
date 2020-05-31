@@ -30,7 +30,7 @@ import {
   ModalN,
   ModalT,
   ModalD,
-  ModalClose
+ ModalClose
 } from './DevGistItem.styles'
 
 import './CmModal.css'
@@ -48,6 +48,12 @@ const DevGistItem = ({
 }) => {
 
   const [open, setOpen] = useState(false)
+
+  const closeIcon = (
+<ModalClose />
+
+  )
+
 
   const onOpenModal = () => {
     setOpen(true);
@@ -101,7 +107,7 @@ const DevGistItem = ({
           )} 
           <Dk title='Unlike' onClick= {() => removeLike(_id)} /> 
 
-          <Modal open={open} onClose={onCloseModal}
+          <Modal open={open} onClose={onCloseModal}  closeIcon={closeIcon}
             classNames={{
               overlay: 'customOverlay',
               modal: 'customModal',
