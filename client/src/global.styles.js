@@ -9,7 +9,6 @@ body {
     background-color: rgba(5, 91, 94);
     font-size: 1rem;
   line-height: 1.6;
- 
 
 
     @media screen and ( max-width: 800px) {

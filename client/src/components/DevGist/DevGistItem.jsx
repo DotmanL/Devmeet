@@ -22,10 +22,20 @@ import {
   Cm,
   Dl,
   Pc,
-  Mb
+  Mb,
+  Cms,
+  ModalC,
+  ModalU, 
+  ModalImg,
+  ModalN,
+  ModalT,
+  ModalD,
+  ModalClose
 } from './DevGistItem.styles'
 
 import './CmModal.css'
+
+
 
 
 const DevGistItem = ({
@@ -47,6 +57,7 @@ const DevGistItem = ({
     setOpen(false);
   };
 
+ 
   return (
     <Fragment>
       <Post>
@@ -78,47 +89,65 @@ const DevGistItem = ({
           {showActions && (<Fragment>
             <Lower>
           <LowerC>
-      
+         
+           <Pc>    
+        <Cm title='Comments' onClick={onOpenModal}/> {''} {comments.length > 0 && (
+            <Cms>{comments.length}</Cms>
+          )} 
+          
+          
         <Lk title='like' onClick= {() => addLike(_id)} />{''} {likes.length > 0 && (
             <span style={{'color':'white'}}>{likes.length}</span>
           )} 
           <Dk title='Unlike' onClick= {() => removeLike(_id)} /> 
-         
 
-           <Pc>    
-        <Cm title='Comments' onClick={onOpenModal}>
-          {comments.length > 0 && (
-            <span style={{'color':'white'}}>{comments.length}</span>
-          )} 
-          </Cm>
-
-          <Modal open={open} onClose={onCloseModal} 
+          <Modal open={open} onClose={onCloseModal}
             classNames={{
               overlay: 'customOverlay',
               modal: 'customModal',
             }}
             >
+          <ModalC> 
+            <ModalU>
+       
+          <ModalImg src={avatar}/>          
+          </ModalU>
 
-          <GistInput
-         
-          postId={_id} />
-         
+          <ModalN>
+          {name}
+          </ModalN>
+
+        
+          <ModalT>
+          {text}
+          </ModalT>
+          
+           <ModalD>
+          <Moment format=" h:mm A ~ MMMM Do, YYYY">{date}</Moment>
+          </ModalD>
+       
+         </ModalC>
+     
+
+         <GistInput postId={_id} />
         </Modal>
         
         </Pc>
-        
-
+      
+         
         <Mb> 
-        <Link to={`/posts/${_id}`}>      
-        <Cm title='Comments' onClick={onOpenModal}>
-          {comments.length > 0 && (
-            <span style={{'color':'white'}}>{comments.length}</span>
+        <Cm title='Comments' onClick={onOpenModal}/> {''} {comments.length > 0 && (
+            <Cms>{comments.length}</Cms>
           )} 
-          </Cm>
-          </Link>
+          
+        <Lk title='like' onClick= {() => addLike(_id)} />{''} {likes.length > 0 && (
+            <span style={{'color':'white'}}>{likes.length}</span>
+          )} 
+          <Dk title='Unlike' onClick= {() => removeLike(_id)} /> 
+
         </Mb>
 
-          
+
 
           {!userP.loading && user === userP.user._id && ( <Dl title='Delete' onClick= {() => deletePost(_id)} > 
             </Dl>
@@ -144,12 +173,14 @@ DevGistItem.propTypes = {
   deletePost: PropTypes.func.isRequired,
   removeLike: PropTypes.func.isRequired,
   addLike: PropTypes.func.isRequired,
- 
+
   
 
 }
 const mapStateToProps = (state) => ({
   userP: state.user,
+
+
   
 })
 

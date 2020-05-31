@@ -7,7 +7,6 @@ import { getPost } from '../../Redux/Post/post.actions'
 import DevGistItem from '../DevGist/DevGistItem'
 import DevUsers from '../DevUsers/DevUsers'
 import DevFeed from '../DevFeed/DevFeed'
-import GistInput  from './GistInput'
 import CommentItem from './CommentItem'
 import {
   PostsPageContainer,
@@ -41,9 +40,8 @@ const Gist = ({ getPost, post: { post, loading }, match }) => {
           <Header>Post</Header>
         </TopCover>
         <Container>
-          <DevGistItem post={post} showActions={false} />
+          <DevGistItem post={post} showActions={true} />
         </Container>
-        <GistInput postId={post._id} />
         <Comments>
           {post.comments.map(comment => (
           <CommentItem key ={comment._id} comment={comment} postId ={post._id}/>

@@ -3,11 +3,12 @@ import { Like } from '@styled-icons/boxicons-solid/Like'
 import { Dislike } from '@styled-icons/boxicons-regular/Dislike'
 import { CommentDots } from '@styled-icons/boxicons-solid/CommentDots'
 import { Delete } from '@styled-icons/material/Delete'
-
+import {CloseCircle} from '@styled-icons/evaicons-solid/CloseCircle'
 
 
 export const Pc = styled.div`
 cursor: pointer;
+display: flex;
 
 @media screen and (max-width: 800px) {
     display: none;
@@ -96,7 +97,7 @@ export const PostContainer = styled.div`
 export const PostText = styled.p`
   font-size: 18px;
   color: white;
-  margin-top: -60px;
+  margin-top: -55px;
   padding-left: 110px;
   width: 95%;
   @media screen and (max-width: 800px) {
@@ -150,12 +151,14 @@ export const Lk = styled(Like)`
   color: gray;
   width: 30px;
   height: 30px;
-  margin-left: 3px;
+
+  margin-left: 166.4px;
   cursor: pointer;
   @media screen and (max-width: 800px) {
     width: 20px;
     height: 20px;
-    margin-left: 0px;
+   
+    margin-left: 50px;
   }
 `
 export const Dk = styled(Dislike)`
@@ -174,15 +177,29 @@ export const Cm = styled(CommentDots)`
    color: gray;
   width: 30px;
   height: 30px;
-  margin-left: 166.4px;
+  margin-left: 3px;
   cursor: pointer;
 
   @media screen and (max-width: 800px) {
     width: 20px;
     height: 20px;
-    margin-left: 50px;
+    margin-left: 0px;
+  
+    
   }
 `
+
+
+
+export const Cms =styled.span`
+color: white;
+
+@media screen and (max-width: 800px) {
+    display: flex;
+    
+  }
+`
+
 
 export const Dl = styled(Delete)`
   color: red;
@@ -194,6 +211,71 @@ export const Dl = styled(Delete)`
   @media screen and (max-width: 800px) {
     width: 20px;
     height: 20px;
+    margin-left: 50px;
+  }
+`
+
+export const ModalC =styled.div`
+background: darkslategrey;
+color: white;
+flex-direction: column;
+`
+export const ModalU =styled.div`
+display: flex;
+  height: 93px;
+  margin-top: 1px;
+  width: 93px;
+  flex-direction: row;
+  padding-left: 5px;
+  padding-right: 10px;
+`
+export const ModalImg = styled.img`
+ background: white;
+  border-radius: 50%;
+  display: inline-block;
+
+  position: relative;
+  margin-top: 5px;
+  width: 70px;
+  height: 70px;
+`
+
+export const ModalN =styled.h4`
+  font-size: 20px;
+  color: white;
+  margin-top: -90px;
+  padding-left: 95px;
+`
+
+export const ModalT =styled.p`
+font-size: 18px;
+  color: white;
+  margin-top: -30px;
+  padding-left: 95px;
+  width: 95%;
+`
+
+export const ModalD = styled.p`
+ font-size: 13px;
+  color: gray;
+  align-self: flex-start;
+  padding-left: 95px;
+  margin-top: -20px;
+  width: 100%;
+`
+
+
+export const ModalClose = styled(CloseCircle)`
+  color: white;
+  width: 30px;
+  height: 30px;
+
+  margin-left: 166.4px;
+  cursor: pointer;
+  @media screen and (max-width: 800px) {
+    width: 20px;
+    height: 20px;
+   
     margin-left: 50px;
   }
 `

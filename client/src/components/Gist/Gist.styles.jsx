@@ -18,6 +18,8 @@ export const PostsPageContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
+  height: 110vh;
+  
 `
 
 export const Container = styled.div`
@@ -28,12 +30,15 @@ export const Container = styled.div`
   position: relative;
   flex-direction: column;
   align-items: center;
-  margin-top: 0px;
+  margin-top: 70px;
 `
 export const TopCover = styled.div`
   background: black;
   width: 100%;
   display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1;
   flex-direction: row;
 `
 export const Cover = styled.div`

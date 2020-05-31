@@ -140,7 +140,8 @@ font-weight: 100;
  @media screen and ( max-width: 800px) {
   display: flex;
  flex-direction: row;
-font-size: 12px;
+font-size: 15px;
+font-weight: 100;
   }
  `
 
