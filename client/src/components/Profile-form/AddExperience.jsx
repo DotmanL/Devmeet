@@ -124,7 +124,7 @@ const handleSubmit = async event => {
             toggleDisabled(!toDateDisabled)
             }}
             /> {' '}Current Job </P>
-        
+     
           
         <FormInput
               type="date"

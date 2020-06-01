@@ -110,9 +110,7 @@ const AddEducation = ({ addEducation, history }) => {
             />
             <SmallText>From Date</SmallText>
 
-            <P>
-              {' '}
-              <FormInputC
+            <P> <FormInputC
                 type="checkbox"
                 name="current"
                 value="current"
@@ -121,9 +119,7 @@ const AddEducation = ({ addEducation, history }) => {
                   setFormData({ ...formData, current: !current })
                   toggleDisabled(!toDateDisabled)
                 }}
-              />{' '}
-              Current School or Bootcamp{' '}
-            </P>
+              />{' '}Current School or Bootcamp </P>
 
             <FormInput
               type="date"

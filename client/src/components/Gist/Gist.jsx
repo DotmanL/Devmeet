@@ -28,7 +28,7 @@ const Gist = ({ getPost, post: { post, loading }, match }) => {
     <Spinner />
   ) : (
     <PostsPageContainer>
-      <DevUsers />
+      <DevUsers/>
 
       <Cover>
         <TopCover>

@@ -124,7 +124,7 @@ border: 3px solid black;
   }
   @media screen and ( max-width: 800px) {
       width: 80px;
-      font-size: 10px;
+      font-size: 11px;
   }
 
  `

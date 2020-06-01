@@ -11,7 +11,7 @@ background: black;
 border-left: 1px solid gray;
 border-right: 1px solid gray;
 border-bottom: 1px solid gray;
-width: 732px;
+width: 700px;
 text-align: center;
 height: 75px;
 position: fixed;
@@ -87,6 +87,7 @@ flex-direction: column;
 text-align: center;
 margin-top: -70px;
 padding-top: 70px;
+margin-left: -5px;
 
 
 }

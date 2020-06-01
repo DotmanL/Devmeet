@@ -89,23 +89,25 @@ export const SmallText =styled.h6`
   `
 
 export const P =styled.p`
-
-  color: white;
+ color: white;
+  display: flex;
+  flex-direction: row;
   `
+
 
 
 export const FormInputC =styled.input`
 width: 20px;
 height: 35px;
 background: white;
-margin-left: 25px;
-margin-top: -20px;
+color: white;
+margin-left: 35px;
+margin-top: -5px;
 border-radius: 5px;
 
 border: 1px solid black;
 @media screen and (max-width: 800px) {
- width: 3%;
- height: 45px;
+ 
 }
 `
 

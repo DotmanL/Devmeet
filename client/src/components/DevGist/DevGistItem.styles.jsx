@@ -32,13 +32,14 @@ export const Post = styled.div`
   border-bottom: 1px solid gray;
   margin-top: 0px;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   @media screen and (max-width: 500px) {
     width: 100vw;
-    border-bottom: 1px solid gray;
+    border-bottom: 1.5px solid gray;
   }
 `
 
@@ -217,7 +218,7 @@ export const Dl = styled(Delete)`
 `
 
 export const ModalC =styled.div`
-background-color: black;
+
 color: white;
 flex-direction: column;
 `
@@ -226,15 +227,16 @@ display: flex;
   height: 93px;
   margin-top: 1px;
   width: 93px;
-  flex-direction: row;
+  flex-direction: column;
   padding-left: 5px;
   padding-right: 10px;
+ 
 `
 export const ModalImg = styled.img`
  background: white;
   border-radius: 50%;
   display: inline-block;
-
+  background: black;
   position: relative;
   margin-top: 5px;
   width: 70px;
@@ -254,6 +256,11 @@ font-size: 18px;
   margin-top: -30px;
   padding-left: 95px;
   width: 95%;
+  
+  @media screen and (max-width: 800px) {
+    width: 80vw;
+    
+  }
 `
 
 export const ModalD = styled.p`
@@ -280,3 +287,4 @@ export const ModalClose = styled(CloseCircle)`
     margin-left: 50px;
   }
 `
+

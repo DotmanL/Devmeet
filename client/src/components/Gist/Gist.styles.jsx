@@ -16,10 +16,10 @@ export const Ar = styled(ArrowBack) `
 
 export const PostsPageContainer = styled.div`
   display: flex;
-  width: 100%;
-  height: auto;
+  background: black;
   flex-direction: row;
-  position: relative;
+  
+  
   
 `
 
@@ -36,13 +36,16 @@ export const Container = styled.div`
 `
 export const TopCover = styled.div`
   background: black;
-  width: 68.2%;
+  width: 63.5vw;
   display: flex;
   position: fixed;
   border-bottom: 1px solid gray;
   top: 0;
   z-index: 1;
   flex-direction: row;
+  @media screen and (max-width: 800px) {
+    width: 100vw;
+  }
 `
 export const Cover = styled.div`
   width: 850px;
@@ -79,12 +82,13 @@ export const Circle =styled.div`
   } 
 
   @media screen and (max-width: 800px) {
-   background-color: black
+   background: black;
+   background: linear-gradient(to left, black 50%, black 50%);
   }
 `
 
 export const Comments =styled.div`
-background: yellow;
+background: black;
 flex-direction: column;
 display: flex;
 `

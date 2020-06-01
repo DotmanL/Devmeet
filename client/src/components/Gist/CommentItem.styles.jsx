@@ -1,18 +1,19 @@
 import styled from 'styled-components';
-import { Delete } from '@styled-icons/material/Delete'
+import { Delete } from '@styled-icons/typicons/Delete'
 
 export const CommentI = styled.div`
 background: black;
 border-bottom: 1px solid gray;
 margin-top: 0px;
 width: 100%;
+height: auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
 
 @media screen and (max-width: 800px) {
   width: 100vw;
-  border-bottom: 0.9px solid gray;
+  border-bottom: 1px solid gray;
 }
 `
 

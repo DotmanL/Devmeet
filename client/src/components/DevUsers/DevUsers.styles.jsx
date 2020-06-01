@@ -12,7 +12,7 @@ export const Container = styled.div`
   background: black;
   border-right: 1px solid gray;
   width: 250px; 
-  height: 3000px;
+  height: auto;
   display: flex;
   flex-direction: column;
   text-align: center;

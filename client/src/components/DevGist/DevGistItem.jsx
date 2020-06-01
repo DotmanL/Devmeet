@@ -30,10 +30,11 @@ import {
   ModalN,
   ModalT,
   ModalD,
- ModalClose
+ ModalClose, 
 } from './DevGistItem.styles'
 
 import './CmModal.css'
+
 
 
 
@@ -116,9 +117,9 @@ const DevGistItem = ({
           <ModalC> 
             <ModalU>
        
-          <ModalImg src={avatar}/>          
+          <ModalImg src={avatar}/>   
           </ModalU>
-
+          
           <ModalN>
           {name}
           </ModalN>

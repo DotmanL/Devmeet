@@ -7,30 +7,25 @@ flex-direction: column;
 align-items: flex-start;
 padding-bottom: 10px;
 border-bottom: 1px solid gray;
-
+background: black;
 border: 10px;
-margin-top: -35px;
+margin-top: 0px;
 margin-left: 4px;
 
 @media screen and (max-width: 800px) {
-  margin-top: -50px;
+  margin-top: 0px;
   }
 `
 
 
-export const CoverL =styled.div`
-width: 100px;
-height: 60px;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-`
-
-export const Line =styled.div`
-width: 2px;
-height: 500px;
-margin-left: 34px;
+export const CircleC = styled.img`
 background: gray;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+display: flex;
+margin-top: 10px;
+margin-left: 10px;
 `
 
 
@@ -41,24 +36,17 @@ padding-left: 10px;
 display: flex;
 flex-direction: row;
 margin-top: 0px;
+margin-left: 0px;
 `
 
 
 
 
 
-export const CircleC = styled.img`
-background: gray;
-border-radius: 50%;
-width: 50px;
-height: 50px;
-display: flex;
-margin-top: -10px;
-`
 
 
 export const FormInput =styled.textarea`
-width: 90%;
+width: 100%;
 background: black;
 border: none;
 overflow: auto;
@@ -81,7 +69,7 @@ export const Button = styled.button`
   border-radius: 10px;
   width: 140px;
   margin-left: 10px;
-  margin-top: 150px;
+  margin-top: 170px;
   height: 51px;
   border: 2px solid #fff;
   cursor: pointer;

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux';
-import {Container, FormContainer, FormInput, Button, CircleC, Line, CoverL} from './GistInput.styles'
+import {Container, FormContainer, FormInput, Button, CircleC, } from './GistInput.styles'
 import {addComment } from '../../Redux/Post/post.actions';
 
 
@@ -12,10 +12,8 @@ const GistInput = ({ postId,  user: { user },
 
   return (
     <Container>
-   <CoverL>
-      <Line />
-      </CoverL>
-  
+
+    
     <form    
     onSubmit={e => {
           e.preventDefault();
