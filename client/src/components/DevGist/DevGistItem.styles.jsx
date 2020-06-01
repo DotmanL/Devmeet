@@ -218,7 +218,7 @@ export const Dl = styled(Delete)`
 `
 
 export const ModalC =styled.div`
-
+background: black;
 color: white;
 flex-direction: column;
 `
