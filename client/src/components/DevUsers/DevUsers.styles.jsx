@@ -11,8 +11,8 @@ import {SignOut} from '@styled-icons/octicons/SignOut'
 export const Container = styled.div`
   background: black;
   border-right: 1px solid gray;
-  width: 200px; 
-  height: auto;
+  width: 250px; 
+  height: 3000px;
   display: flex;
   flex-direction: column;
   text-align: center;

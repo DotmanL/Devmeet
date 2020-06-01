@@ -32,6 +32,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 70px;
+  height: auto;
 `
 export const TopCover = styled.div`
   background: black;
