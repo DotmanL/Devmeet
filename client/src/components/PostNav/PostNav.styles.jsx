@@ -87,7 +87,7 @@ flex-direction: column;
 text-align: center;
 margin-top: -70px;
 padding-top: 70px;
-margin-left: -5px;
+margin-left: -2px;
 
 
 }
