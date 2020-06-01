@@ -17,6 +17,7 @@ export const Ar = styled(ArrowBack) `
 export const PostsPageContainer = styled.div`
   display: flex;
   background: black;
+  height: 100vh;
   flex-direction: row;
   
   
