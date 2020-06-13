@@ -4,7 +4,7 @@ import {SearchAlt} from '@styled-icons/boxicons-regular/SearchAlt'
 
 export const Container = styled.div`
 width: 95vw;
-border: 3px solid white;
+border-radius: 8px;
 margin-right: auto;
 margin-left: auto;
 background: black;

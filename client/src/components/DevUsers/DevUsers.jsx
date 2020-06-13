@@ -15,36 +15,37 @@ import {
   ProfMenu,
   Us,
   SoMenu,
-  Soss
+  Soss,
 } from './DevUsers.styles'
 
 const DevUsers = ({ user: { user }, signout }) => {
   return (
     <Container>
       <MenuC>
+      
         <HomeLink as="a" href="/">
-          Home
+        <Hm/>{''} Home
         </HomeLink>
          <Link to='/'>
         <Hm/>
         </Link>
 
         <ProfMenu as="a" href={`/profile/${user && user._id}`}>
-          My Profile
+        <Us/>{''}  My Profile
         </ProfMenu>
         <Link to={`/profile/${user && user._id}`}>
         <Us/>
         </Link>
 
         <DashMenu as="a" href="/dashboard">
-          Dashboard
+        <Db/>{''} Dashboard
         </DashMenu>
         <Link to='/dashboard'>
         <Db/>
         </Link>
 
         <DevMenu as="a" href="/profiles">
-          Developers
+        <Dv/>{''} Developers
         </DevMenu>
 
         <Link to='/profiles'>
@@ -53,7 +54,7 @@ const DevUsers = ({ user: { user }, signout }) => {
 
          
         <SoMenu onClick={signout}>
-         Sign Out
+        <Soss/>{''}Sign Out
         </SoMenu>
        
         

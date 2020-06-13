@@ -10,7 +10,7 @@ export const SignInContainer = styled.div`
   margin-top: 20px;
   
   @media screen and (max-width: 800px) {
-  width: 85vw;
+  width: 65vw;
   }
 `;
 
@@ -29,6 +29,7 @@ export const LogoContainer = styled.img`
   margin-top: 30px;
   width: 90vw;
   height: 200px;
+  display: none;
   }
 `;
 
@@ -48,12 +49,12 @@ export const SignInFooter = styled(Link)`
   width: 200px;
   margin-left: 550px;
   margin-top: 0px;
-  color: rgb(5, 91, 94);
+  color: black;
 
   
   @media screen and (max-width: 800px) {
-  margin-left: 0px;
-  margin-top: 10px;
+  margin-left: 15%;
+  margin-top: -5px;
   }
 `;
 
@@ -61,5 +62,10 @@ export const SignInFooter = styled(Link)`
 export const Password = styled(Link)`
   font-size: 15px;
   margin-left: 10px;
-  color:rgb(5, 91, 94);
+  color: black;
+    
+  @media screen and (max-width: 800px) {
+    margin-left: 15%;
+  margin-top: 15px;
+  }
 `

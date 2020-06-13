@@ -10,11 +10,11 @@ align-items: center;
 text-align: center;
 flex-direction: column;
 background: black;
-border: 2px solid white;
+border: 1px solid white;
 width: 95vw;
 padding-bottom: 30px;
 margin-top: 10vh;
-border-radius: 5px;
+border-radius: 8px;
 
 
 @media screen and ( max-width: 800px) {

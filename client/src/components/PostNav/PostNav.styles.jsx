@@ -8,12 +8,10 @@ import {SignOut} from '@styled-icons/octicons/SignOut'
 
 export const Nav = styled.div`
 background: black;
-border-left: 1px solid gray;
-border-right: 1px solid gray;
 border-bottom: 1px solid gray;
-width: 700px;
+width: 705px;
 text-align: center;
-height: 75px;
+height: 65px;
 position: fixed;
 display: flex;
 flex-direction: row;
@@ -21,17 +19,18 @@ flex-direction: row;
   z-index: 1;
 
   @media screen and (max-width: 500px) {
-   width: 100vw;
+    width: 100vw;
+    height: 11vh;
    border-left: 1px solid black;
 border-right: 1px solid black;
 border-bottom: 1px solid gray;
 
   }
 
-  @media screen and (min-width: 500px) and (max-width: 1063px) {
-    display: flex;
-    width: 71vw;
-    position: fixed;
+  @media screen and (min-width: 800px) and (max-width: 1063px) {
+  width: 74vw;
+    
+    border-left: 1px solid gray;
   
   }
 

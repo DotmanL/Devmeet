@@ -56,16 +56,12 @@ position: fixed;
 
   }
 `
-
-
   export const DashMenu =styled.button`
-    border: 3px solid black;
   border-radius: 10px;
   width: 140px;
   margin-left: 10px;
-  margin-top: 40px;
+  margin-top: 20px;
   height: 51px;
-  border: 2px solid #fff;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -101,7 +97,7 @@ position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(5, 91, 94);
+    background: #03045e;
     border-radius: 10px;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -143,7 +139,9 @@ export const HomeLink =styled(DashMenu)`
 
 export const Hm =styled(Home)`
   cursor: pointer;
-  display: none;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
@@ -157,8 +155,10 @@ export const Hm =styled(Home)`
 `
 
 export const Db =styled(Profile)`
-  cursor: pointer;
-  display: none;
+   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
@@ -172,8 +172,10 @@ export const Db =styled(Profile)`
 `
 
 export const Us =styled(User)`
-  cursor: pointer;
-  display: none;
+   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
@@ -187,8 +189,10 @@ export const Us =styled(User)`
 `
 
 export const Dv =styled(DeveloperMode)`
-  cursor: pointer;
-  display: none;
+   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
@@ -202,8 +206,10 @@ export const Dv =styled(DeveloperMode)`
 `
 
 export const Soss =styled(SignOut)`
-  cursor: pointer;
-  display: none;
+    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 
   @media screen and (min-width: 500px) and (max-width: 1088px) {
       display: flex;

@@ -7,9 +7,11 @@ import { toast } from 'react-toastify';
 
 
 import { 
+  SIGN_UP_START,
   SIGN_UP_SUCCESS, 
   SIGN_UP_FAIL, 
-  USER_LOADED, AUTH_ERROR, 
+  USER_LOADED, AUTH_ERROR,
+  SIGN_IN_START, 
   SIGN_IN_SUCCESS, 
   SIGN_IN_FAIL,
   SIGN_OUT,
@@ -59,6 +61,10 @@ export const signup = ({name, email, password}) => async dispatch => {
   const body =JSON.stringify({name, email, password});
 
   try {
+
+    dispatch ({
+      type: SIGN_UP_START
+    })
     const res = await axios.post("/api/users", body, config);
     
     dispatch({
@@ -95,8 +101,14 @@ export const signin = ( email, password) => async dispatch => {
   const body =JSON.stringify({email, password});
 
   try {
+
+    dispatch ({
+      type: SIGN_IN_START
+    })
     const res = await axios.post("/api/auth", body, config);
     
+  
+
     dispatch({
       type: SIGN_IN_SUCCESS,
       payload: res.data

@@ -9,7 +9,7 @@ export const SignUpContainer = styled.div`
   margin-bottom: 20px;
   margin-top: -10px;
   @media screen and (max-width: 800px) {
-  width: 300px;
+  width: 70vw;
   margin-left: 20px;
   }
 `;
@@ -26,6 +26,7 @@ export const LogoContainer = styled.img`
   margin-left: -10px;
   margin-top: 30px;
   width: 300px;
+  display: none;
   }
 `;
 
@@ -44,7 +45,7 @@ export const SignUpFooter = styled(Link)`
   width: 200px;
   margin-left: 500px;
   margin-top: 0px;
-  color:rgb(5, 91, 94);
+  color: black;
   
   @media screen and (max-width: 800px) {
   margin-left: 0px;

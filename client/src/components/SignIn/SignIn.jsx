@@ -8,12 +8,9 @@ import { signin } from '../../Redux/User/user.actions';
 
 import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom';
+import ButtonSpin from '../ButtonSpin/ButtonSpin';
 
-
-
-
-
-const SignIn = ({ signin, isAuthenticated}) => {
+const SignIn = ({ signin, isAuthenticated, user:{loading}}) => {
 
     const [ userCredentials, setUserCredentials] = useState({
       email: '',
@@ -25,9 +22,9 @@ const SignIn = ({ signin, isAuthenticated}) => {
 
     const handleSubmit = async event => {
       event.preventDefault();
+      signin(email, password);  
+     
       setUserCredentials({ email:"", password:"" });
-      signin(email, password);
-      //toast.success("Sign in Successful", { autoClose: 8000,});
       
     }
 
@@ -48,6 +45,7 @@ const SignIn = ({ signin, isAuthenticated}) => {
    
     return (  
       <SignInContainer>
+        
          <SignInTitle>SIGN IN</SignInTitle>
           <form onSubmit={handleSubmit} >
           <FormInput
@@ -67,13 +65,23 @@ const SignIn = ({ signin, isAuthenticated}) => {
             minLength="6"
             required
           />
-         
-          <CustomButton type='submit'>SIGN IN</CustomButton>
+        
+    <CustomButton style={{'marginLeft':'30px'}} type='submit'> 
+      
+    {!loading && <span>Sign In</span>}  
+    {loading && <span>Submitting</span>}
+    {loading && (<ButtonSpin />)}
+    
+   
+
+
+      </CustomButton>
+        
           <Password to ='/forgotpassword'>Forgot your Password? </Password>
         
         </form>
         <LogoContainer src={Logo} alt="sign in" />
-            <SignInFooter to ="/signup">I don't have a account </SignInFooter>  
+            <SignInFooter to ="/signup">I don't have an account </SignInFooter>  
         </SignInContainer>
   )
 }
@@ -81,10 +89,13 @@ const SignIn = ({ signin, isAuthenticated}) => {
 SignIn.propType = {
   signin: PropTypes.func.isRequired,
   isAuthenticated:PropTypes.bool,
+  user: PropTypes.object.isRequired,
+  
 }
 
 const mapStateToProps = state => ({
-isAuthenticated: state.user.isAuthenticated
+isAuthenticated: state.user.isAuthenticated,
+user: state.user
 })
 
 export default connect( mapStateToProps, { signin, }) (SignIn);

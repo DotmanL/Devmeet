@@ -6,13 +6,12 @@ import { connect } from 'react-redux';
 import { toast } from 'react-toastify';
 import { signup } from '../../Redux/User/user.actions'
 import PropTypes from 'prop-types';
-
-
-
+import ButtonSpin from '../ButtonSpin/ButtonSpin';
 
 import { SignUpContainer, SignUpTitle, SignUpFooter, LogoContainer } from './SignUp.styles';
 
-const SignUp = ({ signup }) => {
+
+const SignUp = ({ signup, user:{loading} }) => {
 
   const [ userCredentials, setUserCredentials] = useState({
       name: '',
@@ -86,7 +85,18 @@ const SignUp = ({ signup }) => {
             minLength="6"
             required
           />
-          <CustomButton type='submit'>SIGN UP</CustomButton>
+            <CustomButton type='submit'> 
+      
+      {!loading && <span>Sign Up</span>}  
+      {loading && <span>Submitting</span>}
+      {loading && (<ButtonSpin />)}
+      
+    
+  
+        </CustomButton>
+          
+        
+        
         </form>
         <LogoContainer src={Logo} alt="sign up" />
             <SignUpFooter to ="/signin">I am already a member</SignUpFooter>  
@@ -98,10 +108,12 @@ const SignUp = ({ signup }) => {
 
 SignUp.propTypes = {
   signup: PropTypes.func.isRequired,
-  
+  user: PropTypes.object.isRequired,
 }
 
-
-export default connect(null,
+const mapStateToProps = state => ({
+  user: state.user
+  })
+export default connect(mapStateToProps,
    {signup} )
    (SignUp);

@@ -1,8 +1,10 @@
 import {
+  SIGN_UP_START,
    SIGN_UP_SUCCESS, 
    SIGN_UP_FAIL,
     USER_LOADED, 
     AUTH_ERROR,
+    SIGN_IN_START,
     SIGN_IN_SUCCESS,
     SIGN_IN_FAIL,
     SIGN_OUT,
@@ -81,7 +83,14 @@ case SIGN_IN_SUCCESS:
       loading: false,
       user: payload
     }
+  case SIGN_IN_START: 
+  case SIGN_UP_START:
   
+  return {
+    ...state,
+    isAuthenticated: false,
+    loading: true
+  }
 default:
   return state;
 }

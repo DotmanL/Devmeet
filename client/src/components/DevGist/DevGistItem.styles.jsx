@@ -62,7 +62,7 @@ export const Name = styled.h4`
   font-size: 20px;
   color: white;
   margin-top: -90px;
-  padding-left: 110px;
+  padding-left: 115px;
 
   :hover {
     text-decoration: underline;
@@ -100,7 +100,7 @@ export const PostText = styled.p`
   font-size: 18px;
   color: white;
   margin-top: -55px;
-  padding-left: 110px;
+  padding-left: 115px;
   width: 95%;
   @media screen and (max-width: 800px) {
     font-size: 15px;
@@ -114,7 +114,7 @@ export const PostDate = styled.p`
   font-size: 13px;
   color: gray;
   align-self: flex-start;
-  padding-left: 110px;
+  padding-left: 115px;
   margin-top: -10px;
   border-bottom: 1px solid gray;
   width: 100%;
@@ -207,7 +207,7 @@ export const Dl = styled(Delete)`
   color: red;
   width: 30px;
   height: 30px;
-  margin-left: 120px;
+  margin-left: 80px;
   cursor: pointer;
 
   @media screen and (max-width: 800px) {
@@ -221,6 +221,7 @@ export const ModalC =styled.div`
 background: black;
 color: white;
 flex-direction: column;
+
 `
 export const ModalU =styled.div`
 display: flex;
@@ -275,9 +276,12 @@ export const ModalD = styled.p`
 
 export const ModalClose = styled(CloseCircle)`
   color: white;
+  resize: none;
   width: 45px;
   height: 45px;
-
+  outline: none;
+  border: 1px solid black;
+  stroke: none;
   margin-left: 166.4px;
   cursor: pointer;
   @media screen and (max-width: 800px) {

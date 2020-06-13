@@ -28,11 +28,16 @@ width: 100%;
 
 export const FormInput =styled.textarea`
 width: 100%;
-background: lightgray;
+background: black;
+color: white;
 border: 2px solid white;
+border-bottom: 20px solid gray;
 padding-top: 10px;
-padding-left: 10px;
-height:200px;
+padding-left: 20px;
+font-size: 15px;
+height:100px;
+resize: none;
+outline: none;
 border: 8px;
 @media screen and (max-width: 800px) {
     height: 100px;
@@ -40,15 +45,15 @@ border: 8px;
 `
 
 export const Button = styled.button`
-  border: 1px solid black;
   border-radius: 10px;
-  width: 140px;
+  width: 100px;
   margin-left: 10px;
   margin-top: 0px;
-  height: 51px;
-  border: 2px solid #fff;
+  height: 41px;
+  border: 1px solid #fff;
   cursor: pointer;
   background: black;
+  border-radius: 10px;
   color: #fff;
   font-family: "Montserrat-SemiBold";
   -webkit-transform: perspective(1px) translateZ(0);
@@ -78,7 +83,7 @@ export const Button = styled.button`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(5, 91, 94);
+    background:#03045e;
     border-radius: 10px;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);

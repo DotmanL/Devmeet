@@ -14,7 +14,7 @@ color: green;
 
 export const Container = styled.div`
 border-radius: 10px;
-border: 2px solid white;
+border: 1px solid white;
 background: black;
 width: 93vw;
 margin-right: auto;
@@ -101,6 +101,7 @@ border: 3px solid black;
   border: 2px solid #fff;
   margin-top: -5px;
   cursor: pointer;
+  font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: center;

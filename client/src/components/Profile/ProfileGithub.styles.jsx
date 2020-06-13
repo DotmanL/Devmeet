@@ -3,7 +3,7 @@ import {Github} from '@styled-icons/boxicons-logos/Github';
 
 export const Container =styled.div`
 background: black;
-border: 2px solid darkblue;
+border: 1.5px solid white;
 display: flex; 
 flex-direction: column;
 justify-content: center; 

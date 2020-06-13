@@ -10,7 +10,7 @@ export const Container = styled.div`
   width: 90vw;
   margin-top: 10px;
   background: black;
-  border: 2px solid darkblue; 
+  border: 1.5px solid white;
   display: flex;
   flex-direction: row;
   justify-content: center;

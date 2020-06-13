@@ -64,7 +64,7 @@ cursor: pointer;
 
 
 export const Nav = styled.div`
-  background-color: rgba(5, 91, 94, 0.5);
+  background-color: #011627;
   height: 8vh;
   width: 100%;
   border-bottom: 2px solid white;

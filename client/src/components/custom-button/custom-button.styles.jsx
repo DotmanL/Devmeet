@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const buttonStyles = css`
-  background-color:  rgb(5, 91, 94);
+  background-color:  black;
   color: white;
   border: none;
 
@@ -56,6 +56,7 @@ padding: 0 35px 0 35px;
 font-size: 15px;
 background-color: black;
 color: white;
+outline: none;
 text-transform: uppercase;
 font-family: 'Open Sans Condensed';
 font-weight: bolder;
