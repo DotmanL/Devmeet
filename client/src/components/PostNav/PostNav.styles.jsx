@@ -9,6 +9,8 @@ import {SignOut} from '@styled-icons/octicons/SignOut'
 export const Nav = styled.div`
 background: black;
 border-bottom: 1px solid gray;
+border-left: 1px solid gray;
+border-right: 1px solid gray;
 width: 885px;
 text-align: center;
 height: 65px;

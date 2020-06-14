@@ -14,8 +14,18 @@ const DevGist = (
     post:{posts, loading}}) => {
   
       useEffect(() =>{
-    getPosts()
+        getPosts()
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+ 
   }, [getPosts])
+
+
+  const handleScroll = () => { 
+    if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
+    console.log('fetch more items');
+  }
+
   
   return  loading ? <Spinner/> :
   (
