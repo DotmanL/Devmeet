@@ -12,7 +12,8 @@ import DevGistInput from './DevGistInput';
 const DevGist = (
   {getPosts, 
     post:{posts, loading}}) => {
-  useEffect(() =>{
+  
+      useEffect(() =>{
     getPosts()
   }, [getPosts])
   
