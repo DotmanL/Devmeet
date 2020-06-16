@@ -7,6 +7,7 @@ export const Container = styled.div`
   border-top: 1px solid gray;
   margin-top: 5px;
   width: 950px;
+  height: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
