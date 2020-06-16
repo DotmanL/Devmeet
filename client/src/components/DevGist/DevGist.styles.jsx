@@ -7,12 +7,12 @@ export const Container = styled.div`
   border-top: 1px solid gray;
   margin-top: 5px;
   width: 950px;
-  height: auto;
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
   
   @media screen and (max-width: 800px) {
     width: 100vw;
@@ -61,11 +61,23 @@ background: black;
 flex-direction: column;
 justify-content: center;
 width: 100%;
+height: auto;
 align-items: center;
-padding-bottom: 250px;
-position: relative;
+padding-bottom: 10px;
 @media screen and (max-width: 800px) {
     width: 90vw;
-    
+    padding-bottom: 30px;
+  
   }
+`
+
+export const Reached =styled.h1`
+color: white;
+font-size: 30px;
+
+@media screen and (max-width: 800px) {
+    width: 90vw;
+    padding-bottom: 20px;
+  }
+
 `

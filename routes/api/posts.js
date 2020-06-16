@@ -48,7 +48,11 @@ router.post('/', [ auth, [
 router.get('/', auth, async (req, res) => {
 
   try {
-    const posts = await Post.find().sort({ date: -1 });
+
+    const limit = parseInt(req.query.limit); // Make sure to parse the limit to number
+    const skip = parseInt(req.query.skip);
+    const posts = await Post.find().sort({ date: -1 }).skip(skip).limit(limit)
+
     res.json(posts)
   } catch (err) {
     console.error(err.message)

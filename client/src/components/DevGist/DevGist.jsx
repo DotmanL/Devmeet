@@ -1,32 +1,53 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 
 import PostNav from '../PostNav/PostNav';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Spinner from '../Spinner/Spinner';
-import {getPosts} from '../../Redux/Post/post.actions';
+import {getPosts, getMorePosts} from '../../Redux/Post/post.actions';
 import DevGistItem from './DevGistItem'
-import { Container, Header, Welcome, Posts, Cover } from './DevGist.styles';
+import { Container, Header, Welcome, Posts, Cover, Reached } from './DevGist.styles';
 import DevGistInput from './DevGistInput';
 
+
 const DevGist = (
+
+  
   {getPosts, 
+    getMorePosts,
     post:{posts, loading}}) => {
   
+      const [isFetching, setIsFetching] = useState(false);
+      const [limit, setLimit] = useState(10);
+      const [skip, setSkip] = useState(0);
+     const [hasReached, setHasReached] = useState(false)
+
+
       useEffect(() =>{
-        getPosts()
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
- 
-  }, [getPosts])
-
-
-  const handleScroll = () => { 
-    if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
-    console.log('fetch more items');
-  }
+        if (posts.length === 0){
+          getPosts(limit)
+        } else {
 
   
+        // const {innerHeight} = window;
+        // const {documentElement} = document;
+      
+          
+      window.onscroll = () => {
+        if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight){
+       setIsFetching(true)
+   
+        console.log('fetch more items');
+        setLimit(10)
+      let toSkip = skip + limit
+      setSkip(toSkip)
+        getMorePosts(toSkip)
+      }
+      }
+    }
+  
+  })
+
   return  loading ? <Spinner/> :
   (
     <Container>
@@ -36,14 +57,16 @@ const DevGist = (
       <Welcome>Welcome to the DevMeet</Welcome>
       </Cover>
       <DevGistInput />
+   
       <Posts>
         {posts.map(post => (
           <DevGistItem  key={post._id} post={post}/>
         ))}
-      </Posts>
-
-      
          
+          
+      </Posts>
+      {!isFetching && (<Reached>Fetching</Reached>)} 
+      {!hasReached &&(<Reached>End</Reached>)}
     </Container>
     )
 }
@@ -52,6 +75,7 @@ const DevGist = (
 
 DevGist.propTypes = {
   getPosts: PropTypes.func.isRequired,
+  getMorePosts: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired
 };
 
@@ -59,4 +83,4 @@ const mapStateToProps = state => ({
   post: state.post
 })
 
-export default connect(mapStateToProps, {getPosts}) (DevGist);
+export default connect(mapStateToProps, {getPosts, getMorePosts}) (DevGist);
