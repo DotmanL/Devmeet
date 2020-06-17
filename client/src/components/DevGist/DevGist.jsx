@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import Spinner from '../Spinner/Spinner';
 import {getPosts, getMorePosts} from '../../Redux/Post/post.actions';
 import DevGistItem from './DevGistItem'
-import { Container, Header, Welcome, Posts, Cover, Reached } from './DevGist.styles';
+import { Container, Header, Welcome, Posts, Cover } from './DevGist.styles';
 import DevGistInput from './DevGistInput';
 
 
@@ -34,11 +34,14 @@ const DevGist = (
       
           
       window.onscroll = () => {
-        if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight || isFetching){
+        if (
+          (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 400 ) &&
+          posts.length
+        ) {
        setIsFetching(true)
-     
+       setHasReached(false)
         console.log('fetch more items');
-        setLimit(7)
+        setLimit(10)
       let toSkip = skip + limit
       setSkip(toSkip)
         getMorePosts(toSkip)
@@ -66,8 +69,7 @@ const DevGist = (
          
           
       </Posts>
-      {!isFetching && (<Reached>Fetching</Reached>)} 
-      {/* {hasReached &&(<Reached>End</Reached>)} */}
+      {!isFetching && !hasReached && (<Spinner/>)} 
     </Container>
     )
 }
