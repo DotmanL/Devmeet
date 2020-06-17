@@ -18,7 +18,7 @@ const DevGist = (
     post:{posts, loading}}) => {
   
       const [isFetching, setIsFetching] = useState(false);
-      const [limit, setLimit] = useState(20);
+      const [limit, setLimit] = useState(10);
       const [skip, setSkip] = useState(0);
      const [hasReached, setHasReached] = useState(false)
 
@@ -34,17 +34,15 @@ const DevGist = (
       
           
       window.onscroll = () => {
-        if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight ){
-       
-          console.log('fetch more items');
-          setIsFetching(true)
-          setHasReached(false)
-        setLimit(20)
+        if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight){
+       setIsFetching(true)
+   
+        console.log('fetch more items');
+        setLimit(10)
       let toSkip = skip + limit
       setSkip(toSkip)
-      getMorePosts(toSkip) 
+        getMorePosts(toSkip)
       }
-      
       }
     }
   
@@ -67,9 +65,8 @@ const DevGist = (
          
           
       </Posts>
-    
-      {!isFetching && (<div><Spinner style={{'color': 'red'}} /></div>)} 
-      {hasReached &&(<Reached>End</Reached>)}
+      {!isFetching && (<Reached>Fetching</Reached>)} 
+      {!hasReached &&(<Reached>End</Reached>)}
     </Container>
     )
 }
