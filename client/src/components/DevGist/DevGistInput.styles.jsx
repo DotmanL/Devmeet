@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container =styled.div`
 width: 100%;
 display: flex;
+position: relative;
 flex-direction: column;
 padding-bottom: 10px;
 border-bottom: 1px solid gray;
@@ -35,6 +36,7 @@ border-bottom: 20px solid gray;
 padding-top: 10px;
 padding-left: 20px;
 font-size: 15px;
+position: relative;
 height:100px;
 resize: none;
 outline: none;

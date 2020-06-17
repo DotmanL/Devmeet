@@ -221,6 +221,7 @@ export const ModalC =styled.div`
 background: black;
 color: white;
 flex-direction: column;
+position: relative;
 
 `
 export const ModalU =styled.div`

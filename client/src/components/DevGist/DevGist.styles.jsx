@@ -64,10 +64,10 @@ justify-content: center;
 width: 100%;
 height: auto;
 align-items: center;
-padding-bottom: 30px;
+padding-bottom: 10px;
 @media screen and (max-width: 800px) {
     width: 90vw;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   
   }
 `
