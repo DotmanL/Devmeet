@@ -34,14 +34,15 @@ const DevGist = (
       
           
       window.onscroll = () => {
-        if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight){
+        if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight || isFetching){
        setIsFetching(true)
-   
+     
         console.log('fetch more items');
-        setLimit(10)
+        setLimit(7)
       let toSkip = skip + limit
       setSkip(toSkip)
         getMorePosts(toSkip)
+        
       }
       }
     }
@@ -66,7 +67,7 @@ const DevGist = (
           
       </Posts>
       {!isFetching && (<Reached>Fetching</Reached>)} 
-      {!hasReached &&(<Reached>End</Reached>)}
+      {/* {hasReached &&(<Reached>End</Reached>)} */}
     </Container>
     )
 }
