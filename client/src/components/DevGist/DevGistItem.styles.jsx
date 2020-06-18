@@ -28,7 +28,6 @@ display: none;
 
 
 export const Post = styled.div`
-  background: black;
   border-bottom: 1px solid gray;
   margin-top: 0px;
   width: 100%;
@@ -88,7 +87,7 @@ export const UserDet = styled.div`
 
 export const PostContainer = styled.div`
   display: flex;
-  background: black;
+  background-color: rgb(0, 0, 0);
   flex-direction: column;
 
   @media screen and (max-width: 800px) {
@@ -128,7 +127,7 @@ export const PostDate = styled.p`
 `
 export const Lower = styled.div`
   display: flex;
-  background: black;
+  background-color: rgb(0, 0, 0);
   flex-direction: column;
   padding-left: 95px;
   @media screen and (max-width: 800px) {
@@ -138,6 +137,7 @@ export const Lower = styled.div`
 `
 export const LowerC = styled.div`
   display: flex;
+
   flex-direction: row;
   padding-left: 15px;
   text-align: center;

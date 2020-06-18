@@ -3,21 +3,21 @@ import {SearchAlt} from '@styled-icons/boxicons-regular/SearchAlt'
 
 
 export const Container = styled.div`
-width: 95vw;
+width: 85vw;
 border-radius: 8px;
+border: 2px solid white;
 margin-right: auto;
 margin-left: auto;
-background: black;
-margin-top: 10vh;
+background: #000000;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 
 @media screen and (max-width: 800px) {
-
+  width: 100vw;
   font-size: 20px;
- margin-top: 80px;
+
  border: 0px;
 }
 `

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import Spinner from '../Spinner/Spinner';
 import {getProfiles} from '../../Redux/Profile/profile.actions';
 import ProfileItem from './ProfileItem';
-import NavBar from '../Navbar/Navbar';
+import Nav from '../Navbar/Nav';
 
 import {Title, SubTitle, ProfilesL, SA, Container} from './Profiles.styles'
 
@@ -20,7 +20,7 @@ const Profiles = ({getProfiles, profile: { profiles, loading}}) => {
     <Container>
   <Fragment>
       {loading ? <Spinner /> : <Fragment>
-        <NavBar />
+        <Nav />
         <Title>Developers</Title>
         <SubTitle><SA />Browse and Connect with developers</SubTitle>
     </Fragment>}

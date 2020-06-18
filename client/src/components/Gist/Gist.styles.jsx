@@ -37,10 +37,11 @@ export const Container = styled.div`
 `
 export const TopCover = styled.div`
   background: black;
-  width: 63.5vw;
+  width: 63.0vw;
   display: flex;
   position: fixed;
   border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
   top: 0;
   z-index: 1;
   flex-direction: row;

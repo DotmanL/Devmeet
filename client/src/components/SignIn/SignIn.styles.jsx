@@ -49,7 +49,7 @@ export const SignInFooter = styled(Link)`
   width: 200px;
   margin-left: 550px;
   margin-top: 0px;
-  color: black;
+  color:#14213d;
 
   
   @media screen and (max-width: 800px) {
@@ -61,7 +61,7 @@ export const SignInFooter = styled(Link)`
 
 export const Password = styled(Link)`
   font-size: 15px;
-  margin-left: 10px;
+  margin-left: 40px;
   color: black;
     
   @media screen and (max-width: 800px) {

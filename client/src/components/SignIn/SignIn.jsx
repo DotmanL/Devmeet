@@ -69,7 +69,7 @@ const SignIn = ({ signin, isAuthenticated, user:{loading}}) => {
     <CustomButton style={{'marginLeft':'30px'}} type='submit'> 
       
     {!loading && <span>Sign In</span>}  
-    {loading && <span>Submitting</span>}
+    {loading && <span>Signing In</span>}
     {loading && (<ButtonSpin />)}
     
    

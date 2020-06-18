@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: black;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  border-top: 1px solid gray;
+  background-color: rgb(0, 0, 0);
+  border-left: 0.5px solid gray;
+  border-right: 0.5px solid gray;
+  border-top: 0.5px solid gray;
   margin-top: 5px;
   width: 950px;
   height: 100%;
@@ -23,11 +23,11 @@ export const Container = styled.div`
   `;
 
 export const Cover =styled.div`
-background: black;
 display: flex;
 flex-direction: column;
 width: 100%;
-margin-top:-8px;
+position: relative;
+margin-top: -8px;
 border-bottom: 1px solid gray;
 
 `
@@ -58,7 +58,7 @@ margin-top: -30px;
 
 export const Posts =styled.div`
 display: flex;
-background: black;
+background-color: rgb(0, 0, 0);
 flex-direction: column;
 justify-content: center;
 width: 100%;

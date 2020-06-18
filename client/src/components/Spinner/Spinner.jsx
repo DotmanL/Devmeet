@@ -9,7 +9,7 @@ const override = css`
   display: flex;
   flex-direction: row;
   justify-content: center;
-
+  align-items: center;
   margin-top: 50vh;
   border-color: red;
 

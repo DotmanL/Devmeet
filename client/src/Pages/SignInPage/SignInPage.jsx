@@ -1,13 +1,13 @@
 import React from 'react'
 import SignIn from '../../components/SignIn/SignIn';
 import { SignInPageContainer } from './SignInPage.styles';
-import NavBar  from '../../components/Navbar/Navbar';
+import Nav  from '../../components/Navbar/Nav';
 
 const SignInPage = () => {
   return (
     <SignInPageContainer>
       
-      <NavBar />
+      <Nav />
 
     <SignIn />
     </SignInPageContainer>

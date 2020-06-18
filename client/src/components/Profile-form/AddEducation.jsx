@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addEducation } from '../../Redux/Profile/profile.actions'
-import NavBar from '../Navbar/Navbar'
+import Nav from '../Navbar/Nav'
 //import {Link} from 'react-router-dom';
 
 import {
@@ -67,7 +67,7 @@ const AddEducation = ({ addEducation, history }) => {
 
   return (
     <Fragment>
-      <NavBar />
+      <Nav />
       <Container>
         <FormContainer>
           <Title>Add Your Education</Title>

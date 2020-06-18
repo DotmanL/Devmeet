@@ -3,7 +3,7 @@ import { Container, FormInput, Button, Title } from './Reset.styles';
 import {reset} from '../../Redux/User/user.actions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import NavBar  from '../../components/Navbar/Navbar';
+import Nav  from '../../components/Navbar/Nav';
 import {toast} from 'react-toastify';
 
 
@@ -37,7 +37,7 @@ const[inputs, setInputs] = useState({
 
   return (
     <Container>
-      <NavBar />
+      <Nav />
   <Title>Hey, type in your new password </Title>
        
         <form onSubmit={handleSubmit}>

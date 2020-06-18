@@ -10,23 +10,19 @@ align-items: center;
 text-align: center;
 flex-direction: column;
 background: black;
-border: 1px solid white;
-width: 95vw;
+border: 2px solid white;
+width: 85vw;
 padding-bottom: 30px;
-margin-top: 10vh;
+margin-top: 13vh;
 border-radius: 8px;
 
 
 @media screen and ( max-width: 800px) {
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-      border: 0px solid white;
+  
+        border: 0px solid white;
       width: 100vw;
-align-items: center;
-text-align: center;
-flex-direction: column;
-  }
+      margin-top: 0vh;  
+      }
 `
 export const Details = styled.h2 `
 color: white;
@@ -41,38 +37,41 @@ font-weight: bold;
 
 export const Prof =styled(Profile)`
 color: white;
-width: 30px;
-height: 30px;
-margin-left: 3px;
+width: 20px;
+height: 20px;
+margin-left: -5px;
 cursor: pointer;
 
 @media screen and ( max-width: 800px) {
-  width: 20px;
-height: 20px;
+  width: 15px;
+height: 15px;
+margin-left: 1px;
      }
 `
 
 export const BT =styled(BlackTie)`
 color: white;
-width: 30px;
-height: 30px;
-margin-left: 3px;
+width: 20px;
+height: 20px;
+margin-left: -5px;
 cursor: pointer;
 @media screen and ( max-width: 800px) {
-  width: 20px;
-height: 20px;
+  width: 15px;
+height: 15px;
+margin-left: 1px;
      }
 `
 
 export const GD =styled(Graduation)`
 color: white;
-width: 30px;
-height: 30px;
-margin-left: 3px;
+width: 20px;
+height: 20px;
+margin-left: -5px;
 cursor: pointer;
 @media screen and ( max-width: 800px) {
-  width: 20px;
-height: 20px;
+  width: 15px;
+height: 15px;
+margin-left: 1px;
      }
 `
 
@@ -104,18 +103,15 @@ margin-top: 0px;
 export const Button = styled.button `
 border: 3px solid black;
   border-radius: 4px;
-  width: 162px;
+  width: 122px;
   height: 51px;
   border: 2px solid #fff;
-  margin: auto;
-  margin-top: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 0;
-  background: green;
-  color: #fff;
+  background: #14213d;
   text-transform: uppercase;
   font-family: "Montserrat-SemiBold";
 
@@ -123,30 +119,26 @@ border: 3px solid black;
     opacity: 0.5;
   }
   @media screen and ( max-width: 800px) {
-      width: 80px;
-      font-size: 11px;
+      width: 90px;
   }
 
  `
 
  export const Add = styled.div`
  display: flex;
- font-size: 15px;
-font-weight: 100;
+ font-size: 10px;
  flex-direction: row;
- padding: 5px 5px;
  margin-top: 0px;
 
  @media screen and ( max-width: 800px) {
-  display: flex;
- flex-direction: row;
-font-size: 15px;
-font-weight: 100;
+font-size: 10px;
+
   }
  `
 
  export const EditButton= styled(Button)`
   margin-left: 30px;
+  padding: 20px auto;
   @media screen and ( max-width: 800px) {
   margin-left: 10px;
   }

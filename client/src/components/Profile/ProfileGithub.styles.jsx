@@ -7,13 +7,13 @@ border: 1.5px solid white;
 display: flex; 
 flex-direction: column;
 justify-content: center; 
-width: 90vw;
+width: 80vw;
 margin-top: 10px;
 padding-bottom: 20px;
 padding-right: 10px;
 
 @media screen and (max-width: 800px) {
-    
+    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -6,11 +6,12 @@ display: flex;
 position: relative;
 flex-direction: column;
 padding-bottom: 10px;
+background-color: rgb(0, 0, 0);
 border-bottom: 1px solid gray;
 `
 
 export const Cover =styled.div`
-background: black;
+ 
 border-bottom: 1px solid gray;
 width: 100%;
 color: white;
@@ -23,13 +24,12 @@ margin-left: 10px;
 `
 
 export const FormContainer =styled.div`
-background: black;
 width: 100%;
 `
 
 export const FormInput =styled.textarea`
 width: 100%;
-background: black;
+background-color: rgb(0, 0, 0);
 color: white;
 border: 2px solid white;
 border-bottom: 20px solid gray;

@@ -11,7 +11,7 @@ background: black;
 border-bottom: 1px solid gray;
 border-left: 1px solid gray;
 border-right: 1px solid gray;
-width: 885px;
+width: 880px;
 text-align: center;
 height: 65px;
 position: fixed;

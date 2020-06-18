@@ -64,15 +64,15 @@ background: black;
 border: 3px solid white;
 border-radius: 6px;
 padding-bottom: 30px;
-margin-top: 9vh;
+margin-top: 12vh;
+width: 85vw;
 margin-right: auto;
-margin-left: auto;
-width: 95vw;
+  margin-left: auto;
 
 @media screen and ( max-width: 800px) {
-  width: 97vw;
+  width: 100vw;
   border: 0px solid white;
-      margin-top: 10vh;
+      margin-top: 0vh;
   }
 `
 
@@ -83,7 +83,7 @@ align-items: center;
 border-radius: 6px;
 padding-bottom: 30px;
 margin: 20px auto;
-width: 95vw;
+width: 80vw;
 
 @media screen and ( max-width: 800px) {
     
@@ -108,9 +108,8 @@ align-items: center;
 background: black;
 border: 1.5px solid white;
 border-radius: 6px;
-
 margin: 20px auto;
-width: 45vw;
+width: 35vw;
 
 @media screen and ( max-width: 800px) {
   width: 80vw;
@@ -127,11 +126,9 @@ flex-direction: column;
 align-items: center;
 background: black;
 border: 1.5px solid white;
-
 border-radius: 6px;
-
 margin: 20px auto;
-width: 45vw;
+width: 35vw;
 @media screen and ( max-width: 800px) {
      
   width: 80vw;

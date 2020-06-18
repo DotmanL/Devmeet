@@ -6,7 +6,7 @@ import {
 } from '../../Redux/Profile/profile.actions'
 import PropTypes from 'prop-types'
 
-import NavBar from '../Navbar/Navbar'
+import Nav from '../Navbar/Nav'
 import {
   Container,
   Title,
@@ -101,7 +101,7 @@ const CreateProfile = ({
 
   return (
     <Fragment>
-      <NavBar />
+      <Nav />
 
       <Container>
      

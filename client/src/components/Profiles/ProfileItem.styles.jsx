@@ -14,15 +14,15 @@ color: green;
 
 export const Container = styled.div`
 border-radius: 10px;
-border: 1px solid white;
+border: 2px solid white;
 background: black;
-width: 93vw;
+width: 70vw;
 margin-right: auto;
 margin-left: auto;
 flex-direction: row;
 display: flex;
 justify-content: flex-start;
-align-items: center;
+
 margin-top: 8px;
 margin-bottom: 20px;
 padding-bottom: 10px;
@@ -37,7 +37,7 @@ align-items: center;
 `
 
 export const DevContainer = styled.div`
-background: black;
+
 width: 65vw;
 margin-left: 20px;
 border-radius: 10px;
@@ -75,7 +75,7 @@ height: 100px
 export const Name = styled.h2`
 font-size: 20px;
 color: white;
-margin-top: 50px;
+
 `
 
 export const Status = styled.p`
@@ -92,6 +92,7 @@ margin-top: -20px;
 export const Location = styled.h3`
 font-size: 20px;
 color: white;
+margin-top: -20px;
 `
 export const PButton = styled.button `
 border: 3px solid black;
@@ -99,7 +100,7 @@ border: 3px solid black;
   width: 120px;
   height: 35px;
   border: 2px solid #fff;
-  margin-top: -5px;
+
   cursor: pointer;
   font-size: 13px;
   display: flex;
@@ -132,8 +133,8 @@ color: white;
 
 export const ListL =styled.ul`
 list-style: none;
-margin-left: 40vw;
-margin-top: -15vh;
+margin-left: 30vw;
+margin-top: -25vh;
 
 
 @media screen and (max-width: 800px) {

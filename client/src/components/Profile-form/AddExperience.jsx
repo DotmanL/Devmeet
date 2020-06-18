@@ -2,8 +2,7 @@ import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {addExperience} from '../../Redux/Profile/profile.actions';
-import NavBar from '../Navbar/Navbar'
-//import {Link} from 'react-router-dom';
+import Nav from '../Navbar/Nav'
 import {
   Container,
   Title,
@@ -69,7 +68,7 @@ const handleSubmit = async event => {
 
   return (
     <Fragment>
-      <NavBar />
+      <Nav />
       <Container>
       <FormContainer>
       <Title>Add an Experience</Title>

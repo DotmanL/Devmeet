@@ -8,6 +8,8 @@ import { getPosts, getMorePosts } from '../../Redux/Post/post.actions'
 import DevGistItem from './DevGistItem'
 import { Container, Header, Welcome, Posts, Cover } from './DevGist.styles'
 import DevGistInput from './DevGistInput'
+import ButtonSpin from '../ButtonSpin/ButtonSpin';
+
 
 const DevGist = ({ getPosts, getMorePosts, post: { posts, loading } }) => {
   const [isFetching, setIsFetching] = useState(false)
@@ -16,31 +18,37 @@ const DevGist = ({ getPosts, getMorePosts, post: { posts, loading } }) => {
   const [hasReached, setHasReached] = useState(false)
 
   useEffect(() => {
+
     if (posts.length === 0) {
       getPosts(limit)
-    } else {
-      window.onscroll = () => {
-        if (
-          window.innerHeight + window.scrollY >=
-            document.body.offsetHeight - 580 &&
-          posts.length
-        ) {
-          setIsFetching(true)
-          setHasReached(false)
-          console.log('fetch more items')
-          setLimit(10)
-          let toSkip = skip + limit
-          setSkip(toSkip)
-          getMorePosts(toSkip)  
-        }
-        
-      }
-      
-    }
+       } 
+
     
+    
+      
   })
 
+  const scrollListener = () => {
+    if (
+      window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 580 &&
+      posts.length
+    ) {
+      setIsFetching(true)
+      setHasReached(false)
+      console.log('fetch more items')
+      setLimit(10)
+      let toSkip = skip + limit
+      setSkip(toSkip)
+      getMorePosts(toSkip)  
+    } 
 
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollListener);
+    return () => window.removeEventListener("scroll", scrollListener);
+  });
 
   return loading ? (
     <Spinner />
@@ -54,11 +62,14 @@ const DevGist = ({ getPosts, getMorePosts, post: { posts, loading } }) => {
       <DevGistInput />
 
       <Posts>
+      
         {posts.map((post) => (
           <DevGistItem key={post._id} post={post} />
+          
         ))}
+        {!isFetching && !hasReached && <ButtonSpin />}
       </Posts>
-      {!isFetching && !hasReached && <Spinner />}
+    
     </Container>
   )
 }

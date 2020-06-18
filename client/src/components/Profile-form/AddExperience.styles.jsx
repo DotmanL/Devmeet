@@ -5,13 +5,14 @@ export const Container = styled.div`
 border-radius: 10px;
 border: 3px solid white;
 background: black;
-width: 95vw;
+width: 85vw;
 margin-top: 10vh;
 margin-right: auto;
 margin-left: auto;
 padding-bottom: 50px;
 @media screen and (max-width: 800px) {
-  
+  width: 90vw;
+  margin-top: 1vh;
 }
 `
 
@@ -38,11 +39,11 @@ margin-left: 40px;
 export const FormContainer = styled.div`
 margin-top: 50px;
 background: black;
-width: 85vw;
+width: 80vw;
 margin-left: 20px;
 justify-content: space-between;
 @media screen and (max-width: 800px) {
- width: 85vw;
+  width: 75vw;
 }
 ;
 `
@@ -55,7 +56,7 @@ margin-left: 30px;
 border-radius: 5px;
 margin-top: 15px;
 border: 1px solid black;
-
+outline: none;
 
 @media screen and (max-width: 800px) {
  width: 80%;
@@ -70,6 +71,8 @@ margin-left: 30px;
 border-radius: 5px;
 margin-top: 10px;
 border: 1px solid black;
+resize: none;
+outline: none;
 
 
 @media screen and (max-width: 800px) {

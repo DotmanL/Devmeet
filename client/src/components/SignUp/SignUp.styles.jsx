@@ -45,7 +45,7 @@ export const SignUpFooter = styled(Link)`
   width: 200px;
   margin-left: 500px;
   margin-top: 0px;
-  color: black;
+  color: #14213d;
   
   @media screen and (max-width: 800px) {
   margin-left: 0px;

@@ -7,7 +7,7 @@ import { Instagram } from '@styled-icons/boxicons-logos/Instagram'
 import { FacebookSquare } from '@styled-icons/boxicons-logos/FacebookSquare'
 
 export const Container = styled.div`
-  width: 90vw;
+  width: 80vw;
   margin-top: 10px;
   background: black;
   border: 1.5px solid white;
@@ -15,9 +15,10 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  
 
   @media screen and (max-width: 800px) {
-   
+    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +54,7 @@ export const DetContainer = styled.div`
   justify-content: space-evenly;
   
   @media screen and (max-width: 800px) {
+    width: 80vw;
     display: flex;
     align-items: center;
     text-align: center;
@@ -106,7 +108,7 @@ export const Edit = styled.button`
 
 export const Icons = styled.div`
   height: 50px;
-  width: 440px;
+  width: 75vw;
   margin-left: 10px;
   margin-top: 70px;
   display: flex;
@@ -119,34 +121,34 @@ export const Icons = styled.div`
     justify-content: space-evenly;
     flex-direction: row;
     margin-top: 20px;
-    width: 80vw;
+    width: 75vw;
   }
 `
 
 export const Yt = styled(Youtube)`
   color: white;
-  width: 50px;
+  width: 40px;
 `
 export const Twit = styled(Twitter)`
   color: white;
-  width: 50px;
+  width: 40px;
 `
 
 export const Fb = styled(FacebookSquare)`
   color: white;
-  width: 50px;
+  width: 40px;
 `
 
 export const Linked = styled(LinkedinSquare)`
   color: white;
-  width: 50px;
+  width: 40px;
 `
 
 export const Ig = styled(Instagram)`
   color: white;
-  width: 50px;
+  width: 40px;
 `
 export const Webb = styled(Web)`
   color: white;
-  width: 50px;
+  width: 40px;
 `

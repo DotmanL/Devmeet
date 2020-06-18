@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar  from '../../components/Navbar/Navbar';
+import Nav  from '../../components/Navbar/Nav';
 import Dashboard from '../../components/Dashboard/Dashboard';
 
 import {
@@ -16,7 +16,7 @@ const DashboardPage = () => {
   return (
    
     <PageContainer> 
-      <NavBar /> 
+      <Nav/> 
      <Dashboard /> 
      
     </PageContainer>

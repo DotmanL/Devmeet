@@ -8,7 +8,7 @@ export const Main = styled.div`
 export const Container = styled.div`
 background: black;
 border: 1.5px solid white;
-width: 90vw;
+width: 80vw;
 display: flex;
 margin-top: 20px;
 display: flex;
@@ -16,7 +16,8 @@ flex-direction: column;
 align-items: center;
 
 @media screen and (max-width: 800px) {
- 
+  width: 80vw;
+
   display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -35,7 +36,7 @@ font-size: 20px;
 color: white;
 margin-top: -20px;
 text-align: center;
-width: 80vw;
+width: 70vw;
 
 `
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux';
 import Spinner from '../Spinner/Spinner'
 import {getProfileById} from '../../Redux/Profile/profile.actions';
-import NavBar from '../Navbar/Navbar';
+import Nav from '../Navbar/Nav';
 
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
@@ -27,7 +27,7 @@ useEffect(() =>{
 
   return (
  <Fragment>
-   <NavBar />
+   <Nav />
    {profile === null || loading ? ( <Spinner/> 
    ) : ( 
         <ProfileContainer>

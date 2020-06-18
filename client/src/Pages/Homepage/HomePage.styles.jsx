@@ -9,7 +9,7 @@ align-items: center;
 position: relative;
 padding-top: 40px;
 text-align: center;
-background: rgb(5, 91, 94);
+background-color: #14213d;
 @media screen and (max-width: 800px) {
   background: black;
   }

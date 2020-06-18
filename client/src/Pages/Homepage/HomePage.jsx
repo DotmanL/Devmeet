@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Redirect } from 'react-router-dom';
-import NavBar  from '../../components/Navbar/Navbar';
+import Nav  from '../../components/Navbar/Nav';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -26,7 +26,7 @@ const HomePage = ({isAuthenticated}) => {
 
   return (
     <HomePageContainer>
-      <NavBar />
+      <Nav />
     <HomeContent>
      
     <Title>DEVELOPERS MEET</Title>

@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const Title = styled.h2`
-font-size: 30px;
+font-size: 25px;
 color: white;
-margin-left: -600px;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
 @media screen and ( max-width: 800px) {
    font-size: 20px;
    margin-left: 20px;

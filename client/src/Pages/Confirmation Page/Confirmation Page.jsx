@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { activate } from '../../Redux/User/user.actions';
-import NavBar  from '../../components/Navbar/Navbar';
+import Nav  from '../../components/Navbar/Nav';
 
 import { Redirect } from 'react-router-dom';
 import {
@@ -28,7 +28,7 @@ const ConfirmationPage = ({activate, match, isAuthenticated}) => {
   return (
   
    <Container>
-       <NavBar/>
+       <Nav/>
 <Details>
 Chill, your account is being verified
 </Details>

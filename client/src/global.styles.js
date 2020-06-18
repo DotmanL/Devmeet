@@ -6,7 +6,7 @@ body {
     font-family: 'Raleway', sans-serif;
     padding: 0px;
     margin: 0px;
-    background-color: #edf2f4;
+    background-color: #14213d;
     font-size: 1rem;
   line-height: 1.6;
 
@@ -14,7 +14,7 @@ body {
     @media screen and ( max-width: 800px) {
         padding: 0px;
     margin: 0px;
-    background: black;
+    background-color: #14213d;
     }
 }
 
