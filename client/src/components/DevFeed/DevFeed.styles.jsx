@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: black;
+  background-color: black;
   border-left: 1px solid gray;
-  width: 250px;
+  width: 270px;
   height: auto;
-  position: relative;
   display: flex;
-  
   flex-direction: column;
+  text-align: center;
+  position: relative;
+
     
 
   @media screen and (max-width: 1000px) {

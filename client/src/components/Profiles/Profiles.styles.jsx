@@ -12,12 +12,13 @@ background: #000000;
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-top: 14vh;
 justify-content: center;
 
 @media screen and (max-width: 800px) {
   width: 100vw;
   font-size: 20px;
-
+  margin-top: 0vh;
  border: 0px;
 }
 `

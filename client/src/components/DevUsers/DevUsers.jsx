@@ -12,10 +12,12 @@ import {
   Db,
   DevMenu,
   Dv,
+  Dvm,
   ProfMenu,
   Us,
   SoMenu,
   Soss,
+  Sossm,
 } from './DevUsers.styles'
 
 const DevUsers = ({ user: { user }, signout }) => {
@@ -49,7 +51,7 @@ const DevUsers = ({ user: { user }, signout }) => {
         </DevMenu>
 
         <Link to='/profiles'>
-        <Dv/>
+        <Dvm/>
         </Link>
 
          
@@ -58,7 +60,7 @@ const DevUsers = ({ user: { user }, signout }) => {
         </SoMenu>
        
         
-        <Soss onClick={signout}/>
+        <Sossm onClick={signout}/>
               
       </MenuC>
     </Container>

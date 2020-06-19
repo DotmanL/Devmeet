@@ -38,6 +38,8 @@ width: 85%;
 margin-left: 15px;
 margin-top: 30px;
 position: fixed;
+display: flex;
+flex-direction: column;
 
 @media screen and (max-width: 500px) {
   display: none;
@@ -62,6 +64,7 @@ position: fixed;
   margin-left: 10px;
   margin-top: 20px;
   height: 51px;
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -132,6 +135,7 @@ export const DevMenu = styled(DashMenu)`
 export const ProfMenu = styled(DashMenu)`
 `
 export const SoMenu = styled(DashMenu)`
+margin-top: 30px;
 `
 export const HomeLink =styled(DashMenu)`
 
@@ -142,6 +146,7 @@ export const Hm =styled(Home)`
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  position: relative;
 
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
@@ -159,7 +164,7 @@ export const Db =styled(Profile)`
   width: 40px;
   height: 40px;
   margin-right: 10px;
-
+  position: relative;
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
     color: white;
@@ -176,7 +181,7 @@ export const Us =styled(User)`
   width: 40px;
   height: 40px;
   margin-right: 10px;
-
+  position: relative;
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
     color: white;
@@ -193,7 +198,7 @@ export const Dv =styled(DeveloperMode)`
   width: 40px;
   height: 40px;
   margin-right: 10px;
-
+  position: relative;
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
     color: white;
@@ -205,12 +210,26 @@ export const Dv =styled(DeveloperMode)`
   }
 `
 
+export const Dvm =styled(DeveloperMode)`
+  display: none;
+  @media screen and (min-width: 500px) and (max-width: 1088px) {
+    display: flex;
+    color: white;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 30px;
+  cursor: pointer;   
+  }
+`
+
+
 export const Soss =styled(SignOut)`
     cursor: pointer;
   width: 40px;
   height: 40px;
   margin-right: 10px;
-
+  position: relative;
   @media screen and (min-width: 500px) and (max-width: 1088px) {
       display: flex;
     color: white;
@@ -222,3 +241,20 @@ export const Soss =styled(SignOut)`
   }
 `
 
+export const Sossm =styled(SignOut)`
+    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  position: relative;
+  display: none;
+  @media screen and (min-width: 500px) and (max-width: 1088px) {
+      display: flex;
+    color: white;
+  width: 55px;
+  height: 55px;
+  margin-left: 10px;
+  margin-top: 30px;
+ position: relative;   
+  }
+`

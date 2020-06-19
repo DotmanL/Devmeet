@@ -11,27 +11,30 @@ background: black;
 border-bottom: 1px solid gray;
 border-left: 1px solid gray;
 border-right: 1px solid gray;
-width: 880px;
-text-align: center;
+width: 885px;
+margin-left: 17vw;
 height: 65px;
 position: fixed;
 display: flex;
 flex-direction: row;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
 
-  @media screen and (max-width: 500px) {
+
+
+  @media screen and (max-width: 800px) {
     width: 100vw;
-    height: 11vh;
+    margin-left: 0vw;
    border-left: 1px solid black;
 border-right: 1px solid black;
 border-bottom: 1px solid gray;
 
   }
-
   @media screen and (min-width: 800px) and (max-width: 1063px) {
-  width: 74vw;
-    
+  width: 73vw;
+  margin-left: 7.5vw;
     border-left: 1px solid gray;
   
   }
@@ -47,7 +50,7 @@ height: 50px;
 margin-top: 15px;
 margin-left: 10px;
 display: none;
-
+position: relative;
 @media screen and (max-width: 800px) {
   display: flex;
   width: 50px;
@@ -55,6 +58,7 @@ height: 50px;
 background: gray;
 border-radius: 50%;
 margin-left: 5vw;
+margin-top: 1.5vh;
 
   }
 `
@@ -64,7 +68,7 @@ margin-left: 5vw;
 export const Header = styled.h2`
 color: white;
 margin-left: 20px;
-
+position: relative;
 @media screen and (max-width: 800px) {
   color: white;
 margin-left: 80px;

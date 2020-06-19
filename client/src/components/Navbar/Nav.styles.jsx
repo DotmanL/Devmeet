@@ -10,7 +10,6 @@ export const Navigation = styled.nav`
   top: 0;
     left: 0;
     right: 0;
-    left: 0;
   justify-content: space-between;
   text-transform: uppercase;
   border-bottom: 1px solid white;
@@ -45,9 +44,12 @@ font-size: 20px;
 margin-top: 20px;
 font-weight: 700;
 cursor: pointer;
-
+position: relative;
 :hover{
   color: goldenrod;
+}
+@media screen and  (max-width: 800px) {
+  margin-top: 10px;
 }
 `
 

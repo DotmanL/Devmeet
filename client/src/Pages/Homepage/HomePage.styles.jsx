@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import homepage from './homepage.jpg'
 
+
+
 export const HomePageContainer = styled.div `
 display: flex;
 flex-direction: column;
@@ -11,7 +13,6 @@ padding-top: 40px;
 text-align: center;
 background-color: #14213d;
 @media screen and (max-width: 800px) {
-  background: black;
   }
 `
 
@@ -36,12 +37,14 @@ export const HomeContent = styled.div`
     background-size: cover;
     background-position: center;
     width: 320px;
+    margin-top: -4vh;
 }
 `
 
 export const Title = styled.h1`
 color: white;
 font-size: 50px;
+font-family: 'Arvo', serif;
 margin-top: 90px;
 
 @media screen and (max-width: 800px) {
@@ -52,6 +55,7 @@ margin-top: 90px;
 export const SubTitle = styled.h3`
 color: white;
 font-size: 25px;
+width: 75vw;
 `
 
 export const Button = styled.button`
@@ -73,6 +77,7 @@ export const Button = styled.button`
   
   &:hover {
     opacity: 0.8;
+    background-color: green;
   }
 `;
 export const Buttons = styled.div` 
@@ -84,7 +89,7 @@ export const Buttons = styled.div`
 `;
  
 export const SignInButton = styled(Button)` 
-background-color: green;
+background-color: #14213d; 
 margin-left: 20px;
 color: white;
 @media screen and (max-width: 800px) {
@@ -94,9 +99,8 @@ color: white;
 `;
  
 export const SignUpButton = styled(Button)` 
-  background-color: green;
+  background-color: #14213d;
   color: white;
-  
   @media screen and (max-width: 800px) {
     font-size: 15px;
 }

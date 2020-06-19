@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: rgb(0, 0, 0);
+   background: black;
   border-left: 0.5px solid gray;
   border-right: 0.5px solid gray;
   border-top: 0.5px solid gray;
   margin-top: 5px;
   width: 950px;
-  height: 100%;
+  height: auto;
   display: flex;
   position: relative;
   flex-direction: column;

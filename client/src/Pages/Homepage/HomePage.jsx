@@ -16,6 +16,7 @@ import {
   SubTitle
 
 } from './HomePage.styles'
+import { Fragment } from 'react';
 
 
 const HomePage = ({isAuthenticated}) => {
@@ -25,8 +26,10 @@ const HomePage = ({isAuthenticated}) => {
   }
 
   return (
+    <Fragment>
+         <Nav />
     <HomePageContainer>
-      <Nav />
+   
     <HomeContent>
      
     <Title>DEVELOPERS MEET</Title>
@@ -40,6 +43,7 @@ const HomePage = ({isAuthenticated}) => {
     </HomeContent>
   
     </HomePageContainer> 
+    </Fragment>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Container, FormInput, Button, Title } from './Forgot.styles'
-import NavBar  from '../../components/Navbar/Navbar';
+import Nav  from '../../components/Navbar/Nav';
 import {connect} from 'react-redux'
 import { forgot } from '../../Redux/User/user.actions'
 import PropTypes from 'prop-types'
@@ -32,7 +32,7 @@ const Forgot = ({forgot}) => {
 
   return (
     <Container>
-      <NavBar />
+      <Nav />
       <Title>Forgot your password, type in your email to reset your password</Title>
       <form onSubmit={handleSubmit}>
          

@@ -10,7 +10,7 @@ const Nav = () => {
 
   return (
     <Navigation>
-      <Logo>DevMeet</Logo>
+      <a href ='/'><Logo>DevMeet</Logo></a>
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}

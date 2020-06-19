@@ -16,11 +16,20 @@ export const Ar = styled(ArrowBack) `
 
 export const PostsPageContainer = styled.div`
   display: flex;
-  background: black;
-  height: 100vh;
   flex-direction: row;
+  position: relative;
+  width: 100vw;
+    height: 100vh;
+    padding-bottom: -50px;
+  @media screen and (max-width: 800px) {
+    width: 100vw;
+    height: 100vh;
+  }
   
   
+  @media screen and (max-width: 1300px) {
+ 
+  }  
   
 `
 
@@ -33,6 +42,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 70px;
+  
   height: auto;
 `
 export const TopCover = styled.div`
