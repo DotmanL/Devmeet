@@ -20,7 +20,7 @@ export const PostsPageContainer = styled.div`
   position: relative;
   width: 100vw;
     height: 100vh;
-    padding-bottom: -50px;
+    
   @media screen and (max-width: 800px) {
     width: 100vw;
     height: 100vh;

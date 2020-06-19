@@ -12,6 +12,7 @@ white-space: nowrap;
 font-weight: 700;
 font-size: 20px;
 margin: 0 1vw;
+font-family: 'Vollkorn', serif;
 padding-top: 3vh;
 transition: all 200ms ease-in;
 cursor: pointer;

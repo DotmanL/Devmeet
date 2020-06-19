@@ -44,6 +44,7 @@ font-size: 20px;
 margin-top: 20px;
 font-weight: 700;
 cursor: pointer;
+font-family: 'Vollkorn', serif;
 position: relative;
 :hover{
   color: goldenrod;

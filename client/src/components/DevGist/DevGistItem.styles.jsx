@@ -43,7 +43,7 @@ export const Post = styled.div`
 `
 
 export const UserImg = styled.img`
-  background: white;
+  background: rgb(211,211,211);
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
@@ -59,7 +59,7 @@ export const UserImg = styled.img`
 `
 export const Name = styled.h4`
   font-size: 20px;
-  color: white;
+  color: rgb(211,211,211);
   margin-top: -90px;
   padding-left: 115px;
 
@@ -97,7 +97,7 @@ export const PostContainer = styled.div`
 
 export const PostText = styled.p`
   font-size: 18px;
-  color: white;
+  color: rgb(211,211,211);
   margin-top: -55px;
   padding-left: 115px;
   width: 95%;
@@ -194,7 +194,7 @@ export const Cm = styled(CommentDots)`
 
 
 export const Cms =styled.span`
-color: white;
+color: rgb(211,211,211);
 
 @media screen and (max-width: 800px) {
     display: flex;
@@ -219,7 +219,7 @@ export const Dl = styled(Delete)`
 
 export const ModalC =styled.div`
 background: black;
-color: white;
+color: rgb(211,211,211);
 flex-direction: column;
 position: relative;
 
@@ -235,7 +235,7 @@ display: flex;
  
 `
 export const ModalImg = styled.img`
- background: white;
+ background: rgb(211,211,211);
   border-radius: 50%;
   display: inline-block;
   background: black;
@@ -247,14 +247,14 @@ export const ModalImg = styled.img`
 
 export const ModalN =styled.h4`
   font-size: 20px;
-  color: white;
+  color: rgb(211,211,211);
   margin-top: -90px;
   padding-left: 95px;
 `
 
 export const ModalT =styled.p`
 font-size: 18px;
-  color: white;
+  color: rgb(211,211,211);
   margin-top: -30px;
   padding-left: 95px;
   width: 95%;
@@ -276,7 +276,7 @@ export const ModalD = styled.p`
 
 
 export const ModalClose = styled(CloseCircle)`
-  color: white;
+  color: rgb(211,211,211);
   resize: none;
   width: 45px;
   height: 45px;

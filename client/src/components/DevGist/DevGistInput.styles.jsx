@@ -14,12 +14,12 @@ export const Cover =styled.div`
  
 border-bottom: 1px solid gray;
 width: 100%;
-color: white;
+color: rgb(211,211,211);
 `
 
 export const Header =styled.h2`
 font-size: 20px;
-color: white;
+color: rgb(211,211,211);
 margin-left: 10px;
 `
 
@@ -30,8 +30,8 @@ width: 100%;
 export const FormInput =styled.textarea`
 width: 100%;
 background-color: rgb(0, 0, 0);
-color: white;
-border: 2px solid white;
+color: rgb(211,211,211);
+border: 2px solid rgb(211,211,211);
 border-bottom: 20px solid gray;
 padding-top: 10px;
 padding-left: 20px;

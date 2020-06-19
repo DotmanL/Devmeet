@@ -11,8 +11,8 @@ background: black;
 border-bottom: 1px solid gray;
 border-left: 1px solid gray;
 border-right: 1px solid gray;
-width: 885px;
-margin-left: 17vw;
+width: 870.5px;
+margin-left: 16.8vw;
 height: 65px;
 position: fixed;
 display: flex;
@@ -66,7 +66,7 @@ margin-top: 1.5vh;
 
 
 export const Header = styled.h2`
-color: white;
+color:rgb(211,211,211);
 margin-left: 20px;
 position: relative;
 @media screen and (max-width: 800px) {

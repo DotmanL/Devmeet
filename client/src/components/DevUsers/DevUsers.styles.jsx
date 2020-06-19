@@ -38,6 +38,7 @@ width: 85%;
 margin-left: 15px;
 margin-top: 30px;
 position: fixed;
+color:rgb(211,211,211);
 display: flex;
 flex-direction: column;
 
@@ -71,7 +72,7 @@ flex-direction: column;
   justify-content: center;
   padding: 0;
   background: black;
-  color: #fff;
+  color:rgb(211,211,211);
   font-family: "Montserrat-SemiBold";
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -150,7 +151,7 @@ export const Hm =styled(Home)`
 
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
-    color: white;
+    color: rgb(211,211,211);
   width: 40px;
   height: 40px;
   margin-left: 10px;
@@ -167,7 +168,7 @@ export const Db =styled(Profile)`
   position: relative;
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
-    color: white;
+    color: rgb(211,211,211);
   width: 40px;
   height: 40px;
   margin-left: 10px;
@@ -184,7 +185,7 @@ export const Us =styled(User)`
   position: relative;
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
-    color: white;
+    color: rgb(211,211,211);
   width: 40px;
   height: 40px;
   margin-left: 10px;
@@ -201,7 +202,7 @@ export const Dv =styled(DeveloperMode)`
   position: relative;
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
-    color: white;
+    color: rgb(211,211,211);
   width: 40px;
   height: 40px;
   margin-left: 10px;
@@ -214,7 +215,7 @@ export const Dvm =styled(DeveloperMode)`
   display: none;
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;
-    color: white;
+    color: rgb(211,211,211);
   width: 40px;
   height: 40px;
   margin-left: 10px;
@@ -232,7 +233,7 @@ export const Soss =styled(SignOut)`
   position: relative;
   @media screen and (min-width: 500px) and (max-width: 1088px) {
       display: flex;
-    color: white;
+    color: rgb(211,211,211);
   width: 55px;
   height: 55px;
   margin-left: 10px;
@@ -250,7 +251,7 @@ export const Sossm =styled(SignOut)`
   display: none;
   @media screen and (min-width: 500px) and (max-width: 1088px) {
       display: flex;
-    color: white;
+    color: rgb(211,211,211);
   width: 55px;
   height: 55px;
   margin-left: 10px;

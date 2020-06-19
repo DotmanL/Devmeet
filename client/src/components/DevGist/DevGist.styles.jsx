@@ -32,7 +32,7 @@ border-bottom: 1px solid gray;
 
 `
 export const Header = styled.h2`
-color: white;
+color: rgb(211,211,211);
 font-size: 30px;
 align-self: flex-start;
 padding-left: 30px;
@@ -45,7 +45,7 @@ margin-top: 90px;
 
 
 export const Welcome = styled.p`
-color: white;
+color: rgb(211,211,211);
 font-size: 25px;
 align-self: flex-start;
 padding-left: 30px;
@@ -73,7 +73,7 @@ padding-bottom: 10px;
 `
 
 export const Reached =styled.h1`
-color: white;
+color: rgb(211,211,211);
 font-size: 30px;
 
 @media screen and (max-width: 800px) {
