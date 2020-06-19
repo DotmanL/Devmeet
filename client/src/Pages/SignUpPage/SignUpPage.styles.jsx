@@ -15,7 +15,7 @@ border: 2px solid black;
  
   @media screen and (max-width: 800px) {
    width: 85vw;
-   margin-top: 12vh;
+   margin-top: 2vh;
   
   
   

@@ -14,8 +14,10 @@ margin-bottom: 20px;
 border: 2px solid black;
 
   @media screen and (max-width: 800px) {
-   width: 80vw;
-   margin-top: 15vh;
+   width: 85vw;
+   margin-top: 5vh;
+   display: flex;
+   flex-direction: column;
   
   }
 `;

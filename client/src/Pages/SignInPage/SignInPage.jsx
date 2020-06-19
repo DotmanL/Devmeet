@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import SignIn from '../../components/SignIn/SignIn';
 import { SignInPageContainer } from './SignInPage.styles';
 import Nav  from '../../components/Navbar/Nav';
 
 const SignInPage = () => {
   return (
+    <Fragment>
+      <Nav />
     <SignInPageContainer>
       
-      <Nav />
+      
 
     <SignIn />
     </SignInPageContainer>
+    </Fragment>
   )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import SignUp from '../../components/SignUp/SignUp.jsx';
 import { SignUpPageContainer } from './SignUpPage.styles'
 import Nav  from '../../components/Navbar/Nav';
@@ -7,11 +7,14 @@ import Nav  from '../../components/Navbar/Nav';
 
 const SignUpPage = () => {
   return (
+    <Fragment>
+        <Nav />
     <SignUpPageContainer>
-      <Nav />
+    
      
     <SignUp />
     </SignUpPageContainer>
+    </Fragment>
   )
 }
 
