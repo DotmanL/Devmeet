@@ -34,7 +34,7 @@ const responseGoogle = (response) => {
     onSuccess={responseGoogle}
     onFailure={responseGoogle}
     cookiePolicy={'single_host_origin'}
-  />,
+  />
     </Fragment>
     );
 };

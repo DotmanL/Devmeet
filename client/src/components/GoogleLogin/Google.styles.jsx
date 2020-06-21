@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import {Google} from '@styled-icons/boxicons-logos/Google'
+import {ReactComponent as gl} from './google.svg'
 
-
-export const Gg = styled(Google)`
+export const Gg = styled(gl)`
 color: red;
-width: 30px;
-height: 30px;
-margin-top: 10px;
-
+width: 20px;
+height: 20px;
+margin-top: 15px;
 `  
+
