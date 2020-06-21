@@ -27,20 +27,20 @@ const NavLinks = ({ user: { isAuthenticated, loading}, signout}) => {
 
     <NavItem to ='/dashboard'>
     <DashB title="Dashboard" to='/dashboard'/>
-    Dashboard
+    Dashboard  <Dash title="Dashboard"/>
     </NavItem>
 
   <Link to ='/dashboard'>
-  <Dash title="Dashboard"/>
+ 
   </Link>
 
     <NavItem to = "/" onClick={signout}>
-     SIGN OUT 
+     SIGN OUT   <Sos to = "/" title="Sign Out" onClick={signout} />
+
     <So to = "/" title="Sign Out" onClick={signout} /> 
     </NavItem>
 
-    <Sos to = "/" title="Sign Out" onClick={signout} />
-
+   
     </Fragment>
 
   )

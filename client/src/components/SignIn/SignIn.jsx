@@ -2,15 +2,17 @@ import React, { useState } from 'react'
 import FormInput from '../form-input/form-input';
 import CustomButton from '../custom-button/custom-button';
 import Logo from '../images/ecs1.jpg';
-import { SignInContainer, SignInTitle, SignInFooter, LogoContainer, Password } from './SignIn.styles';
+
 import { connect } from 'react-redux';
-import { signin } from '../../Redux/User/user.actions';
+import { signin, Googlesignin } from '../../Redux/User/user.actions';
 
 import PropTypes from 'prop-types'
-import { Redirect } from 'react-router-dom';
+import {Redirect } from 'react-router-dom';
 import ButtonSpin from '../ButtonSpin/ButtonSpin';
+import Google from '../GoogleLogin/Google'
+import { SignInContainer, SignInTitle, SignInFooter, LogoContainer, Password, Bcontainer} from './SignIn.styles';
 
-const SignIn = ({ signin, isAuthenticated, user:{loading}}) => {
+const SignIn = ({ signin, Googlesignin, isAuthenticated, user:{loading}}) => {
 
     const [ userCredentials, setUserCredentials] = useState({
       email: '',
@@ -34,7 +36,12 @@ const SignIn = ({ signin, isAuthenticated, user:{loading}}) => {
 
     };
 
-    
+    const informParent = response => {
+      Googlesignin(response, () => {
+      
+      });
+  };
+
 
     //redirect when signed in
 
@@ -65,18 +72,18 @@ const SignIn = ({ signin, isAuthenticated, user:{loading}}) => {
             minLength="6"
             required
           />
-        
+        <Bcontainer>
     <CustomButton style={{'marginLeft':'30px'}} type='submit'> 
       
     {!loading && <span>Sign In</span>}  
-    {loading && <span>Signing In</span>}
+    {loading && <span>Sign In</span>}
     {loading && (<ButtonSpin />)}
-    
-   
-
-
       </CustomButton>
-        
+           
+         <Google informParent={informParent} />
+           
+           </Bcontainer>
+
           <Password to ='/forgotpassword'>Forgot your Password? </Password>
         
         </form>
@@ -90,7 +97,8 @@ SignIn.propType = {
   signin: PropTypes.func.isRequired,
   isAuthenticated:PropTypes.bool,
   user: PropTypes.object.isRequired,
-  
+  Googlesignin: PropTypes.func.isRequired,
+
 }
 
 const mapStateToProps = state => ({
@@ -98,4 +106,4 @@ isAuthenticated: state.user.isAuthenticated,
 user: state.user
 })
 
-export default connect( mapStateToProps, { signin, }) (SignIn);
+export default connect( mapStateToProps, { signin, Googlesignin, }) (SignIn);

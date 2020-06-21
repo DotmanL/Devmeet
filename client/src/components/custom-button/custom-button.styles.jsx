@@ -12,6 +12,7 @@ const buttonStyles = css`
   }
   @media screen and (max-width: 800px) {
   background-color: black;
+  
   }
 `;
 
@@ -25,12 +26,24 @@ const invertedButtonStyles = css`
     color: white;
     border: none;
   }
+
+
 `;
 
 const googleSignInStyles = css`
   background-color: darkblue;
   color: white;
-  font-size: 12px;
+  font-size: 10px;
+  margin-left: 15px;
+
+
+  @media screen and (max-width: 800px) {
+    margin-top: 15px;
+    margin-left: 25px;
+    font-size: 15px;
+    }
+
+  
 
   &:hover {
     background-color: #357ae8;
@@ -52,7 +65,7 @@ width: auto;
 height: 50px;
 letter-spacing: 0.5px;
 line-height: 50px;
-padding: 0 35px 0 35px;
+
 font-size: 15px;
 background-color: black;
 color: white;
@@ -63,6 +76,7 @@ font-weight: bolder;
 border: none;
 border-radius: 20px;
 cursor: pointer;
+text-align: center;
 display: flex;
 justify-content: center;
 

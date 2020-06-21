@@ -125,13 +125,72 @@ export const signin = ( email, password) => async dispatch => {
       errors.forEach((error) =>(toast.error (error.msg)));
     }
    
-   
     dispatch({
       type: SIGN_IN_FAIL
     })
     toast.error("Sign in Failure", { autoClose: 8000,});
   };
 };
+
+//Google
+
+export const setLocalStorage = (key, value) => {
+  if (window !== 'undefined') {
+      localStorage.setItem(key, JSON.stringify(value));
+  }
+};
+
+
+//remove from localstorage
+// export const removeLocalStorage = key => {
+//   if (window !== 'undefined') {
+//       localStorage.removeItem(key);
+//   }
+// };
+
+
+export const Googlesignin = (response) => async dispatch => {
+
+  // setLocalStorage('token', response.data.token);
+  JSON.stringify({response});
+
+  console.log(response);
+  
+   try {
+     
+   dispatch ({
+       type: SIGN_IN_START
+     })
+     dispatch({
+       type: SIGN_IN_SUCCESS,
+       payload: response.data,
+     });
+     toast.success("Sign in Successful", { autoClose: 5000,});
+     dispatch(loadUser());
+
+   } catch (err) {
+     const errors = err.response.data.errors;
+     
+     if (errors) {
+       errors.forEach((error) =>(toast.error (error.msg)));
+     }
+     dispatch({
+       type: SIGN_IN_FAIL
+     })
+     toast.error("Sign in Failure", { autoClose: 8000,});
+   };
+ };
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -253,3 +312,10 @@ export const signout = () => dispatch => {
   dispatch({ type: SIGN_OUT})
   
 } 
+
+
+
+
+
+
+ 

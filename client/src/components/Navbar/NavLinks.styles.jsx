@@ -30,7 +30,7 @@ position: relative;
   transition: all 0.4s ease-in;
 }
 :hover {
-  color: #14213d;
+  color: orange;
   ::after {
     width: 100%;
   }
@@ -47,8 +47,8 @@ color: #14213d;
 
 export const So =styled(SignOut)`
 color: white;
-width: 30px;
-height: 30px;
+width: 25px;
+height: 25px;
 margin-left: 10px;
 cursor: pointer;
 @media screen and ( max-width: 800px) {
@@ -68,6 +68,7 @@ display:none;
 @media screen and ( max-width: 800px) {
       width: 25px;
       height: 25px;
+      color: blue;
       display: inline-block;
       margin-left: 5px;
       margin-top: 3px;
@@ -85,14 +86,15 @@ display: none;
       width: 25px;
       height: 25px;
       display: inline-block;
-      margin-left: -5px;
+      margin-left: 5px;
+      color: blue;
   }
 `
 
 export const DashB =styled(Profile)`
 color: white;
-width: 30px;
-height: 30px;
+width: 25px;
+height: 25px;
 margin-left: -5px;
 cursor: pointer;
 

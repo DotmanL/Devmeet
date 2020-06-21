@@ -7,7 +7,7 @@ justify-content: center;
 text-align: center;
 background: black;
 flex-direction: column;
-margin: 90px auto;
+margin: 50px auto;
 width: 80vw;
 height: 50vh;
 border-radius: 10px;

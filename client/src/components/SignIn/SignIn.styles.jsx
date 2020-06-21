@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {Link } from 'react-router-dom';
+ 
 
 export const SignInContainer = styled.div`
   display: flex;
@@ -68,4 +69,17 @@ export const Password = styled(Link)`
     margin-left: 15%;
   margin-top: 15px;
   }
+`
+export const Bcontainer = styled.div`
+display: flex;
+margin-top: -20px;
+justify-content: center;
+@media screen and (max-width: 800px) {
+  display: flex;
+  margin-top: -20px;
+flex-direction: column;
+justify-content: center;
+
+   
+    }
 `

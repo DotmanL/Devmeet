@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-
 import PostNav from '../PostNav/PostNav'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Spinner from '../Spinner/Spinner'
 import { getPosts, getMorePosts } from '../../Redux/Post/post.actions'
 import DevGistItem from './DevGistItem'
-import { Container, Header, Welcome, Posts, Cover } from './DevGist.styles'
 import DevGistInput from './DevGistInput'
 import ButtonSpin from '../ButtonSpin/ButtonSpin'
+
+import { Container, Header, Welcome, Posts, Cover } from './DevGist.styles'
 
 const DevGist = ({ getPosts, getMorePosts, post: { posts, loading } }) => {
   const [isFetching, setIsFetching] = useState(false)

@@ -4,7 +4,7 @@ const { check, validationResult } = require('express-validator')
 const gravatar = require('gravatar')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-//const config = require('config')
+
 const User = require('../../models/User')
 const normalize = require('normalize-url')
 const _ = require('lodash')
@@ -286,7 +286,6 @@ const payload = {
           }
       })
 
-
         // @orute     Put api/resetpassword/:token
 // @desc     reset password
 // @access   Public
@@ -353,3 +352,6 @@ const payload = {
     }
     })
     module.exports = router;
+
+
+ 

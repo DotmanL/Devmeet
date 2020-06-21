@@ -38,6 +38,7 @@ const HomePage = ({isAuthenticated}) => {
     <Buttons>  
     <SignUpButton as={Link} to= "/signup">SIGN UP</SignUpButton>
      <SignInButton  as={Link} to= "/signin">  SIGN IN</SignInButton>
+     
      </Buttons>
 
     </HomeContent>

@@ -6,7 +6,7 @@ export const Navigation = styled.nav`
   width: 100vw;
   display: flex;
   position: fixed;
-  background-color: black;
+  background-color: #14213d;
   top: 0;
     left: 0;
     right: 0;
@@ -20,7 +20,7 @@ export const Navigation = styled.nav`
   @media (max-width: 800px) {
     position: sticky;
     height: 8vh;
-
+    background-color: black;
     top: 0;
     left: 0;
     right: 0;

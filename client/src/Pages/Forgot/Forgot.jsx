@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, Fragment} from 'react'
 import { Container, FormInput, Button, Title } from './Forgot.styles'
 import Nav  from '../../components/Navbar/Nav';
 import {connect} from 'react-redux'
@@ -31,8 +31,10 @@ const Forgot = ({forgot}) => {
   };
 
   return (
-    <Container>
-      <Nav />
+    <Fragment> 
+       <Nav /> 
+       <Container>
+     
       <Title>Forgot your password, type in your email to reset your password</Title>
       <form onSubmit={handleSubmit}>
          
@@ -51,6 +53,8 @@ const Forgot = ({forgot}) => {
 
 
     </Container>
+    </Fragment>
+ 
   )
 }
 
