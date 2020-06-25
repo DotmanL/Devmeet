@@ -90,9 +90,10 @@ const DevGistItem = ({
           </PostText>
           </Link>
 
-          <PostImageContainer>
+            {text && imageUrl &&
+          (<PostImageContainer>
          <PostImage src={imageUrl}/>
-         </PostImageContainer>
+         </PostImageContainer>)}
 
           <PostDate>
             <Moment format=" h:mm A  • MMMM Do, YYYY">{date}</Moment>

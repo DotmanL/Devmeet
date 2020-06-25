@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 //import axios from 'axios'
 //import ImageUploader from 'react-images-upload';
 import {addPost} from '../../Redux/Post/post.actions'
-import {Container, Cover, Header, FormContainer, FormInput, PostingB, Button, ButtonDimed} from './DevGistInput.styles'
+import {Container, Cover, Header, FormContainer, FormInput, Gal, PostPrev, PostB, Button, ButtonDimed} from './DevGistInput.styles'
 
 import ButtonSpin from '../ButtonSpin/ButtonSpin';
 
@@ -58,20 +58,30 @@ const DevGistInput = ({addPost, post:{posting}}) => {
       required
       />
 
-       {image.preview ? <img alt ='test' src={image.preview} style={{'width':'50%', 'marginLeft': '50px',}} /> : (
-   <>  <h5>Upload your photo</h5>
+ <PostPrev>
+   <label htmlFor='upload'>
+      {image.preview ? <img alt ='test' src={image.preview} style={{'width':'50%', 'marginLeft': '-50px',}} /> : (
+   <>  
+   <span><Gal /> </span>
+   {/* <h5 style ={{'color': 'white', 'marginLeft': '-140px','marginTop': '0px'}}>Upload your photo</h5> */}
    </>)}
+   </label>
+      </PostPrev>
        <input
         type="file"
         name="image"
+        id='upload'
         onChange={handleImage}
+        style={{'display': 'none'}}
       />
-      
+      <br />
+  
+    
+      <PostB>
    {text.length === 0 ? (  
  <ButtonDimed disabled type="submit"> Post </ButtonDimed>) : (<Button type="submit"> Post  </Button>)}  
-  {posting &&     <PostingB>Posting</PostingB> }
     {posting && (<ButtonSpin />)}
-   
+    </PostB>
 
  
     </FormContainer>

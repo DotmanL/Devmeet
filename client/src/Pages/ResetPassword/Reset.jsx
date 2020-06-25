@@ -1,4 +1,4 @@
-import React, { useState, } from 'react';
+import React, { useState, Fragment } from 'react';
 import { Container, FormInput, Button, Title } from './Reset.styles';
 import {reset} from '../../Redux/User/user.actions';
 import { connect } from 'react-redux';
@@ -36,8 +36,10 @@ const[inputs, setInputs] = useState({
   }
 
   return (
+    <Fragment>
+          <Nav />
     <Container>
-      <Nav />
+  
   <Title>Hey, type in your new password </Title>
        
         <form onSubmit={handleSubmit}>
@@ -63,6 +65,7 @@ const[inputs, setInputs] = useState({
         <Button type ='submit'> Submit </Button>
         </form>
     </Container>
+    </Fragment>
   )
 }
 

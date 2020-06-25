@@ -10,6 +10,7 @@ justify-content: center;
 text-align: center;
 width: 60vw;
 height: 40vh;
+
 `
 
 

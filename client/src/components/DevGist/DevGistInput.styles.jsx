@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import {Gallery} from '@styled-icons/remix-fill/Gallery'
+
+export const Gal = styled(Gallery)`
+width: 40px;
+height: 40px;
+color: white;
+cursor: pointer;
+margin-left: -140px;
+`
 
 export const Container =styled.div`
 width: 100%;
@@ -50,10 +59,28 @@ border: 8px;
     height: 100px;
   }
 `
+export const PostPrev = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 150px;
+
+`
+
+
+export const PostB = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 20px;
+  margin-top: -60px;
+
+`
 
 export const Button = styled.button`
   border-radius: 10px;
-  width: auto;
+  width: 100px;
   margin-left: 10px;
   margin-top: 0px;
   height: 41px;
