@@ -15,6 +15,8 @@ import {
   UserDet,
   PostText,
   PostDate,
+  PostImageContainer,
+  PostImage,
   Lower,
   LowerC,
   Lk,
@@ -44,7 +46,7 @@ const DevGistItem = ({
   removeLike,
   deletePost,
   userP,
-  post: { _id, name, avatar, user, likes, text, comments, date, },
+  post: { _id, name, avatar, user, likes, text, comments, date, imageUrl },
   showActions
 }) => {
 
@@ -86,11 +88,16 @@ const DevGistItem = ({
           <PostText>
           {text}
           </PostText>
-         
+          </Link>
+
+          <PostImageContainer>
+         <PostImage src={imageUrl}/>
+         </PostImageContainer>
+
           <PostDate>
             <Moment format=" h:mm A  • MMMM Do, YYYY">{date}</Moment>
           </PostDate>
-          </Link>
+      
           </PostContainer>
           
           {showActions && (<Fragment>

@@ -6,12 +6,26 @@ const auth = require('../../middleware/auth');
 const User = require('../../models/User');
 const Post = require('../../models/Post');
 
+const cloudinary = require('../../config/cloudinary');
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
+const multer = require('multer');
+
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'Devmeet',     
+    allowedFormats: ['jpg', 'png'],
+    transformation: [{ width: 500, height: 500, crop: 'limit' }]
+  }
+});
+
+const parser = multer({ storage: storage });
 
 //@orute     POST api/post
 // @desc     Create a post
 // @access   Private
-router.post('/', [ auth, [
-  check('text', 'Text is required').not().isEmpty()
+router.post('/', parser.single('image'), [ auth, [
+  check('text', 'Text is required').not().isEmpty(),
   ],
 ], 
   async (req, res) => {
@@ -21,21 +35,45 @@ router.post('/', [ auth, [
       return res.status(400).json({ errors: errors.array() });
     }
 
-      try {
+    
+try {
 
     const user = await User.findById(req.user.id).select('-password');
 
-    const newPost = new Post ({
+    
+    if(req.file) {
+const images = await  cloudinary.uploader.upload(req.file.path)
+// console.log('req.file :', req.file);
+
+
+const newPost = new Post ({
       text: req.body.text,
       name: user.name,
       avatar: user.avatar,
       user: req.user.id,
+      imageUrl: images.url,
     });
+  
 
      const post = await newPost.save();
 
      res.json(post)
-      } catch (err) {
+    }   
+
+    if(!req.file) {
+
+      const newPost = new Post ({
+        text: req.body.text,
+        name: user.name,
+        avatar: user.avatar,
+        user: req.user.id,
+      });
+      const post = await newPost.save();
+
+      res.json(post)
+    }
+ 
+  } catch (err) {
         console.error(err.message)
         res.status(500).send('Server Error')
       }

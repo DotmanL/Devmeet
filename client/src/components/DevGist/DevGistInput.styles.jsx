@@ -22,6 +22,11 @@ font-size: 20px;
 color: rgb(211,211,211);
 margin-left: 10px;
 `
+export const PostingB =styled.h5`
+font-size: 20px;
+color: rgb(211,211,211);
+margin-left: 20px;
+`
 
 export const FormContainer =styled.div`
 width: 100%;
@@ -48,12 +53,13 @@ border: 8px;
 
 export const Button = styled.button`
   border-radius: 10px;
-  width: 100px;
+  width: auto;
   margin-left: 10px;
   margin-top: 0px;
   height: 41px;
   border: 1px solid #fff;
   cursor: pointer;
+  text-align: center;
   background: black;
   border-radius: 10px;
   color: #fff;
@@ -112,4 +118,12 @@ export const Button = styled.button`
         height: 30px;
         margin-left: 10px;
       }
+`
+
+export const ButtonDimed =styled(Button)`
+opacity: 0.4;
+
+  &:before {
+    background: black;  
+  }
 `

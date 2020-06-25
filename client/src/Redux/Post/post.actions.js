@@ -5,6 +5,7 @@ import {
   UPDATE_LIKES,
   DELETE_POST,
   ADD_POST,
+  ADD_POST_START,
   GET_POST,
   ADD_COMMENT,
   REMOVE_COMMENT,
@@ -123,19 +124,28 @@ export const deletePost = (id) => async (dispatch) => {
 //Add post
 
 export const addPost = (formData) => async (dispatch) => {
-  const config = {
+   
+   const config = {
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': undefined
     },
   }
+// console.log(config);
 
+  // delete axios.options.headers['Content-Type']
   try {
+
+    dispatch ({
+      type: ADD_POST_START
+    })
     const res = await axios.post('/api/posts', formData, config)
 
     dispatch({
       type: ADD_POST,
       payload: res.data,
     })
+    console.log(res);
+    
     toast.success('Post Created')
   } catch (err) {
     dispatch({

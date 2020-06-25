@@ -153,8 +153,6 @@ export const Googlesignin = (response) => async dispatch => {
 
   // setLocalStorage('token', response.data.token);
   JSON.stringify({response});
-
-  console.log(response);
   
    try {
      

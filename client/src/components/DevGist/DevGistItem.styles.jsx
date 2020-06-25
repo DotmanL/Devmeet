@@ -57,6 +57,25 @@ export const UserImg = styled.img`
     height: 60px;
   }
 `
+
+export const PostImageContainer = styled.div`
+width: 80%;
+height: 40%;
+margin-left: 115px;
+padding-bottom: 10px;
+@media screen and (max-width: 800px) {
+    margin-left: 85px;
+    width: 70%;
+   
+  }
+
+`
+
+export const PostImage =styled.img`
+border-radius: 10px;
+height: 40%;
+width: 100%;
+`
 export const Name = styled.h4`
   font-size: 20px;
   color: rgb(211,211,211);

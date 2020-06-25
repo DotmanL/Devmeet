@@ -5,6 +5,7 @@ import {
   UPDATE_LIKES,
   DELETE_POST,
   ADD_POST,
+  ADD_POST_START,
   GET_POST,
   ADD_COMMENT,
   REMOVE_COMMENT,
@@ -14,6 +15,7 @@ const initialState = {
   posts: [],
   post: null,
   loading: true,
+  posting: false,
   error: {},
 }
 
@@ -46,11 +48,18 @@ case GET_MORE_POSTS:
         error: payload,
         loading: false,
       }
+
+      case ADD_POST_START:
+        return{
+          ...state,
+          posting: true,
+        }
     case ADD_POST:
       return {
         ...state,
         posts: [payload, ...state.posts],
         loading: false,
+        posting: false,
       }
     case UPDATE_LIKES:
       return {
