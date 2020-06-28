@@ -4,12 +4,17 @@ export const Container =styled.div `
 margin: 90px auto;
 display: flex;
 flex-direction: column;
-background: grey;
+background: black;
 align-items: center;
 justify-content: center;
 text-align: center;
 width: 60vw;
 height: 40vh;
+@media screen and (max-width: 800px) {
+  width: 80vw;
+height: 70vh;
+margin: 40px auto;
+  }
 
 `
 
@@ -71,7 +76,7 @@ export const Button = styled.button`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(5, 91, 94);
+    background: #14213d;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;

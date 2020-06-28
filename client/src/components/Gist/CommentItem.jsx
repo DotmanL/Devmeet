@@ -41,7 +41,7 @@ const CommentItem = ({
         <PostText>{text}</PostText>
 
         <PostDate>
-          <Moment format=" h:mm A ~ MMMM Do, YYYY">{date}</Moment>
+          <Moment format=" h:mm A • MMMM Do, YYYY">{date}</Moment>
         </PostDate>
       </Link>
     </PostContainer>

@@ -40,7 +40,7 @@ const Gist = ({ getPost, post: { post, loading }, match }) => {
           <Header>Post</Header>
         </TopCover>
         <Container>
-          <DevGistItem post={post} showActions={true} />
+          <DevGistItem post={post} showActions={true} showDate={true} />
         </Container>
         <Comments>
           {post.comments.map(comment => (

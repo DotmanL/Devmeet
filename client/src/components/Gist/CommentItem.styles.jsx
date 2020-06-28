@@ -34,7 +34,7 @@ margin-left: -5px;
 `
 export const Name = styled.h4`
 font-size: 20px;
-color: white;
+color: rgb(211,211,211);
 margin-top: -90px;
 padding-left: 110px;
 
@@ -72,7 +72,7 @@ flex-direction: column;
 
 export const PostText = styled.p`
 font-size: 18px;
-color: white;
+color: rgb(211,211,211);
 margin-top: -60px;
 padding-left: 110px;
 width: 95%;
@@ -86,7 +86,7 @@ width: 95%;
 
 export const PostDate = styled.p`
 font-size: 13px;
-color: gray;
+color: rgb(211,211,211);
 align-self: flex-start;
 padding-left: 110px;
 margin-top: -10px;

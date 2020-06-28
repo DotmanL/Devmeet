@@ -12,11 +12,17 @@ width: 80vw;
 height: 50vh;
 border-radius: 10px;
 border: 2px dashed white;
+@media screen and (max-width: 800px) {
+  margin: 40px auto;
+}
 `
 
 export const Title = styled.h2 `
 color: white;
 font-size: 20px;
+@media screen and (max-width: 800px) {
+  font-size: 18px;
+}
 
 `
 
@@ -43,6 +49,7 @@ export const Button = styled.button`
   margin: auto;
   margin-top: 10px;
   cursor: pointer;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +85,8 @@ export const Button = styled.button`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(5, 91, 94);
+    border-radius: 10px;
+    background: #14213d;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;

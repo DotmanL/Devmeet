@@ -64,7 +64,8 @@ justify-content: center;
 width: 100%;
 height: auto;
 align-items: center;
-padding-bottom: 10px;
+padding-bottom: 50px;
+
 @media screen and (max-width: 800px) {
     width: 90vw;
     padding-bottom: 10px;

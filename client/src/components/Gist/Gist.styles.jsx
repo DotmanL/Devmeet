@@ -18,8 +18,9 @@ export const PostsPageContainer = styled.div`
   display: flex;
   flex-direction: row;
   position: relative;
-  width: 100vw;
-    height: 100vh;
+  width: 100%;
+    height: 100%;
+    padding-bottom: -50px;
     
   @media screen and (max-width: 800px) {
     width: 100vw;
