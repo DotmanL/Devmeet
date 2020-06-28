@@ -18,7 +18,7 @@ display: none;
 @media screen and (max-width: 800px) {
     display: flex;
     position: relative;
-
+   margin-top: 20px;
 
   }
 `
@@ -63,10 +63,11 @@ width: 80%;
 height: 40%;
 margin-left: 125px;
 padding-bottom: 40px;
-margin-top: -40px;
+margin-top: -30px;
 @media screen and (max-width: 800px) {
     margin-left: 95px;
     width: 70%;
+    margin-top: -20px;
    
   }
 
@@ -107,7 +108,7 @@ export const UserDet = styled.div`
 
 export const PostContainer = styled.div`
   display: flex;
-  background-color: rgb(0, 0, 0);
+
   flex-direction: column;
  
   @media screen and (max-width: 800px) {
@@ -118,7 +119,7 @@ export const PostContainer = styled.div`
 export const PostText = styled.h5`
   font-size: 18px;
   color: rgb(211,211,211);
-  margin-top: -55px;
+  margin-top: -35px;
   padding-left: 125px;
   width: 95%;
   display: flex;
@@ -128,20 +129,20 @@ export const PostText = styled.h5`
     font-size: 15px;
     padding-left: 95px;
     width: 100%;
-    margin-top: -40px;
+    margin-top: -26px;
   }
 `
 
 export const PostDate = styled.h6`
   font-size: 13px;
   color: gray;
+  text-decoration: none;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding-left: 115px;
-  margin-top: -29px;
- 
-  width: 100%;
+  padding-right: 40px;
+  margin-top: -25px;
+
 
   @media screen and (max-width: 800px) {
     padding-right: 15px;
@@ -152,30 +153,44 @@ export const PostDate = styled.h6`
 `
 export const Lower = styled.div`
   display: flex;
-  background-color: rgb(0, 0, 0);
   flex-direction: column;
   color: rgb(211,211,211);
   font-size: 15px;
-  padding-left: -15px;
-  margin-top: 20px;
+  padding-left: 125px;
+  margin-top: -30px;
 
   @media screen and (max-width: 800px) {
-    padding-left: -10px;
-    margin-top: 5px;
+    padding-left: 100px;
+    margin-top: -25px;
     font-size: 12px;
     
   }
 `
 export const LowerC = styled.div`
   display: flex;
+  border-bottom: 0.6px solid gray;
+  flex-direction: row;
+  padding-left: 125px;
+  margin-top: 25px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  @media screen and (max-width: 800px) {
+    
+    padding-left: 95px;
+    margin-top: 45px;
+  }
+`
+export const LowerCa = styled.div`
+  display: flex;
   border-bottom: 1px solid gray;
   flex-direction: row;
   padding-left: 125px;
-  margin-top: -30px;
+  margin-top: 0px;
   text-align: center;
   position: relative;
+  padding-bottom: 2px;
   @media screen and (max-width: 800px) {
-    padding-left: 0px;
     padding-left: 95px;
     margin-top: -25px;
   }

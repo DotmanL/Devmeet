@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
    background: black;
-  border-left: 0.5px solid gray;
-  border-right: 0.5px solid gray;
   border-top: 0.5px solid gray;
   margin-top: 5px;
   width: 950px;
@@ -58,7 +56,7 @@ margin-top: -30px;
 
 export const Posts =styled.div`
 display: flex;
-background-color: rgb(0, 0, 0);
+
 flex-direction: column;
 justify-content: center;
 width: 100%;

@@ -16,6 +16,7 @@ import {
   Header,
   Ar,
   Circle,
+  GlobalStyle,
   Comments
 } from './Gist.styles'
 
@@ -28,6 +29,7 @@ const Gist = ({ getPost, post: { post, loading }, match }) => {
     <Spinner />
   ) : (
     <PostsPageContainer>
+         <GlobalStyle />
       <DevUsers/>
 
       <Cover>
@@ -40,7 +42,7 @@ const Gist = ({ getPost, post: { post, loading }, match }) => {
           <Header>Post</Header>
         </TopCover>
         <Container>
-          <DevGistItem post={post} showActions={true} showDate={true} />
+          <DevGistItem post={post} showActions={true} showDate={true} showTime={true}/>
         </Container>
         <Comments>
           {post.comments.map(comment => (

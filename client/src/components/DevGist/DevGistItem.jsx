@@ -7,6 +7,9 @@ import { addLike, removeLike, deletePost } from '../../Redux/Post/post.actions'
 import 'react-responsive-modal/styles.css'
 import { Modal } from 'react-responsive-modal'
 import GistInput from '../Gist/GistInput'
+//import { isAndroid, isIOS } from "react-device-detect";
+
+
 import {
   Post,
   UserImg,
@@ -19,6 +22,7 @@ import {
   PostImage,
   Lower,
   LowerC,
+  LowerCa,
   Lk,
   Dk,
   Cm,
@@ -45,6 +49,7 @@ const DevGistItem = ({
   post: { _id, name, avatar, user, likes, text, comments, date, imageUrl },
   showActions,
   showDate,
+  showTime
 }) => {
   const [open, setOpen] = useState(false)
 
@@ -60,6 +65,7 @@ const DevGistItem = ({
 
   return (
     <Fragment>
+      
       <Post>
         <PostContainer>
           <UserDet>
@@ -68,38 +74,102 @@ const DevGistItem = ({
             </Link>
           </UserDet>
 
-          <Link to={`/profile/${user}`}>
-            <Name>{name}</Name>
-          </Link>
-
+        
+            <Name>  <Link to={`/profile/${user}`}>{name}   </Link>   </Name>
+                  
+        {!showDate &&
+           (<PostDate>
+                  <Moment fromNow>{date}</Moment>
+                </PostDate>)}
+         
+      
           <Link to={`/posts/${_id}`}>
             <PostText>
               {text}
-              <span>
-                
-        {showDate ? (
-          <Fragment>
-          
-            <Lower>
-              <Moment format=" h:mm A  • MMMM Do, YYYY">{date}</Moment>
-            </Lower>
-          </Fragment>) :   (<PostDate>
-                  <Moment fromNow>{date}</Moment>
-                </PostDate>)}
-              
-              </span>
             </PostText>
-          </Link>
-
           {text && imageUrl && (
             <PostImageContainer>
               <PostImage src={imageUrl} />
             </PostImageContainer>
           )}
+     </Link>
+          {showTime &&  (<Fragment>    
+            <Lower>
+              <Moment format=" h:mm A  • MMMM Do, YYYY">{date}</Moment>
+             
+            </Lower>
+          </Fragment>) }
         </PostContainer>
 
+        <Fragment>
+              <LowerCa>
+                <Pc>
+                  <Cm title="Comments" onClick={onOpenModal} /> {''}{' '}
+                  {comments.length > 0 && <Cms>{comments.length}</Cms>}
+                  <Lk title="like" onClick={() => addLike(_id)} />
+                  {''}{' '}
+                  {likes.length > 0 && (
+                    <span style={{ color: 'white' }}>{likes.length}</span>
+                  )}
+                  <Dk title="Unlike" onClick={() => removeLike(_id)} />
+                  
+                {!userP.loading && user === userP.user._id && (
+                  <Dl title="Delete" onClick={() => deletePost(_id)}></Dl>
+                )}
+                  <Modal
+                    open={open}
+                    onClose={onCloseModal}
+                    closeIcon={closeIcon}
+                    classNames={{
+                      overlay: 'customOverlay',
+                      modal: 'customModal',
+                    }}
+                  >
+                    <ModalC>
+                      <ModalU>
+                        <ModalImg src={avatar} />
+                      </ModalU>
 
-        {showActions && (
+                      <ModalN>{name}</ModalN>
+
+                      <ModalT>{text}</ModalT>
+
+                      <ModalD>
+                        <Moment format=" h:mm A  • MMMM Do, YYYY">
+                          {date}
+                        </Moment>
+
+                      </ModalD>
+                    </ModalC>
+
+                    <GistInput postId={_id} />
+                  </Modal>
+                </Pc>
+
+                <Mb>
+                  <Cm title="Comments" onClick={onOpenModal} /> {''}{' '}
+                  {comments.length > 0 && <Cms>{comments.length}</Cms>}
+                  <Lk title="like" onClick={() => addLike(_id)} />
+                  {''}{' '}
+                  {likes.length > 0 && (
+                    <span style={{ color: 'white' }}>{likes.length}</span>
+                  )}
+                  <Dk title="Unlike" onClick={() => removeLike(_id)} />
+                
+
+                {!userP.loading && user === userP.user._id && (
+                  <Dl title="Delete" onClick={() => deletePost(_id)}></Dl>
+                )}
+                </Mb>
+              </LowerCa>
+          </Fragment>
+
+
+
+
+
+
+        {!showActions && (
           <Fragment>
               <LowerC>
                 <Pc>

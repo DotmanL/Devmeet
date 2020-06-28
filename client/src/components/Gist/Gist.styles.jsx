@@ -1,6 +1,25 @@
 import styled from 'styled-components'
 import {ArrowBack} from '@styled-icons/evaicons-solid/ArrowBack'
 
+import { createGlobalStyle } from 'styled-components'
+
+
+
+
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+background-color: black;
+height: 100vh;
+  }
+
+@media screen and (max-width: 800px) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    
+}
+`
 export const Ar = styled(ArrowBack) `
  color: white;
   width: 30px;
@@ -11,7 +30,6 @@ export const Ar = styled(ArrowBack) `
     width: 20px;
     height: 20px;
   }
-
 `
 
 export const PostsPageContainer = styled.div`
@@ -19,8 +37,7 @@ export const PostsPageContainer = styled.div`
   flex-direction: row;
   position: relative;
   width: 100%;
-    height: 100%;
-    padding-bottom: -50px;
+    height: 100vh;
     
   @media screen and (max-width: 800px) {
     width: 100vw;
@@ -35,8 +52,8 @@ export const PostsPageContainer = styled.div`
 `
 
 export const Container = styled.div`
-  background: black;
   border-right: 1px solid gray;
+  border-left: 1px solid gray;
   border-top: 1px solid gray;
   display: flex;
   position: relative;
@@ -75,7 +92,6 @@ padding-left: 0px;
     font-size: 20px;
     margin-top: 20px;
   }
-
 `
 export const Circle =styled.div`
  border-radius: 50px;
@@ -93,7 +109,6 @@ export const Circle =styled.div`
  :hover {
   background-position: left bottom;
   } 
-
   @media screen and (max-width: 800px) {
    background: black;
    background: linear-gradient(to left, black 50%, black 50%);
@@ -105,4 +120,3 @@ background: black;
 flex-direction: column;
 display: flex;
 `
- 
