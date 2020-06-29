@@ -23,7 +23,16 @@ export const Container = styled.div`
   @media screen and (max-width: 500px) {
     display: none;
   }
-  @media screen and (min-width: 500px) and (max-width: 1086px) {
+  @media screen and (min-width: 500px) and (max-width: 1000px) {
+    width: 9.5vw;
+    display: none;
+    background: black;
+    flex-direction: column;
+  text-align: center;
+  position: relative;
+  
+  }
+  @media screen and (min-width: 1000px) and (max-width: 1300px){
     width: 9.5vw;
     display: flex;
     background: black;
@@ -149,6 +158,7 @@ export const Hm =styled(Home)`
   height: 40px;
   margin-right: 10px;
   position: relative;
+  
 
   @media screen and (min-width: 500px) and (max-width: 1088px) {
     display: flex;

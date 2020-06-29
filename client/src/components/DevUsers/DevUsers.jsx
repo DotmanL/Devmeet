@@ -29,7 +29,7 @@ const DevUsers = ({ user: { user }, signout }) => {
         <Hm/>{''} Home
         </HomeLink>
          <Link to='/'>
-      
+        <Hm />
         </Link>
 
         <ProfMenu as="a" href={`/profile/${user && user._id}`}>
