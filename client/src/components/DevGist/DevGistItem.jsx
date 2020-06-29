@@ -18,6 +18,7 @@ import {
   UserDet,
   PostText,
   PostDate,
+  AltDate,
   PostImageContainer,
   PostImage,
   Lower,
@@ -49,7 +50,8 @@ const DevGistItem = ({
   post: { _id, name, avatar, user, likes, text, comments, date, imageUrl },
   showActions,
   showDate,
-  showTime
+  showTime,
+
 }) => {
   const [open, setOpen] = useState(false)
 
@@ -95,8 +97,9 @@ const DevGistItem = ({
      </Link>
           {showTime &&  (<Fragment>    
             <Lower>
+              <AltDate>
               <Moment format=" h:mm A  • MMMM Do, YYYY">{date}</Moment>
-             
+              </AltDate>
             </Lower>
           </Fragment>) }
         </PostContainer>

@@ -62,7 +62,7 @@ export const PostImageContainer = styled.div`
 width: 80%;
 height: 40%;
 margin-left: 125px;
-padding-bottom: 40px;
+padding-bottom: 18px;
 margin-top: -30px;
 @media screen and (max-width: 800px) {
     margin-left: 95px;
@@ -120,7 +120,7 @@ export const PostText = styled.h5`
   font-size: 18px;
   color: rgb(211,211,211);
   margin-top: -35px;
-  padding-left: 125px;
+  padding-left: 130px;
   width: 95%;
   display: flex;
   flex-direction: column;
@@ -128,8 +128,8 @@ export const PostText = styled.h5`
   @media screen and (max-width: 800px) {
     font-size: 15px;
     padding-left: 95px;
-    width: 100%;
-    margin-top: -26px;
+    width: 80%;
+    margin-top: -28px;
   }
 `
 
@@ -151,13 +151,24 @@ export const PostDate = styled.h6`
    
   }
 `
+export const AltDate = styled.div`
+margin-top: -40px;
+padding-left: 10px;
+@media screen and (max-width: 800px) {
+  padding-left: 5px;
+    margin-top: 10px;
+  
+   
+  }
+`
+
 export const Lower = styled.div`
   display: flex;
   flex-direction: column;
   color: rgb(211,211,211);
   font-size: 15px;
   padding-left: 125px;
-  margin-top: -30px;
+  margin-top: 20px;
 
   @media screen and (max-width: 800px) {
     padding-left: 100px;
@@ -178,21 +189,22 @@ export const LowerC = styled.div`
   @media screen and (max-width: 800px) {
     
     padding-left: 95px;
-    margin-top: 45px;
+    margin-top: -15px;
+    border-bottom: 0.6px solid gray;
   }
 `
 export const LowerCa = styled.div`
   display: flex;
-  border-bottom: 1px solid gray;
+  border-bottom: 0px solid gray;
   flex-direction: row;
   padding-left: 125px;
-  margin-top: 0px;
+  margin-top: -20px;
   text-align: center;
   position: relative;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
   @media screen and (max-width: 800px) {
-    padding-left: 95px;
-    margin-top: -25px;
+    padding-left: 98px;
+    margin-top: -15px;
   }
 `
 

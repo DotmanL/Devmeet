@@ -20,7 +20,7 @@ export const LogoContainer = styled.img`
   flex-direction: column;
   width: 390px;
   height: 350px;
-  margin-top: -370px;
+  margin-top: -340px;
   margin-left: 420px;
   
 

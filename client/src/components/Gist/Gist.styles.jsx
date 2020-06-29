@@ -52,9 +52,9 @@ export const PostsPageContainer = styled.div`
 `
 
 export const Container = styled.div`
-  border-right: 1px solid gray;
-  border-left: 1px solid gray;
-  border-top: 1px solid gray;
+  border-right: 0,4px solid gray;
+  border-left: 0.4px solid gray;
+  border-top: 0.4px solid gray;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -62,19 +62,26 @@ export const Container = styled.div`
   margin-top: 70px;
   
   height: auto;
+  @media screen and (max-width: 800px) {
+    border-right: 0px solid gray;
+  border-left: 0px solid gray;
+  border-top: 0px solid gray;
+  }
 `
 export const TopCover = styled.div`
   background: black;
   width: 63.0vw;
   display: flex;
   position: fixed;
-  border-bottom: 1px solid gray;
-  border-right: 1px solid gray;
+  border-bottom: 0.4px solid gray;
+  border-right: 0.4px solid gray;
   top: 0;
   z-index: 1;
   flex-direction: row;
   @media screen and (max-width: 800px) {
     width: 100vw;
+    border-bottom: 0.4px solid gray;
+  border-right: 0px solid gray;
   }
 `
 export const Cover = styled.div`
