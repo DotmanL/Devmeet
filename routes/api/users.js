@@ -8,13 +8,11 @@ const jwt = require('jsonwebtoken')
 const User = require('../../models/User')
 const normalize = require('normalize-url')
 const _ = require('lodash')
-
+const nodemailer = require('nodemailer')
 const Email = require('email-templates')
-
+const sgTransport = require('nodemailer-sendgrid-transport')
 //const sgMail = require('@sendgrid/mail');
 //sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-const nodemailer = require('nodemailer')
 
 //@orute     POST api/users
 // @desc     Register users
@@ -90,52 +88,49 @@ router.post(
           res.json({ token })
 
           const transport = {
-            host: 'smtp.gmail.com',
-            port: 587,
-            secure: false,
             auth: {
-              user: process.env.THE_EMAIL,
-              pass: process.env.thePassword,
+              api_key: process.env.SENDGRID_API_KEY,
             },
           }
-                
-  
 
-          const transporter = nodemailer.createTransport(transport)
+          const transporter = nodemailer.createTransport(sgTransport(transport))
           transporter.verify((error, success) => {
             if (error) {
               console.error(error)
+            } else {
+              console.log(success)
             }
           })
 
           const email = new Email({
-
             message: {
               from: process.env.THE_EMAIL,
               subject: `Account Activation link`,
             },
             transport: transporter,
             send: true,
-            preview: true,
-          });
+            preview: false,
+          })
 
-          email.send({
-            template: 'verify',
-            message: {
-              to: user.email,
-              // attachments: [=
-              //   {
-              //     filename: 'texting.txt',
-              //     content: 'hello world, how are you doing!'
-              //   }
-              // ]
-            },
-            locals: {
-              name: name,
-              token: token,
-              url:`${process.env.CLIENT_URL}`,
-            }
-          }).then(() => console.log('email has been sent!'));
+          email
+            .send({
+              template: 'verify',
+              message: {
+                to: user.email,
+                // attachments: [=
+                //   {
+                //     filename: 'texting.txt',
+                //     content: 'hello world, how are you doing!'
+                //   }
+                // ]
+              },
+              locals: {
+                name: name,
+                token: token,
+                url: `${process.env.CLIENT_URL}`,
+              },
+            })
+            .then(() => console.log('email has been sent!'))
         }
       )
     } catch (err) {
@@ -226,36 +221,32 @@ router.put(
         (err, token) => {
           if (err) throw err
           res.json({ token })
-          
+
           const transport = {
-            host: 'smtp.gmail.com',
-            port: 587,
-            secure: false,
             auth: {
-              user: process.env.THE_EMAIL,
-              pass: process.env.thePassword,
+              api_key: process.env.SENDGRID_API_KEY,
             },
           }
-               
 
-          const transporter = nodemailer.createTransport(transport)
+          const transporter = nodemailer.createTransport(sgTransport(transport))
           transporter.verify((error, success) => {
             if (error) {
               console.error(error)
+            } else {
+              console.log(success)
             }
           })
-               
-          const email = new Email({
 
+          const email = new Email({
             message: {
               from: process.env.THE_EMAIL,
               subject: `Password Reset link`,
             },
             transport: transporter,
             send: true,
-            preview: true,
-          });
-         
+            preview: false,
+          })
+
           return user.updateOne(
             { resetPasswordLink: token },
             (err, success) => {
@@ -265,23 +256,25 @@ router.put(
                     'Database connection error on user password forgot request',
                 })
               }
-              email.send({
-                template: 'reset',
-                message: {
-                  to: user.email,
-                  // attachments: [=
-                  //   {
-                  //     filename: 'texting.txt',
-                  //     content: 'hello world, how are you doing!'
-                  //   }
-                  // ]
-                },
-                locals: {
-                  name: user.name,
-                  token: token,
-                  url:`${process.env.CLIENT_URL}`,
-                }
-              }).then(() => console.log('email has been sent!'));
+              email
+                .send({
+                  template: 'reset',
+                  message: {
+                    to: user.email,
+                    // attachments: [=
+                    //   {
+                    //     filename: 'texting.txt',
+                    //     content: 'hello world, how are you doing!'
+                    //   }
+                    // ]
+                  },
+                  locals: {
+                    name: user.name,
+                    token: token,
+                    url: `${process.env.CLIENT_URL}`,
+                  },
+                })
+                .then(() => console.log('email has been sent!'))
             }
           )
         }
