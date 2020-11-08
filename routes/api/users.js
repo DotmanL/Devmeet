@@ -10,7 +10,8 @@ const normalize = require('normalize-url')
 const _ = require('lodash')
 const nodemailer = require('nodemailer')
 const Email = require('email-templates')
-const sgTransport = require('nodemailer-sendgrid-transport')
+const nodemailerSendgrid = require('nodemailer-sendgrid')
+
 //const sgMail = require('@sendgrid/mail');
 //sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -88,12 +89,12 @@ router.post(
           res.json({ token })
 
           const transport = {
-            auth: {
-              api_key: process.env.SENDGRID_API_KEY,
-            },
+            apiKey: process.env.SENDGRID_API_KEY,
           }
 
-          const transporter = nodemailer.createTransport(sgTransport(transport))
+          const transporter = nodemailer.createTransport(
+            nodemailerSendgrid(transport)
+          )
           transporter.verify((error, success) => {
             if (error) {
               console.error(error)
@@ -223,12 +224,12 @@ router.put(
           res.json({ token })
 
           const transport = {
-            auth: {
-              api_key: process.env.SENDGRID_API_KEY,
-            },
+            apiKey: process.env.SENDGRID_API_KEY,
           }
 
-          const transporter = nodemailer.createTransport(sgTransport(transport))
+          const transporter = nodemailer.createTransport(
+            nodemailerSendgrid(transport)
+          )
           transporter.verify((error, success) => {
             if (error) {
               console.error(error)
