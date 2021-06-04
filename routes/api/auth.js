@@ -87,11 +87,9 @@ router.post(
 //Google login
 
 router.post('/google-login', async (req, res) => {
- 
-	
-	const { idToken } = req.body
-	
-	client
+  const { idToken } = req.body
+
+  client
     .verifyIdToken({ idToken, audience: process.env.GOOGLE_CLIENT_ID })
     .then((response) => {
       try {
@@ -116,8 +114,8 @@ router.post('/google-login', async (req, res) => {
             })
           } else {
             let password = email + process.env.jwtSecret
-					
-						user = new User({ name, email, password })
+
+            user = new User({ name, email, password })
             user.save((err, data) => {
               if (err) {
                 return res.status(400).json({

@@ -3,29 +3,24 @@ import { Like } from '@styled-icons/boxicons-solid/Like'
 import { Dislike } from '@styled-icons/boxicons-regular/Dislike'
 import { CommentDots } from '@styled-icons/boxicons-solid/CommentDots'
 import { Delete } from '@styled-icons/typicons/Delete'
-import {CloseCircle} from '@styled-icons/evaicons-solid/CloseCircle'
+import { CloseCircle } from '@styled-icons/evaicons-solid/CloseCircle'
 
 export const Pc = styled.div`
-cursor: pointer;
-display: flex;
+  cursor: pointer;
+  display: flex;
 
-@media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     display: none;
   }
 `
 export const Mb = styled.div`
-display: none;
-@media screen and (max-width: 800px) {
+  display: none;
+  @media screen and (max-width: 800px) {
     display: flex;
     position: relative;
-   margin-top: 20px;
-
+    margin-top: 20px;
   }
 `
-
-
-
-
 
 export const Post = styled.div`
   border-bottom: 1px solid gray;
@@ -43,7 +38,7 @@ export const Post = styled.div`
 `
 
 export const UserImg = styled.img`
-  background: rgb(211,211,211);
+  background: rgb(211, 211, 211);
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
@@ -59,28 +54,26 @@ export const UserImg = styled.img`
 `
 
 export const PostImageContainer = styled.div`
-width: 80%;
-height: 40%;
-margin-left: 125px;
-padding-bottom: 18px;
-margin-top: -30px;
-@media screen and (max-width: 800px) {
+  width: 80%;
+  height: 40%;
+  margin-left: 125px;
+  padding-bottom: 18px;
+  margin-top: -30px;
+  @media screen and (max-width: 800px) {
     margin-left: 95px;
     width: 70%;
     margin-top: -20px;
-   
   }
-
 `
 
-export const PostImage =styled.img`
-border-radius: 10px;
-height: 40%;
-width: 100%;
+export const PostImage = styled.img`
+  border-radius: 10px;
+  height: auto;
+  width: auto;
 `
 export const Name = styled.h4`
   font-size: 20px;
-  color: rgb(211,211,211);
+  color: rgb(211, 211, 211);
   margin-top: -90px;
   padding-left: 125px;
 
@@ -110,7 +103,7 @@ export const PostContainer = styled.div`
   display: flex;
 
   flex-direction: column;
- 
+
   @media screen and (max-width: 800px) {
     margin-left: 0px;
   }
@@ -118,7 +111,7 @@ export const PostContainer = styled.div`
 
 export const PostText = styled.h5`
   font-size: 18px;
-  color: rgb(211,211,211);
+  color: rgb(211, 211, 211);
   margin-top: -35px;
   padding-left: 130px;
   width: 95%;
@@ -143,29 +136,24 @@ export const PostDate = styled.h6`
   padding-right: 40px;
   margin-top: -25px;
 
-
   @media screen and (max-width: 800px) {
     padding-right: 15px;
     margin-top: -29px;
-  
-   
   }
 `
 export const AltDate = styled.div`
-margin-top: -40px;
-padding-left: 10px;
-@media screen and (max-width: 800px) {
-  padding-left: 5px;
+  margin-top: -40px;
+  padding-left: 10px;
+  @media screen and (max-width: 800px) {
+    padding-left: 5px;
     margin-top: 10px;
-  
-   
   }
 `
 
 export const Lower = styled.div`
   display: flex;
   flex-direction: column;
-  color: rgb(211,211,211);
+  color: rgb(211, 211, 211);
   font-size: 15px;
   padding-left: 125px;
   margin-top: 20px;
@@ -174,7 +162,6 @@ export const Lower = styled.div`
     padding-left: 100px;
     margin-top: -25px;
     font-size: 12px;
-    
   }
 `
 export const LowerC = styled.div`
@@ -187,7 +174,6 @@ export const LowerC = styled.div`
   position: relative;
   padding-bottom: 10px;
   @media screen and (max-width: 800px) {
-    
     padding-left: 95px;
     margin-top: -15px;
     border-bottom: 0.6px solid gray;
@@ -218,12 +204,12 @@ export const Lk = styled(Like)`
   @media screen and (max-width: 800px) {
     width: 20px;
     height: 20px;
-   
+
     margin-left: 50px;
   }
 `
 export const Dk = styled(Dislike)`
-   color: gray;
+  color: gray;
   width: 30px;
   height: 30px;
   margin-left: 166.4px;
@@ -235,7 +221,7 @@ export const Dk = styled(Dislike)`
   }
 `
 export const Cm = styled(CommentDots)`
-   color: gray;
+  color: gray;
   width: 30px;
   height: 30px;
   margin-left: 3px;
@@ -245,22 +231,16 @@ export const Cm = styled(CommentDots)`
     width: 20px;
     height: 20px;
     margin-left: 0px;
-  
-    
   }
 `
 
+export const Cms = styled.span`
+  color: rgb(211, 211, 211);
 
-
-export const Cms =styled.span`
-color: rgb(211,211,211);
-
-@media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     display: flex;
-    
   }
 `
-
 
 export const Dl = styled(Delete)`
   color: red;
@@ -276,25 +256,23 @@ export const Dl = styled(Delete)`
   }
 `
 
-export const ModalC =styled.div`
-background: black;
-color: rgb(211,211,211);
-flex-direction: column;
-position: relative;
-
+export const ModalC = styled.div`
+  background: black;
+  color: rgb(211, 211, 211);
+  flex-direction: column;
+  position: relative;
 `
-export const ModalU =styled.div`
-display: flex;
+export const ModalU = styled.div`
+  display: flex;
   height: 93px;
   margin-top: 1px;
   width: 93px;
   flex-direction: column;
   padding-left: 5px;
   padding-right: 10px;
- 
 `
 export const ModalImg = styled.img`
- background: rgb(211,211,211);
+  background: rgb(211, 211, 211);
   border-radius: 50%;
   display: inline-block;
   background: black;
@@ -304,28 +282,27 @@ export const ModalImg = styled.img`
   height: 70px;
 `
 
-export const ModalN =styled.h4`
+export const ModalN = styled.h4`
   font-size: 20px;
-  color: rgb(211,211,211);
+  color: rgb(211, 211, 211);
   margin-top: -90px;
   padding-left: 95px;
 `
 
-export const ModalT =styled.p`
-font-size: 18px;
-  color: rgb(211,211,211);
+export const ModalT = styled.p`
+  font-size: 18px;
+  color: rgb(211, 211, 211);
   margin-top: -30px;
   padding-left: 95px;
   width: 95%;
-  
+
   @media screen and (max-width: 800px) {
     width: 80vw;
-    
   }
 `
 
 export const ModalD = styled.p`
- font-size: 13px;
+  font-size: 13px;
   color: gray;
   align-self: flex-start;
   padding-left: 95px;
@@ -333,9 +310,8 @@ export const ModalD = styled.p`
   width: 100%;
 `
 
-
 export const ModalClose = styled(CloseCircle)`
-  color: rgb(211,211,211);
+  color: rgb(211, 211, 211);
   resize: none;
   width: 45px;
   height: 45px;
@@ -347,8 +323,7 @@ export const ModalClose = styled(CloseCircle)`
   @media screen and (max-width: 800px) {
     width: 35px;
     height: 35px;
-   
+
     margin-left: 50px;
   }
 `
-
