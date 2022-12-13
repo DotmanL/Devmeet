@@ -24,7 +24,7 @@
     "datauri": "^3.0.0",
     "dotenv": "^8.2.0",
     "email-templates": "^7.0.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-validator": "^6.4.0",
     "google-auth-library": "^6.0.2",
     "gravatar": "^1.8.0",
